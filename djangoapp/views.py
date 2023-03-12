@@ -32,11 +32,13 @@ def shop(request):
     return render(request, 'shop.html', {'title':"Shop", 'marvel_shop':marvel_shop})
 
 def comic(request):
-    MASC = SubCategoryComic.objects.filter(child=1)
-    FF = SubCategoryComic.objects.filter(child=3)
-    LATPA = SubCategoryComic.objects.filter(child=2)
-    MR = SubCategoryComic.objects.filter(child=4)
-    AV = SubCategoryComic.objects.filter(child=5)
+    SC = SubCategoryComic.objects.filter(child=2)
+    FF = SubCategoryComic.objects.filter(child=4)
+    LATPA = SubCategoryComic.objects.filter(child=1)
+    MR = SubCategoryComic.objects.filter(child=6)
+    DS = SubCategoryComic.objects.filter(child=7)
+    DP = SubCategoryComic.objects.filter(child=3)
+    GOTG = SubCategoryComic.objects.filter(child=5)
 
     items = [1, 2, 3, 4, 5]
     feature_comic = SubCategoryComic.objects.filter(pk__in=items)
@@ -45,7 +47,7 @@ def comic(request):
     # change number to how many random items you want
     marvel_items = random.sample(items, 12)
 
-    return render(request, 'comics.html', {'title':"Comics", 'MASC':MASC, 'LATPA':LATPA, 'FF':FF, 'MR':MR, 'AV':AV, 'feature_comic':feature_comic, 'marvel_items':marvel_items})
+    return render(request, 'comics.html', {'title':"Comics", 'SC':SC, 'LATPA':LATPA, 'FF':FF, 'MR':MR, 'DP':DP, 'DS':DS, 'GOTG':GOTG, 'feature_comic':feature_comic, 'marvel_items':marvel_items})
 
 def movie(request):
     # Movie Views 
