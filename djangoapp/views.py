@@ -8,24 +8,21 @@ import random
 
 def home(request):
     # Comic Views
-    MASC = SubCategoryComic.objects.filter(child=1)
-    FF = SubCategoryComic.objects.filter(child=2)
-    LATPA = SubCategoryComic.objects.filter(child=3)
 
-    comic = [1, 6, 12, 14]
+    comic = [1, 2, 3, 4]
     comic_spiderman = SubCategoryComic.objects.filter(pk__in=comic)
 
-    comic = [3, 8, 17, 18]
-    comic_pet = SubCategoryComic.objects.filter(pk__in=comic)
+    comic = [21, 22, 23, 24]
+    comic_deadpool = SubCategoryComic.objects.filter(pk__in=comic)
 
-    comic = [2, 7, 11, 13]
-    comic_fantastic = SubCategoryComic.objects.filter(pk__in=comic)
+    comic = [16, 17, 18, 19]
+    comic_guardians = SubCategoryComic.objects.filter(pk__in=comic)
 
 
     # Shop Views
     marvel_shop = CategoryShop.objects.filter(parent=1)    
     
-    return render(request, 'home.html', {'title':"Home", 'MASC':MASC, 'FF':FF, 'LATPA':LATPA, 'marvel_shop':marvel_shop, 'comic_spiderman':comic_spiderman, 'comic_pet':comic_pet, 'comic_fantastic':comic_fantastic})
+    return render(request, 'home.html', {'title':"Home", 'marvel_shop':marvel_shop, 'comic_spiderman':comic_spiderman, 'comic_deadpool':comic_deadpool, 'comic_guardians':comic_guardians})
 
 def shop(request):
     marvel_shop = CategoryShop.objects.filter(parent=1) 
