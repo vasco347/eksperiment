@@ -1,0 +1,1327 @@
+<!DOCTYPE HTML>
+<html lang="en">
+{% load static %}
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/>
+  
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  
+  <title>Marvel | {{title}}</title>
+</head>
+
+<body>
+
+{% block Header %}
+    <header class="header-banner-top">
+  
+      <div class="main-navigation">
+        <input type="checkbox" name="mobile-menu-toggle" id="mobile-menu-toggle" class="mobile-menu-box" />
+        <nav class="horizontal-nav primary-wrapper" role='navigation'>
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'movie' %}">Movie</a></li>
+            <li><a href="{% url 'comic' %}">Comic</a></li>
+            <li><a href="#">Game</a></li>
+            <li><a href="{% url 'shop' %}">Shop</a></li>
+            <li><a href="{% url 'about' %}">About Me</a></li>
+          </ul>
+        </nav>
+        <label for="mobile-menu-toggle" class="mobile-menu-label hidden"></label>
+      </div>
+      
+    </header>
+    
+      <section class="headline">
+        <h1 class="nav-h1">MARVELIUS</h1>
+      </section>
+    
+{% endblock Header %}
+
+{% block Video-content %}
+
+  <!-- video modal -->
+  <div class="container-grid mt-1">
+
+  <section class="left-item__headline-movie">
+
+    <a href="https://www.youtube.com/watch?v=oZ6iiRrz1SY" data-youtube-id="oZ6iiRrz1SY" class="video-banner js-trigger-video-modal">
+     
+      <img width="100%" height="100%" src="http://i3.ytimg.com/vi/oZ6iiRrz1SY/maxresdefault.jpg"/>
+    
+      <!-- Play bttn - converted to a data URI just so i can avoid the need for external asset hosting w/ this demo -->
+    </a>
+
+  </section>
+
+  <section class="left-item__headline-movies">
+
+    <a href="https://www.youtube.com/watch?v=m9EX0f6V11Y" data-youtube-id="m9EX0f6V11Y" class="video-banner js-trigger-video-modal">
+     
+      <img width="100%" height="100%" src="http://i3.ytimg.com/vi/m9EX0f6V11Y/maxresdefault.jpg"/>
+    
+      <!-- Play bttn - converted to a data URI just so i can avoid the need for external asset hosting w/ this demo -->
+    </a>
+
+  </section>
+
+  <section class="right-item__movie">
+
+    <article class="content">
+      <h1>Marvel Movies</h1>
+        
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+
+        <h2 class="h2-content">
+          Lates Movies (2022)
+        </h2>
+
+        <div class="video-thumb-grid">
+        
+          <!-- Black Panther - Wakanda Forever -->
+          <a
+             href="https://www.youtube.com/watch?v=_Z3QKkl1WyM" 
+             data-youtube-id="_Z3QKkl1WyM" 
+             class="video-thumb js-trigger-video-modal"
+          >
+            <img 
+              class="video-banner-img" 
+              src="http://i3.ytimg.com/vi/_Z3QKkl1WyM/maxresdefault.jpg" 
+              alt="" 
+            />
+          </a>
+          
+          <!-- Thor Love and Thunder -->
+          <a
+             href="https://www.youtube.com/watch?v=Go8nTmfrQd8" 
+             data-youtube-id="Go8nTmfrQd8" 
+             class="video-thumb js-trigger-video-modal"
+          >
+            <img 
+              class="video-banner-img" 
+              src="http://i3.ytimg.com/vi/Go8nTmfrQd8/hqdefault.jpg" 
+              alt="" 
+            />
+          </a>
+          
+          <!-- Doctor Strange in the Multiverse of Madness -->
+          <a
+             href="https://www.youtube.com/watch?v=aWzlQ2N6qqg" 
+             data-youtube-id="aWzlQ2N6qqg" 
+             class="video-thumb js-trigger-video-modal"
+          >
+            <img 
+              class="video-banner-img" 
+              src="http://i3.ytimg.com/vi/aWzlQ2N6qqg/hqdefault.jpg" 
+              alt="Death Cab for Cutie - You Are A Tourist" 
+            />
+          </a>
+          
+        </div>
+
+        <h2 class="h2-content">
+          Coming Soon (2023)
+        </h2>
+
+        <div class="video-thumb-grid">
+        
+          <!-- Ant Man and The Wasp - Quantumania -->
+          <a
+             href="https://www.youtube.com/watch?v=5WfTEZJnv_8" 
+             data-youtube-id="5WfTEZJnv_8" 
+             class="video-thumb js-trigger-video-modal"
+          >
+            <img 
+              class="video-banner-img" 
+              src="http://i3.ytimg.com/vi/5WfTEZJnv_8/hqdefault.jpg" 
+              alt="" 
+            />
+          </a>
+          
+          <!-- Guardians of the Galaxy Volume 3 -->
+          <a
+             href="https://www.youtube.com/watch?v=u3V5KDHRQvk" 
+             data-youtube-id="u3V5KDHRQvk" 
+             class="video-thumb js-trigger-video-modal"
+          >
+            <img 
+              class="video-banner-img" 
+              src="http://i3.ytimg.com/vi/u3V5KDHRQvk/hqdefault.jpg" 
+              alt="" 
+            />
+          </a>
+          
+          <!-- Spider-Man Across the Spider-Verse -->
+          <a
+             href="https://www.youtube.com/watch?v=cqGjhVJWtEg" 
+             data-youtube-id="cqGjhVJWtEg" 
+             class="video-thumb js-trigger-video-modal"
+          >
+            <img 
+              class="video-banner-img" 
+              src="http://i3.ytimg.com/vi/cqGjhVJWtEg/hqdefault.jpg" 
+              alt="Death Cab for Cutie - You Are A Tourist" 
+            />
+          </a>
+          
+        </div>
+
+    </article>
+    
+  </section>
+  
+  </div>
+
+
+  <section class="video-modal">
+
+  <!-- Modal Content Wrapper -->
+  <div 
+       id="video-modal-content" class="video-modal-content"
+   >
+    
+       <!-- iframe -->
+       <iframe 
+          id="youtube" 
+          width="100%" 
+          height="100%" 
+          frameborder="0" 
+          allow="autoplay" 
+          allowfullscreen 
+          src=
+        ></iframe>
+
+      <a 
+        href="#" 
+        class="close-video-modal" 
+      >
+
+        <!-- X close video icon -->
+        <svg 
+          version="1.1" 
+          xmlns="http://www.w3.org/2000/svg" 
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0"
+          y="0"
+          viewBox="0 0 32 32" 
+          style="enable-background:new 0 0 32 32;" 
+          xml:space="preserve" 
+          width="20" 
+          height="20" 
+        >
+
+          <g id="icon-x-close">
+              <path fill="#ffffff" d="M30.3448276,31.4576271 C29.9059965,31.4572473 29.4852797,31.2855701 29.1751724,30.980339 L0.485517241,2.77694915 C-0.122171278,2.13584324 -0.104240278,1.13679247 0.52607603,0.517159487 C1.15639234,-0.102473494 2.17266813,-0.120100579 2.82482759,0.477288136 L31.5144828,28.680678 C31.9872448,29.1460053 32.1285698,29.8453523 31.8726333,30.4529866 C31.6166968,31.0606209 31.0138299,31.4570487 30.3448276,31.4576271 Z" id="Shape"></path>
+              <path fill="#ffffff" d="M1.65517241,31.4576271 C0.986170142,31.4570487 0.383303157,31.0606209 0.127366673,30.4529866 C-0.12856981,29.8453523 0.0127551942,29.1460053 0.485517241,28.680678 L29.1751724,0.477288136 C29.8273319,-0.120100579 30.8436077,-0.102473494 31.473924,0.517159487 C32.1042403,1.13679247 32.1221713,2.13584324 31.5144828,2.77694915 L2.82482759,30.980339 C2.51472031,31.2855701 2.09400353,31.4572473 1.65517241,31.4576271 Z" id="Shape"></path>
+          </g>
+
+        </svg>
+      </a>
+
+  </div><!-- end modal content wrapper -->
+
+
+  <!-- clickable overlay element -->
+  <div class="overlay"></div>
+
+
+  </section>
+  <!-- end video modal -->
+
+{% endblock Video-content %}
+
+{% block Comic-content %}
+
+  <div class="content">
+
+  <h1 class="title-marvel__comic">MARVEL COMIC</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+  <h2 class="h2-comic">MARVEL ACTION SPIDER-MAN</h2>
+  
+  <section class="slider-comic">
+    {% for post in comic_spiderman %}
+    <div class="card-comic comic-shadow">
+      <a href="{% url 'comic' %}">
+        <img class="hover-comic" src="{{post.covers}}"/>
+        <h3 class="title-comic">{{post.title}}</h3>
+      </a>
+    </div>
+    {% endfor %}
+  </section>
+  
+  <h2 class="h2-comic">LOCKJAW AND THE PET AVENGERS</h2>
+  
+  <section class="slider-comic">
+
+    {% for post in comic_pet %}
+    <div class="card-comic comic-shadow">
+      <a href="{% url 'comic' %}">
+        <img class="hover-comic" src="{{post.covers}}"/>
+        <h3 class="title-comic">{{post.title}}</h3>
+      </a>
+    </div>
+    {% endfor %}
+    
+  </section>
+  
+  <h2 class="h2-comic">FANTASTIC FOUR POWERPACK</h2>
+  
+  <section class="slider-comic">
+
+    {% for post in comic_fantastic %}
+    <div class="card-comic comic-shadow">
+      <a href="{% url 'comic' %}">
+        <img class="hover-comic" src="{{post.covers}}"/>
+        <h3 class="title-comic">{{post.title}}</h3>
+      </a>
+    </div>
+    {% endfor %}
+    
+  </section>
+
+  </div>
+
+{% endblock Comic-content %}
+
+{% block Character-content %}
+
+  <div class="container-char">
+
+    <div class="left-item__char">
+
+      <div class="content">
+        <h1>Marvel Villain</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+
+      <div class="content">
+
+        <section class="slider-char">
+
+          <div>
+            <a href="#!">
+              <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/spiderman-characterthumbnail-mysterio_4d75e822.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">MYSTERIO</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/avengers-characterthumbnail-ultron_2f2e0159.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">ULTRON</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/spiderman-characterthumbnail-goblin_a3bcf783.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">GREEN GOBLIN</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/spiderman-characterthumbnail-carnage_5150f94d.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">CARNAGE</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/spiderman-characterthumbnail-doctoroctopus_2b014e4e.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">DOCTOR OCTOPUS</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/spiderman-characterthumbnail-vulture_84cd11d8.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">VULTURE</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/spiderman-characterthumbnail-venom_891c191c.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">VENOM</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/spiderman-characterthumbnail-lizard_5c0066a6.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">LIZARD</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+
+  
+    <div class="right-item__char">
+
+      <div class="content">
+        <h1>Marvel Heroes</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+
+      <div class="content">
+
+        <section class="slider-char">
+
+          <div>
+            <a href="#!">
+              <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/spiderman-characterthumbnail-spiderman_3a64e546.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">SPIDER-MAN</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/avengers-characterthumbnail-thor_818c3376.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">THOR</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/marvelrising-characterthumbnail-msmarvel_ca95396b.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">MS. MARVEL</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/avengers-characterthumbnail-doctorstrange_a033a056.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">DOCTOR STRANGE</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/avengers-characterthumbnail-hulk_779919a1.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">HULK</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/avengers-characterthumbnail-blackwidow_8b8b117b.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">BLACK WIDOW</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/avengers-characterthumbnail-antman_040c3e53.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">ANT MAN</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a href="#!">
+             <div class="card-char">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/avengers-characterthumbnail-blackpanther_e647c782.jpeg?region=0%2C0%2C300%2C300">
+                <div class="thumb-title1">  
+                  <h3 class="title-char">BLACK PANTHER</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
+{% endblock Character-content %}
+
+{% block Games-content %}
+
+  <div class="content">
+
+    <h1>MARVEL GAMES</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <h2 class="h2-game1">Latest Game</h2>
+
+  </div>
+
+  <div class="container-game">
+
+    <div class="card-headline-game">
+      <a href="#!">
+        <img class="hover-headline-game" width="420px" height="220px" src="https://lumiere-a.akamaihd.net/v1/images/captainamerica-shieldstrike_960x540_f6deafa1.jpeg?region=0%2C0%2C960%2C540"/>
+        <h3 class="title-headline-game">CAPTAIN AMERICA: SHIELD STRIKE</h3>
+      </a>
+    </div>
+
+  </div>
+
+
+  <br><br>
+
+    <div class="content">
+        
+      <h2 class="h2-game">Browse Categories</h2>
+      
+    </div>
+
+    <section class="slider-game">
+      
+        <div class="card-cat comic-shadow">
+          <a href="#!">
+            <img class="hover-game-cat" src="https://lumiere-a.akamaihd.net/v1/images/marvelhq-gamecategory-thor_8660af1e.jpeg"/> 
+          </a>
+        </div>
+      
+        <div class="card-cat comic-shadow">
+          <a href="#!">
+            <img class="hover-game-cat" src="https://lumiere-a.akamaihd.net/v1/images/marvelhq-gamecategory-black-panther_2f0ed48a.jpeg"/>
+          </a>
+        </div>
+      
+        <div class="card-cat comic-shadow">
+          <a href="#!">
+            <img class="hover-game-cat" src="https://lumiere-a.akamaihd.net/v1/images/marvelhq-gamecategory-hulk_3644963e.jpeg"/>
+          </a>
+        </div>
+  
+        <div class="card-cat comic-shadow">
+          <a href="#!">
+            <img class="hover-game-cat" src="https://lumiere-a.akamaihd.net/v1/images/marvelhq-gamecategory-super-hero_bb234a31.jpeg"/>
+          </a>
+        </div>
+      
+        <div class="card-cat comic-shadow">
+          <a href="#!">
+            <img class="hover-game-cat" src="https://lumiere-a.akamaihd.net/v1/images/marvelhq-gamecategory-action_4b0b8b81.jpeg"/>
+          </a>
+        </div>
+
+        <div class="card-cat comic-shadow">
+          <a href="#!">
+            <img class="hover-game-cat" src="https://lumiere-a.akamaihd.net/v1/images/marvelhq-gamecategory-spider-man_3d8b5176.jpeg"/>
+          </a>
+        </div>
+
+    </section>
+
+  <div class="content">
+
+    <h2 class="h2-games">
+      SPIDER-MAN GAMES
+    </h2>
+    
+  </div>
+  
+  <div class="container-ShowMore">
+  
+    <div class="item1">
+
+    <div class="container-games">
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/sm_thumbnail_mysteriorush_600x450_5fd26aa1.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">SPIDER-MAN: MYSTERIO RUSH</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/sm_hahh_thumbnail_600450_9dfa31fa.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">SPIDER-MAN: HAZARD AT HORIZON HIGH</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/cyoww_newpose_thumbnail_600450_f9a55f7b.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">CREATE YOUR OWN WEB WARRIOR</h3>
+        </div>
+      </a>
+    </div>
+
+    </div>
+
+    <div class="container-games">
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/usa_spider-man_gt_postercreator_n_12948702.jpeg?region=0%2C0%2C400%2C300" />
+        <div class="box-title">
+          <h3 class="title-game">CREATE YOUR OWN SPIDER-MAN POSTER</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/web-600450-1_471dd63b.png?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">SPIDER-MAN: VENOM'S VENGEANCE</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/thumb_spiderman_small_9833782b.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">HOW WELL DO YOU KNOW SPIDER-MAN?</h3>
+        </div>
+      </a>
+    </div>
+
+    </div>
+
+    <div class="container-games">
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/usa_marvelkids_gt_iconarcade_n_7aa518f8.jpeg?region=0%2C0%2C400%2C300" />
+        <div class="box-title">
+          <h3 class="title-game">MARVEL ICON ARCADE</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/v5-smm_thumbnail_600450-1_2f7d670d.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">SPIDER-MAN MATCH</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/600x450-hlt-promo_1_6ee2ff22.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">SPIDER-MAN: LABORATORY LOCKDOWN</h3>
+        </div>
+      </a>
+    </div>
+
+    </div>
+
+    </div>
+
+    <div class="item2">
+    
+      <div class="container-games">
+
+        <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/web-600450_dc06baab.png?region=0%2C0%2C600%2C450" />
+            <div class="box-title">
+              <h3 class="title-game">SPIDER-MAN: GREEN GOBLIN HAVOC</h3>
+            </div>
+          </a>
+        </div>
+    
+        <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-7119-knsx8f_cd4e5fa5.jpeg?region=0%2C0%2C400%2C300" />
+            <div class="box-title">
+              <h3 class="title-game">SPIDER-MAN RESCUE MISSION ULTIMATE SPIDER-MAN</h3>
+            </div>
+          </a>
+        </div>
+    
+        <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/usa_marvelkids_gt_mshs-sm_n_3a615c3a.jpeg?region=0%2C0%2C400%2C300" />
+            <div class="box-title">
+              <h3 class="title-game">SLING WEBS LIKE SPIDER-MAN</h3>
+            </div>
+          </a>
+        </div>
+    
+      </div>
+
+      <div class="container-games">
+
+        <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-7119-gq8j8y_2e342fe7.jpeg?region=0%2C0%2C400%2C300" />
+            <div class="box-title">
+              <h3 class="title-game">SPIDER-MAN WALL CRAWLER</h3>
+            </div>
+          </a>
+        </div>
+    
+        <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-12561-1d4wi9b_2427fce2.jpeg?region=0%2C0%2C400%2C300" />
+            <div class="box-title">
+              <h3 class="title-game">SPIDER-MAN WEB SHOOTER</h3>
+            </div>
+          </a>
+        </div>
+    
+        <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-12561-1l5bect_749a0a4a.jpeg?region=0%2C0%2C600%2C450" />
+            <div class="box-title">
+              <h3 class="title-game">SPIDER-MAN WEB SLINGER</h3>
+            </div>
+          </a>
+        </div>
+    
+      </div>
+
+    </div>
+
+    <div class="show-more">
+
+      <button href="#!" id="nextbtn" style="--color:#fff;--border:2px;--slant:.5em">SHOW MORE</button>
+      <button href="#!" id="prevbtn" style="--color:#fff;--border:2px;--slant:.5em">SHOW LESS</button>
+    
+    </div>
+
+  </div>
+
+  <div class="content">
+
+    <h2 class="h2-games2">
+      MARVEL RISING GAMES
+    </h2>
+    
+  </div>
+
+  <div class="container-games">
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/marvelrisingmix_thumbnail_600450_93106db6.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">MARVEL RISING MIX & MATCH</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/thumbs_secretwarriors_small_11acef35.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">WHICH SECRET WARRIOR ARE YOU?</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/thumbs_msmarvel_small_209eae46.jpeg?region=0%2C0%2C360%2C270" />
+        <div class="box-title">
+          <h3 class="title-game">HOW WELL DO YOU KNOW MS.MARVEL?</h3>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="container-games">
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/mrsw_match_thumbnail_600450_b44640b3.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">MARVEL RISING MEMORY MATCH</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/thumbs_squirrelgirl_small_600x450_2ffa192d.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">HOW WELL DO YOU KNOW SQUIRREL GIRL?</h3>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="content">
+
+    <h2 class="h2-games2">
+      AVENGERS GAMES
+    </h2>
+    
+  </div>
+
+  <div class="container-ShowMore">
+
+    <div class="Content1">
+
+      <div class="container-games">
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/hulk_thumb_600x450_4e65ea20.png?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">MARVEL'S INCRIDIBLE HULK - CHITAURI TAKEDOWN</h3>
+          </div>
+        </a>
+      </div>
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/captainamerica-shieldstrike_600x450px_v2_cdc00f88.jpeg?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">CAPTAIN AMERICA: SHIELD STRIKE</h3>
+          </div>
+        </a>
+      </div>
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/thumbs_ironman_small_079e4b26.png?region=0%2C0%2C360%2C270" />
+          <div class="box-title">
+            <h3 class="title-game">HOW WELL DO YOU KNOW IRON MAN?</h3>
+          </div>
+        </a>
+      </div>
+  
+      </div>
+  
+      <div class="container-games">
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/avengers_splash_600_52e2b129.jpeg?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">AVENGERS HYDRA DASH</h3>
+          </div>
+        </a>
+      </div>
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/thumb_blackpanther_small_600x450_f833bae9.jpeg?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">HOW WELL DO YOU KNOW BLACK PANTHER?</h3>
+          </div>
+        </a>
+      </div>
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/cm_largegamethumbnails_galacticflight_600x450_aff7c911.png?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">CAPTAIN MARVEL: GALACTIC FLIGHT</h3>
+          </div>
+        </a>
+      </div>
+  
+      </div>
+  
+      <div class="container-games">
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/amw_largegamethumbnails_attackoftherobots_600x450_1_3c8ca26d.jpeg?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">ANT MAN AND THE WASP: ATTACK OF THE ROBOTS</h3>
+          </div>
+        </a>
+      </div>
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/thumbs_avengers_small_600x450_8e0eca15.jpeg?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">WHICH AVENGER ARE YOU?</h3>
+          </div>
+        </a>
+      </div>
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/600x450-vibraniumhunt-promo_86f99796.jpeg?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">BLACK PANTHER: VIBRANIUM HUNT</h3>
+          </div>
+        </a>
+      </div>
+  
+      </div>
+
+    <div>
+
+    <div class="Content2">
+
+      <div class="container-games">
+  
+      <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/600x450-blackpanther-promo_0e604e0f.jpeg?region=0%2C0%2C600%2C450" />
+            <div class="box-title">
+              <h3 class="title-game">BLACK PANTHER: JUNGLE PURSUIT</h3>
+            </div>
+          </a>
+      </div>
+    
+      <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/tmk_largegamethumbnails_thorbossbattle_600x450_1_38e48d46.png?region=0%2C0%2C600%2C450" />
+            <div class="box-title">
+              <h3 class="title-game">THOR: BOSS BATTLES</h3>
+            </div>
+          </a>
+      </div>
+    
+      <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/avm_thumbnail_600450_a69d76e2.jpeg?region=0%2C0%2C600%2C450" />
+            <div class="box-title">
+              <h3 class="title-game">AVENGERS MATCH</h3>
+            </div>
+          </a>
+      </div>
+    
+      </div>
+
+      <div class="container-games">
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/marvelmaniamix_thumbnail_600450_53841f28.png?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">MARVEL MANIA MIX</h3>
+          </div>
+        </a>
+      </div>
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/cyoims_thumbnail_1_1_4711ee05.jpeg?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">CREATE YOUR OWN IRON MAN SUIT</h3>
+          </div>
+        </a>
+      </div>
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/ironmanstickerbook_thumbnail_600450_5cb0c1a3.png?region=0%2C0%2C600%2C450" />
+          <div class="box-title">
+            <h3 class="title-game">CREATE YOUR OWN IRON MAN POSTER</h3>
+          </div>
+        </a>
+      </div>
+  
+      </div>
+
+    </div>
+
+    <div class="Content3">
+
+      <div class="container-games">
+  
+      <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/600x450-ant-man-promo_0513316f.jpeg?region=0%2C0%2C360%2C270" />
+            <div class="box-title">
+              <h3 class="title-game">ANT MAN: COMBAT TRAINING</h3>
+            </div>
+          </a>
+      </div>
+    
+      <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/ironman_600_450_318551ab.png?region=0%2C0%2C600%2C450" />
+            <div class="box-title">
+              <h3 class="title-game">IRON MAN: RISE OF ULTRON</h3>
+            </div>
+          </a>
+      </div>
+    
+      <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/usa_avengers_gt_recruits_hcias_games_a3a7047b.jpeg?region=0%2C0%2C600%2C450" />
+            <div class="box-title">
+              <h3 class="title-game">AVENGERS RECRUITS: CREATE YOUR OWN SUPER HERO POSTER</h3>
+            </div>
+          </a>
+      </div>
+    
+      </div>
+
+      <div class="container-games">
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/thor_600_450_v4_18147b75.png?region=0%2C0%2C601%2C451" />
+          <div class="box-title">
+            <h3 class="title-game">THOR: FROST GIANT FRENZY</h3>
+          </div>
+        </a>
+      </div>
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/usa_marvelkids_gt_mshs-im_n_e80d4bbf.jpeg?region=0%2C0%2C400%2C300" />
+          <div class="box-title">
+            <h3 class="title-game">BLAST LIKE IRON MAN</h3>
+          </div>
+        </a>
+      </div>
+  
+      <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/usa_avengers_gt_avntactics_n_2d53e664.jpeg?region=0%2C0%2C400%2C300" />
+          <div class="box-title">
+            <h3 class="title-game">AVENGERS TACTICS</h3>
+          </div>
+        </a>
+      </div>
+  
+      </div>
+
+    </div>
+
+    <div class="Content4">
+
+      <div class="container-games">
+  
+        <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-7119-p1ge6u_e966b110.jpeg?region=0%2C0%2C400%2C300" />
+            <div class="box-title">
+              <h3 class="title-game">AVENGERS HERO UP</h3>
+            </div>
+          </a>
+        </div>
+    
+        <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/usa_marvelkids_gt_mshs-capt_n_7791718f.jpeg?region=0%2C0%2C400%2C300" />
+            <div class="box-title">
+              <h3 class="title-game">THROW SHIELDS LIKE CAPTAIN AMERICA</h3>
+            </div>
+          </a>
+        </div>
+    
+        <div class="card-game">
+          <a href="#!">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/usa_marvelkids_gt_mshs-hulk_n_d714c4be.jpeg?region=0%2C0%2C400%2C300" />
+            <div class="box-title">
+              <h3 class="title-game">SMASH LIKE HULK</h3>
+            </div>
+          </a>
+        </div>
+    
+      </div>
+
+      <div class="container-games">
+  
+        <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/usa_marvelkids_gt_mshs-thor_n_ccfe1f21.jpeg?region=0%2C0%2C400%2C300" />
+          <div class="box-title">
+            <h3 class="title-game">SUMMON LIGHTNING LIKE THOR</h3>
+          </div>
+        </a>
+        </div>
+  
+        <div class="card-game">
+        <a href="#!">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/usa_marvelkids_gt_mshs-bw_n_f63dc362.jpeg?region=0%2C0%2C400%2C300" />
+          <div class="box-title">
+            <h3 class="title-game">BREAK CODES LIKE BLACK WIDOW</h3>
+          </div>
+        </a>
+        </div>
+  
+      </div>
+
+    </div>
+
+    <div class="show-more">
+
+      <button href="#!" id="morebtn" style="--color:#fff;--border:2px;--slant:.5em">SHOW MORE</button>
+      <button href="#!" id="lessbtn" style="--color:#fff;--border:2px;--slant:.5em">SHOW LESS</button>
+    
+    </div>
+
+  </div>
+
+  <div class="content">
+
+    <h2 class="h2-guardians">
+      GUARDIANS OF THE GALAXY GAMES
+    </h2>
+    
+  </div>
+
+  <div class="container-games">
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/gotg_thumbnail_600450_318bed96.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">GUARDIANS OF THE GALAXY MATCH</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/cyogotg_thumbnail_600450_9c409f40.jpeg?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">CREATE YOUR OWN GUARDIANS OF THE GALAXY</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/guardiansstickerbook_thumbnail_600450_909be411.png?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">GO GALACTIC: GUARDIANS OF THE GALAXY POSTER CREATOR</h3>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="container-games">
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/usa_gotg_gt_defendgalaxy_n_d58db20f.jpeg?region=0%2C0%2C400%2C300" />
+        <div class="box-title">
+          <h3 class="title-game">GUARDIANS OF THE GALAXY: DEFEND THE GALAXY MARVEL'S GUARDIANS OF THE GALAXY</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/titlescreen_600450_090215_6c2c4221.png?region=0%2C0%2C600%2C450" />
+        <div class="box-title">
+          <h3 class="title-game">GUARDIANS OF THE GALAXY: LEGENDARY RELIC MARVEL'S GUARDIANS OF THE GALAXY</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/usa_marvelkids_gt_mshs-groot_n_24fd2171.jpeg?region=0%2C0%2C400%2C300" />
+        <div class="box-title">
+          <h3 class="title-game">COLLECT GROOT'S LIGHT PARTICLES</h3>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="container-games">
+
+    <div class="card-game">
+      <a href="#!">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/usa_marvelkids_gt_mshs-rocket_n_e83a35e5.jpeg?region=0%2C0%2C400%2C300" />
+        <div class="box-title">
+          <h3 class="title-game">FLY LIKE ROCKET RACCOON</h3>
+        </div>
+      </a>
+    </div>
+
+  </div>
+  
+
+{% endblock Games-content %}
+
+{% block Shop-content %}
+  <div class="content">
+  <h2 class="h2-shop">Shop Marvel</h2>
+  </div>
+
+  <div class="container-ShowMore">
+
+    <div class="container-shop">
+      {% for add in slide_shop %}
+      <div class="merch-thumb">
+        <a href="{% url 'detail-shops' add.id %}">
+          <img class="hover-merch" src="{{add.photos}}" />
+        
+          <div class="thumb-title">  
+            <h3 class="title-merch">{{add.title}}</h3>
+            <p class="price-merch">Rp. {{add.price}}<p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="container-shop">
+      {% for add in slide_shop1 %}
+      <div class="merch-thumb">
+        <a href="{% url 'shop' %}">
+          <img class="hover-merch" src="{{add.photos}}" />
+        
+          <div class="thumb-title">  
+            <h3 class="title-merch">{{add.title}}</h3>
+            <p class="price-merch">Rp. {{add.price}}<p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  
+    <div class="container-shop">
+      {% for add in slide3 %}
+      <div class="merch-thumb">
+        <a href="{% url 'shop' %}">
+          <img class="hover-merch" src="{{add.photos}}" />
+        
+          <div class="thumb-title">  
+            <h3 class="title-merch">{{add.title}}</h3>
+            <p class="price-merch">Rp. {{add.price}}<p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+  
+      </div>
+
+    </div>
+
+    <div class="show-more">
+
+      <a href="{% url 'shop' %}"><button href="#!" id="morebtn" style="--color:#fff;--border:2px;--slant:.5em">More to Shop</button></a>
+      <button href="#!" id="lessbtn" style="--color:#fff;--border:2px;--slant:.5em">SHOW LESS</button>
+    
+    </div>
+
+{% endblock Shop-content %}
+        
+{% block Footer %}
+
+  <div class="container-foot">
+
+    <section class="nb-copyright">
+
+      <div class="copyrt">
+        <img width="150px" height="120px" src="{% static 'images/marvel-logo.png' %}">
+	      <p class="color">© 2022 MARVEL<p> 
+          <a href="#!">Terms of Use</a>
+          <a href="#!">Contact Us</a>
+          <a href="#!">Privacy Policy</a>
+          <a href="#!">Do Not Sell My Info</a>
+      </div>
+
+    </section>
+
+  </div>
+
+{% endblock Footer %}
+
+<!-- (js script must be put before close tag body)  -->
+<!-- jQuery (always put this first) -->                   
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Slick Script  -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ 
+<!-- Our Script -->
+<script type="text/javascript" src="{% static 'js/style.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slider-char.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slider-comic.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/slider-game.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/button.js' %}"></script>
+ 
+</body>
+</html>

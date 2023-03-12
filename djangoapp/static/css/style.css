@@ -1,0 +1,2668 @@
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900";
+ * {
+	 box-sizing: border-box;
+}
+ body {
+	 overflow-x: hidden;
+	 background: url("/static/images/bg.jpg");
+}
+ html {
+	 overflow-x: hidden;
+}
+ .noscroll {
+	 overflow: hidden;
+}
+ .content {
+	 width: 80%;
+	 height: auto;
+	 margin-left: auto;
+	 margin-right: auto;
+	 align-self: center;
+}
+ .content h1 {
+	 font-family: 'Source Sans Pro', sans-serif;
+	 font-size: 1em;
+	 font-weight: 300;
+	 line-height: 1.5em;
+	 color: #fff;
+	 font-size: 3em;
+}
+ .content .h2-comic {
+	 font-family: 'Source Sans Pro', sans-serif;
+	 font-size: 1em;
+	 font-weight: 300;
+	 line-height: 1.5em;
+	 color: #fff;
+	 font-size: 1.5em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 1em;
+	 margin-left: 9.5em;
+	 color: #fff;
+}
+ .content .h2-content {
+	 font-family: 'Source Sans Pro', sans-serif;
+	 font-size: 1em;
+	 font-weight: 300;
+	 line-height: 1.5em;
+	 color: #fff;
+	 font-size: 1.5em;
+	 font-weight: 500;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 1em;
+	 margin-left: 0.5em;
+	 color: #fff;
+}
+ .content .h2-Detail__Movie {
+	 font-family: 'Source Sans Pro', sans-serif;
+	 font-size: 1em;
+	 font-weight: 300;
+	 line-height: 1.5em;
+	 color: #fff;
+	 font-size: 2em;
+	 text-align: center;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 1em;
+	 color: #fff;
+}
+ .content .h2-Detail__Comic {
+	 font-family: 'Source Sans Pro', sans-serif;
+	 font-size: 1em;
+	 font-weight: 300;
+	 line-height: 1.5em;
+	 color: #fff;
+	 font-size: 2em;
+	 text-align: center;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 1em;
+	 color: #fff;
+}
+ .content p {
+	 font-family: 'Source Sans Pro', sans-serif;
+	 font-size: 1em;
+	 font-weight: 300;
+	 line-height: 1.5em;
+	 color: #fff;
+}
+ .content .title-marvel__comic {
+	 font-family: 'Source Sans Pro', sans-serif;
+	 font-size: 2.5em;
+	 color: #fff;
+}
+ .content .h2-game {
+	 font-size: 1.2em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 1em;
+	 margin-left: 3.8em;
+	 color: #fff;
+}
+ .content .h2-game1 {
+	 position: relative;
+	 font-size: 1.2em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 top: 0.5em;
+	 margin-bottom: 1em;
+	 margin-left: 12em;
+	 color: #fff;
+}
+ .content .h2-games {
+	 position: relative;
+	 font-size: 1.2em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-bottom: 1em;
+	 top: 0.5em;
+	 left: 12.8em;
+	 color: #fff;
+}
+ .content .h2-games1 {
+	 position: relative;
+	 font-size: 1.2em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 5em;
+	 margin-bottom: 1em;
+	 left: 12.5em;
+	 top: 0.5em;
+	 color: #fff;
+}
+ .content .h2-games2 {
+	 position: relative;
+	 font-size: 1.2em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 5em;
+	 margin-bottom: 1em;
+	 top: 0.5em;
+	 left: 12.5em;
+	 color: #fff;
+}
+ .content .h2-guardians {
+	 position: relative;
+	 font-size: 1.2em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 5em;
+	 margin-bottom: 1em;
+	 top: 0.5em;
+	 left: 4.5em;
+	 color: #fff;
+}
+ .content .h2-merch {
+	 position: relative;
+	 font-size: 2em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 1em;
+	 text-align: center;
+	 color: #fff;
+}
+ .content .h2-shop {
+	 position: relative;
+	 font-size: 1.2em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 5em;
+	 top: 0.5em;
+	 left: 4.2em;
+	 color: #fff;
+}
+ .content .video-thumb-grid {
+	 position: relative;
+	 font-size: 0;
+	 width: calc(100% + 1rem);
+}
+ .content .video-thumb {
+	 display: inline-block;
+	 vertical-align: top;
+	 text-decoration: none;
+	 width: calc((100% - 4rem) / 2);
+	 height: 0;
+	 padding-top: calc(((100% - 4.3rem) / 2) * 0.5625);
+	 margin: 1rem 1rem;
+	 overflow: hidden;
+	 position: relative;
+	 font-size: 1rem;
+	 -webkit-transform: scale(1);
+	 -moz-transform: scale(1);
+	 -ms-transform: scale(1);
+	 -o-transform: scale(1);
+	 transform: scale(1);
+	 box-shadow: 0 0 0 rgba(0, 0, 0, 0.0);
+	 -webkit-transition: all 0.2s ease-out 0.05s;
+	 -moz-transition: all 0.2s ease-out 0.05s;
+	 -o-transition: all 0.2s ease-out 0.05s;
+	 transition: all 0.2s ease-out 0.05s;
+}
+ .content .video-thumb:hover {
+	 -webkit-transform: scale(1.05);
+	 -moz-transform: scale(1.05);
+	 -ms-transform: scale(1.05);
+	 -o-transform: scale(1.05);
+	 transform: scale(1.05);
+	 box-shadow: 0 2px 4px rgba(13, 1, 61, 0.35);
+}
+ .content .video-thumb img {
+	 display: block;
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 left: -0.5rem;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 object-fit: cover;
+	 object-position: 50% 50%;
+	 background: #2b2b2b;
+}
+ .video-modal {
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 3000;
+	 overflow: hidden;
+	 position: fixed;
+	 opacity: 0;
+	 -webkit-transform: translate(500%, 0%);
+	 -moz-transform: translate(500%, 0%);
+	 -ms-transform: translate(500%, 0%);
+	 -o-transform: translate(500%, 0%);
+	 transform: translate(500%, 0%);
+	 -webkit-transition: -webkit-transform 0s linear 0s;
+	 -moz-transition: -moz-transform 0s linear 0s;
+	 -o-transition: -o-transform 0s linear 0s;
+	 transition: transform 0s linear 0s;
+	 display: -webkit-box;
+	 display: -webkit-flex;
+	 display: flex;
+	 -webkit-box-align: center;
+	 -moz-box-align: center;
+	 -ms-box-align: center;
+	 -ms-flex-align: center;
+	 -webkit-align-items: center;
+	 align-items: center;
+	 -webkit-transform-style: preserve-3d;
+	 -moz-transform-style: preserve-3d;
+	 transform-style: preserve-3d;
+}
+ .video-modal .overlay {
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 3000;
+	 z-index: 0;
+	 background: rgba(0, 0, 0, 0.82);
+	 opacity: 0;
+	 -webkit-transition: opacity 0.2s ease-out 0.05s;
+	 -moz-transition: opacity 0.2s ease-out 0.05s;
+	 -o-transition: opacity 0.2s ease-out 0.05s;
+	 transition: opacity 0.2s ease-out 0.05s;
+}
+ .video-modal-content {
+	 position: relative;
+	 top: auto;
+	 right: auto;
+	 bottom: auto;
+	 left: auto;
+	 z-index: 1;
+	 margin: 0 auto;
+	 overflow-y: visible;
+	 background: #000;
+	 width: calc(100% - 12em);
+	 height: 0;
+	 padding-top: calc((100% - 12em) * 0.5625);
+}
+ .close-video-modal {
+	 display: block;
+	 position: absolute;
+	 left: 0;
+	 top: -40px;
+	 text-decoration: none;
+	 font-size: 20px;
+	 font-weight: bold;
+	 color: #fff;
+}
+ .close-video-static {
+	 display: block;
+	 position: absolute;
+	 left: 0;
+	 top: -40px;
+	 text-decoration: none;
+	 font-size: 20px;
+	 font-weight: bold;
+	 color: #fff;
+}
+ iframe#youtube {
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 1;
+	 background: #000;
+	 box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
+}
+ .show-video-modal .video-modal {
+	 opacity: 1;
+	 transform: translate(0%, 0%);
+	 -ms-transform: translate(0%, 0%);
+	 -moz-transform: translate(0%, 0%);
+	 -o-transform: translate(0%, 0%);
+	 -webkit-transform: translate(0%, 0%);
+}
+ .show-video-modal .video-modal .overlay {
+	 opacity: 1;
+}
+ .show-video-modal .video-modal-content {
+	 transform: translate(0%, 0%);
+	 -moz-transform: translate(0%, 0%);
+	 -o-transform: translate(0%, 0%);
+	 -ms-transform: translate(0%, 0%);
+	 -webkit-transform: translate(0%, 0%);
+}
+ .nav-h1 {
+	 color: #fff;
+	 text-align: center;
+	 font-size: 2rem;
+	 font-weight: bold;
+	 line-height: 1.4;
+	 font-size: 2.2rem;
+}
+ .nav-h2 {
+	 color: #fff;
+	 text-align: center;
+	 font-size: 2rem;
+	 font-weight: bold;
+	 line-height: 1.4;
+}
+ .nav-p {
+	 color: #fff;
+	 font-size: 1.3rem;
+	 text-align: center;
+	 line-height: 1.4;
+	 margin-bottom: 10px;
+}
+ .headline {
+	 width: 100%;
+	 min-height: 450px;
+	 background: url('/static/images/t1.jpg');
+	 background-size: cover;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+}
+ .header-banner-top {
+	 text-align: center;
+}
+ .header-banner-top .primary-wrapper {
+	 margin: 0 auto;
+	 max-width: 900px;
+}
+ .header-banner-top .hidden {
+	 display: none;
+}
+ .header-banner-top .horizontal-nav ul {
+	 list-style: none;
+	 margin: 0;
+	 padding: 0;
+}
+ .header-banner-top .horizontal-nav li {
+	 display: inline-block;
+}
+ .header-banner-top .horizontal-nav a {
+	 display: block;
+	 padding: 1.5em 1em;
+	 color: #fff;
+	 text-decoration: none;
+	 text-transform: uppercase;
+	 font-size: 13px;
+	 letter-spacing: 1px;
+}
+ .header-banner-top .horizontal-nav a:hover {
+	 color: #fdfdfd;
+}
+ .header-banner-top .horizontal-nav .folder {
+	 position: relative;
+	 cursor: pointer;
+}
+ .header-banner-top .horizontal-nav .folder ul {
+	 display: block;
+	 position: absolute;
+	 top: -9999px;
+	 left: 0;
+	 z-index: 999;
+	 background-color: #000;
+	 transition: padding 0.14s ease-out;
+	 text-align: left;
+}
+ .header-banner-top .horizontal-nav .folder li {
+	 display: block;
+}
+ .header-banner-top .horizontal-nav .folder:hover ul {
+	 top: 100%;
+	 padding: 0.5em 0;
+}
+ .header-banner-top .horizontal-nav .folder a {
+	 padding: 0.5em 1em;
+	 white-space: nowrap;
+}
+ .header-banner-top .horizontal-nav .active-link a {
+	 color: #fdfdfd;
+}
+ .header-banner-top .mobile-menu-box {
+	 display: none;
+}
+ .header-banner-top .mobile-menu-label {
+	 display: none;
+}
+ .header-banner-top .banner {
+	 position: relative;
+}
+ .header-banner-top .banner .banner-image {
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+}
+ .header-banner-top .banner .primary-wrapper {
+	 position: relative;
+	 padding-top: 150px;
+	 padding-bottom: 150px;
+}
+ .header-banner-top .main-navigation {
+	 background: #000;
+}
+ .container-comic {
+	 display: flex;
+	 flex-direction: row;
+	 width: 80%;
+	 margin-left: auto;
+	 margin-right: auto;
+	 background: #000;
+}
+ .slider-comic {
+	 overflow: hidden;
+	 width: 50vw;
+	 height: 46vh;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+
+ .slick-dots .slick-active button:before {
+	 color: #fff !important;
+}
+ .slick-dots li button:before {
+	 color: #fff;
+}
+ .container-flex {
+	 display: flex;
+	 flex-direction: row;
+	 align-self: center;
+	 background: #fff;
+	 width: 80%;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ .card-comic {
+	 position: relative;
+	 overflow: hidden;
+	 transition: ease 0.3s;
+}
+ .card-comic .hover-comic {
+	 width: 170px;
+	 height: 264px;
+	 transition: ease 0.3s;
+	 -webkit-transition: ease 0.3s;
+	 -moz-transition: ease 0.3s;
+	 -o-transition: ease 0.3s;
+	 -ms-transition: ease 0.3s;
+}
+ .card-comic:hover .hover-comic {
+	 -ms-transform: scale(1.2);
+	 -moz-transform: scale(1.2);
+	 -o-transform: scale(1.2);
+	 -webkit-transform: scale(1.2);
+	 transform: scale(1.2);
+	 filter: brightness(25%);
+	 -webkit-filter: brightness(25%);
+	 -ms-filter: brightness(25%);
+}
+ .card-comic:hover .title-comic {
+	 opacity: 1;
+	 z-index: 2;
+}
+ .card-comic .title-comic {
+	 padding: 0 10px;
+	 font-family: sans-serif;
+	 position: absolute;
+	 top: 4.5em;
+	 left: 0;
+	 right: 0;
+	 font-weight: bold;
+	 font-size: 1.1em;
+	 text-align: center;
+	 color: azure;
+	 opacity: 0;
+	 z-index: 0;
+}
+ .comic-shadow {
+	 align-self: center;
+	 margin: 15px;
+	 width: 170px;
+	 height: 264px;
+	 box-shadow: -15px 20px 20px 1px transparent;
+}
+ .left {
+	 position: absolute;
+	 top: 60em;
+	 left: 18em;
+}
+ .right {
+	 position: absolute;
+	 top: 60em;
+	 right: 15em;
+}
+ .container-char {
+	 width: 100%;
+	 display: grid;
+	 grid-gap: 10px;
+	 font-family: sans-serif;
+	 grid-template-columns: 4fr 4fr;
+	 grid-template-areas: "left-item__char right-item__char";
+}
+ .left-item__char {
+	 grid-area: left-item__char;
+	 max-height: 100%;
+}
+ .right-item__char {
+	 grid-area: right-item__char;
+	 max-height: 100%;
+}
+ .item-game {
+	 grid-area: item-game;
+}
+ .left-item__headline-movie {
+	 max-height: 100%;
+	 grid-area: left-item__movie;
+}
+ .left-item__headline-movie img {
+	 width: 100%;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ .left-item__headline-movies {
+	 max-height: 100%;
+	 grid-area: left-item__movies;
+}
+ .left-item__headline-movies img {
+	 width: 100%;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ .right-item__movie {
+	 grid-area: right-item__movie;
+	 margin-top: 2em;
+	 max-height: 100%;
+}
+ .container-grid {
+	 width: 100%;
+	 display: grid;
+	 grid-gap: 10px;
+	 font-family: sans-serif;
+	 grid-template-columns: 4fr 4fr;
+	 grid-template-areas: "left-item__movie right-item__movie" "left-item__movies right-item__movie";
+}
+ .slider-char {
+	 overflow: hidden;
+	 width: 40vw;
+	 height: 45vh;
+	 margin: 0 0 2em;
+}
+ .slider-char .card-char {
+	 margin: 20px 10px;
+}
+ .container-foot {
+	 display: flex;
+	 flex-direction: row;
+	 background: #000;
+	 width: 100vw;
+	 margin: auto -12em;
+	 margin-top: 10%;
+}
+ .nb-copyright {
+	 width: 100%;
+	 text-align: center;
+	 overflow: hidden;
+}
+ .nb-copyright .copyrt {
+	 font-size: 14px;
+}
+ .nb-copyright .copyrt a {
+	 text-decoration: none;
+	 color: #fff;
+	 margin: 15px 15px;
+}
+ .color {
+	 color: #fff;
+}
+ .card-headline-game {
+	 width: 550px;
+	 height: 300px;
+	 position: relative;
+	 overflow: hidden;
+	 transition: ease 0.3s;
+	 position: relative;
+	 overflow: hidden;
+	 transition: ease 0.3s;
+}
+ .card-headline-game .title-headline-game {
+	 width: 550px;
+	 font-family: 'Comic Neue', cursive;
+	 position: absolute;
+	 top: 7.5em;
+	 left: 0;
+	 right: 0;
+	 font-weight: bold;
+	 font-size: 1.1em;
+	 text-align: center;
+	 color: azure;
+	 opacity: 0;
+	 z-index: 0;
+	 font-family: sans-serif;
+	 position: absolute;
+	 left: 0;
+	 right: 0;
+	 font-weight: bold;
+	 font-size: 1.1em;
+	 text-align: center;
+	 color: azure;
+	 opacity: 0;
+	 z-index: 0;
+}
+ .card-headline-game .hover-headline-game {
+	 width: 550px;
+	 height: 300px;
+	 transition: ease 0.3s;
+	 -webkit-transition: ease 0.3s;
+	 -moz-transition: ease 0.3s;
+	 -o-transition: ease 0.3s;
+	 -ms-transition: ease 0.3s;
+	 width: 100%;
+	 height: auto;
+	 transition: ease 0.3s;
+	 -webkit-transition: ease 0.3s;
+	 -moz-transition: ease 0.3s;
+	 -o-transition: ease 0.3s;
+	 -ms-transition: ease 0.3s;
+}
+ .card-headline-game:hover .hover-headline-game {
+	 -ms-transform: scale(1.2);
+	 -moz-transform: scale(1.2);
+	 -o-transform: scale(1.2);
+	 -webkit-transform: scale(1.2);
+	 transform: scale(1.2);
+	 filter: brightness(25%);
+	 -webkit-filter: brightness(25%);
+	 -ms-filter: brightness(25%);
+	 -ms-transform: scale(1.2);
+	 -moz-transform: scale(1.2);
+	 -o-transform: scale(1.2);
+	 -webkit-transform: scale(1.2);
+	 transform: scale(1.2);
+	 filter: brightness(25%);
+	 -webkit-filter: brightness(25%);
+	 -ms-filter: brightness(25%);
+}
+ .card-headline-game:hover .title-headline-game {
+	 opacity: 1;
+	 z-index: 2;
+	 opacity: 1;
+	 z-index: 2;
+}
+ .card-cat {
+	 width: 234px;
+	 height: 176px;
+	 position: relative;
+	 overflow: hidden;
+	 transition: ease 0.3s;
+}
+ .card-cat .hover-game-cat {
+	 width: 234px;
+	 height: 176px;
+	 transition: ease 0.3s;
+	 -webkit-transition: ease 0.3s;
+	 -moz-transition: ease 0.3s;
+	 -o-transition: ease 0.3s;
+	 -ms-transition: ease 0.3s;
+}
+ .card-cat:hover .hover-game-cat {
+	 -ms-transform: scale(1.2);
+	 -moz-transform: scale(1.2);
+	 -o-transform: scale(1.2);
+	 -webkit-transform: scale(1.2);
+	 transform: scale(1.2);
+}
+ .slider-game {
+	 overflow: hidden;
+	 width: 70vw;
+	 height: 45vh;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ .slider-game .slick-dots {
+	 position: relative;
+	 top: 1.5em;
+	 left: 0;
+	 right: 0;
+}
+ .container-game {
+	 width: 50vw;
+	 height: auto;
+	 display: flex;
+	 flex-direction: row;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ .container-games {
+	 width: 50vw;
+	 height: auto;
+	 display: flex;
+	 flex-direction: row;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ .container-games .card-game {
+	 margin: 10px 10px;
+	 width: 234px;
+	 height: 176px;
+}
+ .card-game {
+	 position: relative;
+	 overflow: hidden;
+	 transition: ease 0.3s;
+}
+ .card-game .title-game {
+	 font-family: sans-serif;
+	 position: absolute;
+	 top: 3.5em;
+	 left: 0;
+	 right: 0;
+	 font-weight: bold;
+	 font-size: 1em;
+	 text-align: center;
+	 color: azure;
+	 opacity: 0;
+	 z-index: 0;
+}
+ .card-game img {
+	 width: 100%;
+	 height: auto;
+	 transition: ease 0.3s;
+	 -webkit-transition: ease 0.3s;
+	 -moz-transition: ease 0.3s;
+	 -o-transition: ease 0.3s;
+	 -ms-transition: ease 0.3s;
+}
+ .card-game:hover img {
+	 -ms-transform: scale(1.2);
+	 -moz-transform: scale(1.2);
+	 -o-transform: scale(1.2);
+	 -webkit-transform: scale(1.2);
+	 transform: scale(1.2);
+	 filter: brightness(25%);
+	 -webkit-filter: brightness(25%);
+	 -ms-filter: brightness(25%);
+}
+ .card-game:hover .title-game {
+	 opacity: 1;
+	 z-index: 2;
+}
+ .merch-thumb .hover-merch {
+	 width: 150px;
+	 height: 150px;
+	 transition: ease 0.3s;
+	 -moz-transition: ease 0.3s;
+	 -ms-transition: ease 0.3s;
+	 -o-transition: ease 0.3s;
+	 -webkit-transition: ease 0.3s;
+}
+ .merch-thumb:hover .hover-merch {
+	 width: 150px;
+	 height: 150px;
+	 transform: translateY(-8px);
+	 -moz-transform: translateY(-8px);
+	 -ms-transform: translateY(-8px);
+	 -o-transform: translateY(-8px);
+	 -webkit-transform: translateY(-8px);
+}
+
+.merch-thumb .image-detail__shop{
+	width: 400px;
+	height: auto;
+}
+
+ .thumb-title {
+	 width: 80%;
+}
+ .thumb-title .title-merch {
+	 margin: 10px 15px;
+	 width: 100%;
+	 text-decoration: none;
+	 letter-spacing: 0.5px;
+	 line-height: 1.15;
+	 font-size: 15px;
+	 color: #fff;
+	 font-family: sans-serif;
+	 text-align: center;
+}
+ .thumb-title .price-merch {
+	 margin: 10px 15px;
+	 width: 100%;
+	 text-decoration: none;
+	 letter-spacing: 0.5px;
+	 line-height: 1.15;
+	 font-size: 18px;
+	 font-weight: bold;
+	 color: #fff;
+	 font-family: sans-serif;
+	 text-align: center;
+}
+ a {
+	 text-decoration: none;
+}
+ .container-shop {
+	 margin-top: 1em;
+	 width: 50vw;
+	 height: auto;
+	 display: flex;
+	 flex-direction: row;
+	 margin-left: auto;
+	 margin-right: auto;
+	 font-family: sans-serif;
+}
+
+.container-shop .merch-thumb {
+	margin: 10px;
+}
+
+.container-shops {
+	margin-top: 1em;
+	width: 80%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: sans-serif;
+}
+
+.container-shops .merch-thumb {
+	margin:0 20px;
+}
+
+ .container-shop1 {
+	 width: 50vw;
+	 height: auto;
+	 display: flex;
+	 flex-direction: row;
+	 margin-left: auto;
+	 margin-right: auto;
+	 font-family: sans-serif;
+}
+ .container-shop1 .merch-thumb {
+	 margin: 10px;
+}
+ .container-ShowMore {
+	 margin: 0 auto;
+	 width: 75%;
+}
+ .container-ShowMore .step2 {
+	 display: none;
+}
+ .container-ShowMore .item2 {
+	 display: none;
+}
+ .container-ShowMore .Content2 {
+	 display: none;
+}
+ .container-ShowMore #backbtn {
+	 display: none;
+}
+ .container-ShowMore #prevbtn {
+	 display: none;
+}
+ .container-ShowMore #lessbtn {
+	 display: none;
+}
+ .step3 {
+	 display: none;
+}
+ .item3 {
+	 display: none;
+}
+ .Content3 {
+	 display: none;
+}
+ .Content4 {
+	 display: none;
+}
+ .show-more {
+	 padding: 10px 0;
+	 text-align: center;
+}
+
+button {
+  
+	font-size: 35px;
+	padding: 0.4em 1.2em;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	color: #fff;
+	background: 
+	   linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+	   linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+	background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+	background-repeat: no-repeat;
+	box-shadow:
+	  0 0 0 200px inset var(--s,#0000),
+	  0 0 0 var(--border) inset var(--color);
+	clip-path: 
+		polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+				100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+			   );
+	transition: color var(--t,0.3s), background-size 0.3s;
+  }
+  
+  button:focus-visible {
+	outline-offset: calc(-1*var(--border));
+	outline: var(--border) solid #000c;
+	clip-path: none;
+	background-size: 0 0;
+  }
+  
+  button:hover,
+  button:active{
+	background-size: 100% 100%;
+	color: rgb(0, 0, 0);
+  }
+  
+ .card-char img {
+	 width: 200px;
+	 height: 200px;
+	 border-radius: 100%;
+	 transition: ease 0.3s;
+	 -moz-transition: ease 0.3s;
+	 -ms-transition: ease 0.3s;
+	 -o-transition: ease 0.3s;
+	 -webkit-transition: ease 0.3s;
+}
+ .card-char:hover img {
+	 -webkit-transform: translateY(-10px);
+	 -moz-transform: translateY(-10px);
+	 -ms-transform: translateY(-10px);
+	 -o-transform: translateY(-10px);
+	 transform: translateY(-10px);
+}
+ .thumb-title1 {
+	 width: 200px;
+}
+ .thumb-title1 .title-char {
+	 width: 200px;
+	 font-family: sans-serif;
+	 font: bold;
+	 margin: 5px 0;
+	 font-size: 1em;
+	 text-align: center;
+	 color: #fff;
+}
+ .content .h2-movies {
+	 font-size: 1.5em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 1em;
+	 margin-left: 0;
+	 color: #fff;
+}
+
+.content .h2-movies1 {
+	font-size: 1.5em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.155em;
+	margin-left: 0;
+	color: #fff;
+}
+
+ .slider-movie {
+	 overflow: hidden;
+	 width: 100%;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ .slider-movie .card-movie {
+	 width: 330px;
+	 height: 200px;
+}
+ .card-movie {
+	 position: relative;
+	 overflow: hidden;
+	 transition: ease 0.3s;
+}
+ .card-movie .video-banner-icon-play__Movie {
+	 position: relative;
+	 top: 9.5em;
+	 left: -1.5em;
+	 right: 0;
+}
+ .card-movie .hover-movie {
+	 width: 100%;
+	 height: 100%;
+	 transition: ease 0.3s;
+	 -webkit-transition: ease 0.3s;
+	 -moz-transition: ease 0.3s;
+	 -o-transition: ease 0.3s;
+	 -ms-transition: ease 0.3s;
+}
+ .card-movie:hover .hover-movie {
+	 -ms-transform: scale(1.2);
+	 -moz-transform: scale(1.2);
+	 -o-transform: scale(1.2);
+	 -webkit-transform: scale(1.2);
+	 transform: scale(1.2);
+	 filter: brightness(25%);
+	 -webkit-filter: brightness(25%);
+	 -ms-filter: brightness(25%);
+}
+ .card-movie:hover .title-movie {
+	 opacity: 1;
+	 z-index: 2;
+}
+ .card-movie .title-movie {
+	 padding: 0 10px;
+	 font-family: 'Source Sans Pro', sans-serif;
+	 position: absolute;
+	 top: 2.5em;
+	 left: 0;
+	 right: 0;
+	 font-weight: bold;
+	 font-size: 1.1em;
+	 text-align: center;
+	 color: #fff;
+	 opacity: 0;
+	 z-index: 0;
+}
+ .video-banner-icon-play__Movie {
+	 position: absolute;
+	 left: 11.5em;
+	 right: 0;
+	 margin: -15.5em 12.1em 0em;
+	 display: block;
+	 width: 2.5em;
+	 height: 2.5em;
+	 -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+	 -moz-transform: translateX(-50%) translateY(-50%) scale(1);
+	 -ms-transform: translateX(-50%) translateY(-50%) scale(1);
+	 -o-transform: translateX(-50%) translateY(-50%) scale(1);
+	 transform: translateX(-50%) translateY(-50%) scale(1);
+	 -webkit-transition: all 0.2s ease-out 0.05s;
+	 -moz-transition: all 0.2s ease-out 0.05s;
+	 -o-transition: all 0.2s ease-out 0.05s;
+	 transition: all 0.2s ease-out 0.05s;
+	 -webkit-transform: translateX(-50%) translateY(-50%) scale(1.2);
+	 -moz-transform: translateX(-50%) translateY(-50%) scale(1.2);
+	 -ms-transform: translateX(-50%) translateY(-50%) scale(1.2);
+	 -o-transform: translateX(-50%) translateY(-50%) scale(1.2);
+	 transform: translateX(-50%) translateY(-50%) scale(1.2);
+	 background: transparent;
+}
+ .shadow-movie {
+	 align-self: center;
+	 margin: 15px;
+	 width: 170px;
+	 height: 264px;
+	 box-shadow: -15px 20px 20px 1px transparent;
+}
+ video {
+	 position: absolute;
+	 height: 80%;
+	 left: 50%;
+	 transform: translateX(-50%);
+}
+ .container-foot__Movie {
+	 display: flex;
+	 flex-direction: row;
+	 background: #000;
+	 width: 100%;
+	 margin: 0;
+	 margin-top: 20%;
+}
+ .nb-copyright__Movie {
+	 width: 100%;
+	 text-align: center;
+	 overflow: hidden;
+}
+ .nb-copyright__Movie .copyrt__Movie {
+	 font-size: 14px;
+}
+ .nb-copyright__Movie .copyrt__Movie a {
+	 text-decoration: none;
+	 color: #fff;
+	 margin: 15px 15px;
+}
+
+.slider-detail__comic{
+	overflow: hidden;
+	width: 50vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ .slider-detail__comic .img__comic {
+	 width: 710px;
+	 margin: 20px;
+}
+ .container-foot__DetailComic {
+	 display: flex;
+	 flex-direction: row;
+	 background: #000;
+	 width: 100%;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+ .container-foot__DetailMovie {
+	 display: flex;
+	 flex-direction: row;
+	 background: #000;
+	 width: 100%;
+	 margin: 0;
+	 margin-top: 10%;
+}
+
+ .nb-copyright__DetailMovie {
+	 width: 100%;
+	 text-align: center;
+	 overflow: hidden;
+}
+ .nb-copyright__DetailMovie .copyrt__DetailMovie {
+	 font-size: 14px;
+}
+ .nb-copyright__DetailMovie .copyrt__DetailMovie a {
+	 text-decoration: none;
+	 color: #fff;
+	 margin: 15px 15px;
+}
+
+.container-feature__comic{
+	display: grid;
+	grid-template-areas: 
+	"auto auto auto auto auto";
+	gap: 10px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+}
+
+.card-feature__comic {
+	position: relative;
+	overflow: hidden;
+	transition: ease 0.3s;
+}
+
+.card-feature__comic .image-feature__comic{
+	width: 245px;
+	height: 360px;
+}
+
+.card-feature__comic:hover{
+	transform: translateY(-8px);
+	-moz-transform: translateY(-8px);
+	-o-transform: translateY(-8px);
+	-ms-transform: translateY(-8px);
+	-webkit-transform: translateY(-8px);
+}
+
+.card-feature__comic .title-feature__comic{
+	bottom: 0;
+	left: 0;
+	padding: 10px 0px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	z-index: 5;
+	color: #fff;
+	font-size: 80%;
+	font-weight: 500;
+	margin: 0;
+	text-shadow: 0 0 2px #000;
+}
+
+@media(max-width:600px){
+	.container-comics{
+		width: 50vw;
+		display: grid;
+		gap: 10px;
+		grid-template-areas: 
+		"auto auto auto"
+		"auto auto";
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+ .thumb-title-comics .title-comics {
+	 width: 50vw;
+	 color: #fff;
+	 position: relative;
+	 font-size: 1.5em;
+	 left: 15px;
+	 top: 25%;
+	 float: left;
+	 text-align: left;
+}
+ .thumb-title-comics .p-comics {
+	 width: 50vw;
+	 color: #fff;
+	 position: relative;
+	 font-size: 1em;
+	 left: 15px;
+	 top: 30%;
+	 float: left;
+	 text-align: left;
+}
+ .content .featured-comic {
+	 font-size: 1.8em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 1.5em;
+	 color: #fff;
+}
+ .content .h2-comics {
+	 font-size: 1.5em;
+	 font-weight: 600;
+	 text-transform: uppercase;
+	 letter-spacing: 0.155em;
+	 margin-top: 5em;
+	 margin-left: 9.5em;
+	 color: #fff;
+}
+
+.content .h2-comics1 {
+	font-size: 1.5em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.155em;
+	margin-left: 9.5em;
+	color: #fff;
+}
+
+ .container-foot__Comic {
+	 display: flex;
+	 flex-direction: row;
+	 background: #000;
+	 width: 100vw;
+	 margin: auto;
+	 margin-top: 10%;
+}
+ .container-shop12 {
+	 display: flex;
+	 flex-direction: row;
+	 margin-left: auto;
+	 margin-right: auto;
+	 width: 80%;
+}
+ .container-shop12 .hover-merch {
+	 align-self: center;
+	 margin: 0 10px;
+}
+
+.container-about{
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.box-title__about{
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+
+.box-title__about .bold{
+	font-weight: bold;
+}
+
+.box-title__about .h1-about{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #fff;
+	text-align: left;
+	margin:0 20px;
+	letter-spacing: 0.155em;
+}
+
+.box-title__about .h2-about{
+	position: relative;
+	font-size: 1.2em;
+	font-weight: 400;
+	margin: 15px 20px;
+	color: #fff;
+	
+	letter-spacing: 0.155em;
+}
+
+.content .h1-about{
+	font-size: 2em;
+	font-weight: 400;
+	color: #fff;
+	text-align: left;
+	margin: 20px 20px;
+	letter-spacing: 0.155em;
+}
+
+@media (max-width: 600px) {
+	.container-about{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.container-about img{
+		width: 80%;
+		height: auto;
+		align-self: center;
+	}
+	.container-about .h2-about{
+		position: relative;
+		top: 1em;
+		left: 1em;
+		font-size: 1em;
+		margin: 0;
+	}
+	.container-about .h1-about{
+		position: relative;
+		top: 0.5em;
+		left: 0.9em;
+		font-size: 1.1em;
+		margin: 0;
+	}
+	.content .h1-about{
+		position: relative;
+		top: 0;
+		text-align: center;
+	}
+}
+
+.container-about-myweb{
+	width: 80%;
+	display: flex;
+	flex-direction: row-reverse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content .about-myweb{
+	font-size: 1.5em;
+	font-weight: 400;
+	color: #fff;
+	text-align: right;
+	margin:0 20px;
+	letter-spacing: 0.155em;
+	margin-bottom: 15px;
+}
+
+.box-title__about-myweb{
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+
+.box-title__about-myweb .bold{
+	font-weight: bold;
+}
+
+.box-title__about-myweb .h1-about-myweb{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #fff;
+	margin:0 20px;
+	letter-spacing: 0.155em;
+}
+
+.box-title__about-myweb .h2-about-myweb{
+	position: relative;
+	font-size: 1.2em;
+	font-weight: 400;
+	margin: 15px 20px;
+	color: #fff;
+	letter-spacing: 0.155em;
+}
+
+@media (max-width: 600px) {
+	.container-about-myweb{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.container-about-myweb img{
+		width: 90%;
+		height: auto;
+		align-self: center;
+	}
+	.container-about-myweb .h2-about-myweb{
+		position: relative;
+		top: 1em;
+		font-size: 1em;
+		margin:0 20px;
+	}
+
+	.content .about-myweb{
+		position: relative;
+		margin-top: 5em;
+		top: 0;
+		font-weight: 500;
+		text-align: center;
+	}
+}
+
+.container-foot__About{
+	display: flex;
+	flex-direction: row;
+	background: #000;
+	width: 100%;
+	margin-top: 20%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slider-shop{
+	overflow: hidden;
+	width: 80%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slider-shop .detail-merch{
+	width: 247px;
+	height: 286px;
+}
+
+.slider-shop .merch-thumb{
+	margin: 15px;
+}
+
+.slider-shop .title-merch, 
+.slider-shop .price-merch{
+	position: relative;
+	top: 0;
+	left: 0.5em;
+}
+
+.content .h2-detail__Shop{
+	font-size: 2em;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.155em;
+	margin-top: 5.5em;
+	margin-left: 5.3em;
+	color: #fff;
+}
+
+@media (max-width: 600px){
+	.content .h2-detail__Shop{
+		font-size: 2em;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.155em;
+		margin-top: 5.5em;
+		margin-left: 0.5em;
+		color: #fff;
+	}
+}
+
+.container-foot__DetailShop{
+	display: flex;
+	flex-direction: row;
+	background: #000;
+	width: 100vw;
+	margin: auto;
+	margin-top: 10%;
+}
+
+.h2-price{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #fff;
+}
+
+.slider-shop .hover-image{
+	margin: 15px;
+}
+
+.slider-shop .hover-image__DetailComic{
+	margin: 15px;
+}
+
+.hover-image {
+	width: 300px;
+	height: 325px;
+	transition: ease 0.3s;
+	-moz-transition: ease 0.3s;
+	-ms-transition: ease 0.3s;
+	-o-transition: ease 0.3s;
+	-webkit-transition: ease 0.3s;
+}
+
+.hover-image:hover {
+	width: 300px;
+	height: 325px;
+	transform: translateY(-8px);
+	-moz-transform: translateY(-8px);
+	-ms-transform: translateY(-8px);
+	-o-transform: translateY(-8px);
+	-webkit-transform: translateY(-8px);
+}
+
+.hover-image__DetailComic {
+	width: 260px;
+	height: 380px;
+	transition: ease 0.3s;
+	-moz-transition: ease 0.3s;
+	-ms-transition: ease 0.3s;
+	-o-transition: ease 0.3s;
+	-webkit-transition: ease 0.3s;
+}
+
+.hover-image__DetailComic:hover {
+	width: 260px;
+	height: 380px;
+	transform: translateY(-8px);
+	-moz-transform: translateY(-8px);
+	-ms-transform: translateY(-8px);
+	-o-transform: translateY(-8px);
+	-webkit-transform: translateY(-8px);
+}
+
+.box-thumb{
+	display: flex;
+	flex-direction: column;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.box-thumb .box-title__merch {
+	text-decoration: none;
+	word-wrap: break-word;
+	align-items: center;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	font-family: sans-serif;
+	text-align: center;
+	justify-content: center;
+}
+
+ .box-price__merch {
+	margin: 5px 15px;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+	line-height: 1.15;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.container-marvel__comic{
+	display: grid;
+	grid-template-areas: 
+	"auto auto auto auto"
+	"auto auto auto auto"
+	"auto auto auto auto";
+	gap: 30px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+}
+
+.card-marvel__comic {
+	position: relative;
+	overflow: hidden;
+	transition: ease 0.3s;
+}
+
+.card-marvel__comic .image-marvel__comic{
+	width: 220px;
+	height: 270px;
+	transition: ease .3s;
+}
+
+.card-marvel__comic:hover{
+	transform: translateY(-6px);
+	-webkit-transform: translateY(-6px);
+	-o-transform: translateY(-6px);
+	-moz-transform: translateY(-6px);
+	-ms-transform: translateY(-6px);
+}
+
+.card-marvel__comic .title-marvel__comic{
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 10px 0px;
+	position: absolute;
+	width: 100%;
+	z-index: 5;
+	color: #fff;
+	font-size: 80%;
+	font-weight: 500;
+	margin: 0;
+	text-shadow: 0 0 2px #000;
+}
+
+.content .h2-marvel__comic{
+	font-size: 2em;
+	font-weight: bold;
+	letter-spacing: 0.155em;
+	color: #fff;
+	text-align: center;
+}
+
+.container-more{
+	display: grid;
+	grid-template-areas: 
+	"auto auto auto auto"
+	"auto auto auto auto"
+	"auto auto auto auto";
+	gap: 10px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+}
+
+.container-latest__movie{
+	display: grid;
+	grid-template-areas: 
+	"auto auto auto auto"
+	"auto auto auto auto"
+	"auto auto auto auto";
+	gap: 30px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+}
+
+.container-marvel__movie{
+	display: grid;
+	grid-template-areas: 
+	"auto auto auto auto"
+	"auto auto auto auto"
+	"auto auto auto auto";
+	gap: 20px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+}
+
+.card-latest__movie {
+	position: relative;
+	overflow: hidden;
+	transition: ease 0.3s;
+}
+
+.card-latest__movie .image-latest__movie{
+	width: 100%;
+	height: auto;
+	transition: ease .3s;
+}
+
+.card-latest__movie:hover{
+	transform: translateY(-6px);
+	-webkit-transform: translateY(-6px);
+	-o-transform: translateY(-6px);
+	-moz-transform: translateY(-6px);
+	-ms-transform: translateY(-6px);
+}
+
+.card-latest__movie .title-latest__movie{
+	bottom: 0;
+	left: 0;
+	padding: 10px 5px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 5;
+	color: #fff;
+	font-size: 80%;
+	font-weight: 600;
+	margin: 0;
+	text-shadow: 0 0 5px #000;
+}
+
+.content .latest-movie {
+	font-size: 1.8em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.155em;
+	margin-left: 4.2em;
+	margin-top: 1.5em;
+	color: #fff;
+}
+
+@media(max-width:600px){
+	.content .latest-movie{
+		font-size: 1.8em;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.155em;
+		margin-top: 1.5em;
+		margin-left: 0.3em;
+		color: #fff;
+	}
+}
+
+.content .h2-More__Movie{
+	margin-top: 10%;
+	font-size: 1.8em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.155em;
+	color: #fff;
+	text-align: center;
+}
+
+@media(max-width:600px){
+	.content .h2-More__Movie{
+		margin-top: 20px;
+		font-size: 1.8em;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.155em;
+		color: #fff;
+		text-align: center;
+	}
+}
+
+.content .title-marvel__movie{
+	font-size: 1.8em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.155em;
+	color: #fff;
+	text-align: center;
+}
+@media(max-width:600px){
+.content .title-marvel__movie{
+	font-size: 1.8em;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	}
+}
+
+.content .h2-marvel__movie{
+	font-size: 1.8em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.155em;
+	color: #fff;
+	text-align: center;
+}
+
+.container-more__movie{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	gap: 10px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+}
+
+.card-more__movie{
+	position: relative;
+	overflow: hidden;
+	transition: ease 0.3s;
+}
+
+.card-more__movie .image-more__movie{
+	width: 100%;
+	height: auto;
+	transition: ease .3s;
+}
+
+.card-more__movie:hover{
+	transform: translateY(-6px);
+	-webkit-transform: translateY(-6px);
+	-o-transform: translateY(-6px);
+	-moz-transform: translateY(-6px);
+	-ms-transform: translateY(-6px);
+}
+
+.card-more__movie .title-marvel__movie{
+	bottom: 0;
+	left: 0;
+	padding: 10px 5px;
+	position: absolute;
+	text-align: center;
+	width: 95%;
+	z-index: 5;
+	color: #fff;
+	font-size: 80%;
+	font-weight: 600;
+	margin: 0;
+	text-shadow: 0 0 5px #000;
+}
+
+.card-marvel__movie{
+	position: relative;
+	overflow: hidden;
+	transition: ease 0.3s;
+}
+
+.card-marvel__movie .image-marvel__movie{
+	width: 100%;
+	height: auto;
+	transition: ease .3s;
+}
+
+.card-marvel__movie:hover{
+	transform: translateY(-6px);
+	-webkit-transform: translateY(-6px);
+	-o-transform: translateY(-6px);
+	-moz-transform: translateY(-6px);
+	-ms-transform: translateY(-6px);
+}
+
+.card-marvel__movie .title-marvel__movie{
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 10px 0px;
+	position: absolute;
+	width: 100%;
+	z-index: 5;
+	color: #fff;
+	font-size: 80%;
+	font-weight: 500;
+	margin: 0;
+	text-shadow: 0 0 2px #000;
+}
+
+.container-iframe {
+	position: relative;
+	overflow: hidden;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 80%;
+  }
+
+.container-detail_movies{
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-detail_movies .image-detail_movies{
+	width: 235px;
+	height: 300px;
+}
+
+.container-detail_movies .box-entity {
+	color: #fff;
+	text-align: left;
+	margin: 0 20px;
+}
+
+.box-entity h2{
+	font-size: 1.8em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.box-entity h3{
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.box-entity p{
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1.2em;
+}
+
+.box-entity span{
+	display: flex;
+	flex-direction: column;
+	font-size: 1.3em;
+	font-weight: 600;
+	margin: 10px 0;
+}
+
+@media(max-width:600px){
+	.container-detail_movies{
+		width: 100%;
+	}
+	.box-entity h2{
+		font-size: 1.3em;
+	}
+	.box-entity p{
+		font-size: 1em;
+	}
+	.box-entity span{
+		font-size: 1em;
+		font-weight: bold;
+		margin: 5px 0;
+	}
+}
+
+
+@media(max-width:600px){
+	.responsive-iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	  }
+	  .container-iframe {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		padding: 50%;
+	  }
+  }
+
+
+@media (max-width: 600px){
+	.container-marvel__comic{
+		width: 90%;
+		display: grid;
+		gap: 10px;
+		grid-template-areas:
+		"auto auto auto"
+		"auto auto auto"
+		"auto auto auto";
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.card-marvel__comic .image-marvel__comic{
+		width: 100%;
+		height: auto;
+	}
+
+	.container-feature__comic{
+		width: 90%;
+		display: grid;
+		margin: 15px 0;
+		grid-template-areas:
+		"auto auto auto"
+		"auto auto auto"
+		"auto auto auto";
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.card-feature__comic .image-feature__comic{
+		width: 100%;
+		height: auto;
+	}
+	.container-more{
+		width: 90%;
+		display: grid;
+		margin: 15px 0;
+		grid-template-areas:
+		"auto auto auto"
+		"auto auto auto"
+		"auto auto auto";
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.container-marvel__movie{
+		width: 90%;
+		display: grid;
+		margin: 15px;
+		grid-template-areas:
+		"auto auto auto"
+		"auto auto auto"
+		"auto auto auto";
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.container-latest__movie{
+		width: 90%;
+		background-size: cover;
+		display: grid;
+		margin: 15px 0;
+		grid-template-areas:
+		"auto auto auto"
+		"auto auto auto"
+		"auto auto auto";
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.card-latest__movie .image-latest__movie {
+		width: 100%;
+		height: 175px;
+	}
+	.container-more__movie{
+		display: grid;
+		grid-template-areas: 
+		"auto auto auto auto"
+		"auto auto auto auto"
+		"auto auto auto auto";
+		gap: 10px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		color: #fff;
+	}
+	.card-marvel__movie .image-marvel__movie {
+		width: 100%;
+		height: 175px;
+	}
+	.card-more__movie .image-more__movie{
+		width: 100%;
+		height: 140px;
+	}
+}
+
+@media(max-width:600px){
+	.content .h2-detail__Shop{
+		margin-top: 3em;
+	}
+}
+
+@media(max-width: 600px){
+	.slider-shop .thumb-title{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin: 10px 0;
+	}
+	.slider-shop .price-merch{
+		position: relative;
+		left: 0.8em;
+		right: 0;
+		top: 2.5em;
+	}
+	.slider-shop .title-merch{
+		position: relative;
+		left: 1em;
+		right: 0;
+	}
+}
+
+@media(max-width:600px){
+	.container-foot__DetailShop{
+		margin-top: 30%;
+	}
+}
+
+ @media (max-width: 600px) {
+	 .container-shop12 {
+		 display: flex;
+		 flex-direction: column;
+		 margin-left: auto;
+		 margin-right: auto;
+		 width: 80%;
+	}
+	 .container-shop12 .hover-merch {
+		 position: relative;
+		 top: 2em;
+		 left: 4.5em;
+	}
+	 .container-shop12 .title-merch {
+		 margin: 0 -2.5em;
+	}
+	 .container-shop12 .price-merch {
+		 position: relative;
+		 top: 2em;
+		 left: 1em;
+	}
+	 .container-comics {
+		 width: 100%;
+		 height: auto;
+		 display: flex;
+		 flex-direction: column;
+	}
+	 .container-comics .comics-img {
+		 margin: 10px 25px;
+	}
+	 .container-comics .thumb-title-comics .p-comics {
+		 display: inline-block;
+		 width: 100%;
+		 text-align: left;
+		 margin: -15px -15px;
+		 letter-spacing: 0.5px;
+	}
+	 .container-comics .thumb-title-comics .title-comics {
+		 width: 100%;
+		 font-weight: bold;
+		 text-align: left;
+		 letter-spacing: 0.5px;
+	}
+	 .comics-img {
+		 width: 186px;
+		 height: 280px;
+		 align-self: left;
+		 background-size: cover;
+	}
+	 .nb-copyright .copyrt a {
+		 text-decoration: none;
+		 color: #fff;
+		 margin: 0px 3px;
+	}
+}
+ @media (max-width: 1100px) {
+	 .content .featured-comic {
+		 position: relative;
+		 margin-left: 0.3em;
+	}
+	 .content .h2-comics {
+		 position: relative;
+		 margin-left: 0.5em;
+		 font-size: 1.1em;
+		 font-weight: 600;
+	}
+	 .content .h2-comics1 {
+		 position: relative;
+		 margin-left: 0.5em;
+		 font-size: 1.1em;
+		 font-weight: 600;
+	}
+}
+ @media (max-width: 600px) {
+	 .nb-copyright__DetailMovie .copyrt__DetailMovie a {
+		 text-decoration: none;
+		 color: #fff;
+		 margin: 0px 3px;
+	}
+	 .container-foot__DetailMovie {
+		 width: 100%;
+		 margin-top: 10%;
+	}
+}
+ @media (max-width: 600px) {
+	 .slider-detail__comic {
+		 width: 100%;
+		 margin-left: -5px;
+	}
+	 .slider-detail__comic .img__comic {
+		 width: 320px;
+		 margin: 18px;
+	}
+}
+ @media (max-width: 600px) {
+	 .nb-copyright__Movie .copyrt__Movie a {
+		 text-decoration: none;
+		 color: #fff;
+		 margin: 0px 3px;
+	}
+	 .container-foot__Movie {
+		 width: 100%;
+		 margin-top: 80%;
+	}
+}
+ @media (max-width: 1100px) {
+	 .content .h2-movies {
+		 position: relative;
+		 margin-left: 0.3em;
+		 font-size: 1.1em;
+		 font-weight: 600;
+	}
+	 .content .h2-movies1 {
+		 position: relative;
+		 margin-left: 0.3em;
+		 font-size: 1.1em;
+		 font-weight: 600;
+	}
+}
+ @media (max-width: 900px) {
+	 .slider-movie .card-movie {
+		 margin: 1rem;
+	}
+}
+ @media (max-width: 600px) {
+	 .container video {
+		 position: absolute;
+		 max-width: 100%;
+		 height: auto;
+		 transform: translateX(-50%);
+	}
+}
+ @media (max-width: 900px) {
+	 body {
+		 overflow-x: hidden;
+	}
+	 html {
+		 overflow-x: hidden;
+	}
+	 .container-flex {
+		 width: 100%;
+		 height: 275vh;
+		 flex-direction: column;
+	}
+	 .card-comic {
+		 align-self: center;
+		 margin: 3px;
+	}
+	 .card-cat {
+		 align-self: center;
+		 margin: 1em;
+	}
+}
+ @media (max-width: 600px) {
+	 .content .title-marvel__comic {
+		 margin-top: 1.5em;
+	}
+	 .container-char {
+		 grid-template-columns: 4fr;
+		 grid-template-areas: "left-item__char" "right-item__char";
+	}
+	 .right-item__movie {
+		 margin-top: 0px;
+	}
+	 .slider-char {
+		 width: 80vw;
+		 height: 40vh;
+		 margin: 0 2.8em 1.5em;
+	}
+	 .slider-char .card-comic {
+		 margin: 1.5em;
+	}
+	 .slider-char .slick-dots {
+		 position: absolute;
+		 left: 0;
+		 right: 0;
+		 top: 13.5em;
+	}
+	 .nb-copyright .copyrt a {
+		 text-decoration: none;
+		 color: #fff;
+		 margin: 0px 3px;
+	}
+	 .container-foot {
+		 display: flex;
+		 flex-direction: column;
+		 width: 100%;
+		 margin-left: auto;
+		 margin-right: auto;
+		 margin-top: 50%;
+	}
+	 .slider-game {
+		 width: 80vw;
+		 height: 40vh;
+		 margin: 0 2.8em 1.5em;
+	}
+	 .slider-game .card-cat {
+		 margin: 1.5em;
+	}
+	 .slider-game .slick-dots {
+		 position: absolute;
+		 left: 0;
+		 right: 0;
+		 top: 14.5em;
+	}
+	 .container-game {
+		 width: 100%;
+		 display: flex;
+		 height: 34vh;
+		 flex-direction: column;
+	}
+	 .container-game .card-headline-game {
+		 width: 90%;
+		 height: auto;
+		 align-self: center;
+	}
+	 .container-game .title-headline-game {
+		 position: absolute;
+		 width: 100%;
+		 height: auto;
+		 top: 6em;
+	}
+	 .container-games {
+		 width: 100%;
+		 height: auto;
+		 display: flex;
+		 flex-direction: column;
+	}
+	 .container-games .card-game {
+		 width: 100%;
+		 height: auto;
+	}
+	 .container-games .card-game img {
+		 width: 120px;
+		 height: 90px;
+	}
+	 .container-games .card-game:hover img {
+		 filter: brightness(100%);
+		 -webkit-filter: brightness(100%);
+		 -ms-filter: brightness(100%);
+	}
+	 .container-games .title-game {
+		 opacity: 1;
+		 z-index: 2;
+		 position: absolute;
+		 margin: -10px 18px 25px;
+		 top: -5.8em;
+		 left: 8.5em;
+		 right: 0;
+		 text-align: left;
+	}
+	 .container-games .box-title {
+		 position: relative;
+		 margin: 10px -10px;
+		 border-bottom: 2px solid #fff;
+	}
+	 .container-ShowMore {
+		 width: 100%;
+	}
+}
+ @media (max-width: 1100px) {
+	 .content {
+		 width: 100%;
+	}
+	 .content .h2-comic {
+		 position: relative;
+		 margin-left: 0.5em;
+		 font-size: 1.2em;
+	}
+	 .content .h2-content {
+		 position: relative;
+		 margin-left: 0.5em;
+		 font-size: 1.2em;
+	}
+	 .content .h2-Detail__Movie {
+		 position: relative;
+		 text-align: center;
+		 font-size: 1.5em;
+	}
+	 .content .h2-Detail__Comic {
+		 position: relative;
+		 font-size: 1.5em;
+		 text-align: center;
+	}
+	 .content .h2-game {
+		 position: relative;
+		 margin-left: 2.3em;
+	}
+	 .content .h2-game1 {
+		 position: relative;
+		 margin-left: 1em;
+	}
+	 .content .h2-games {
+		 position: relative;
+		 left: 0.8em;
+		 top: 0;
+	}
+	 .content .h2-games1 {
+		 position: relative;
+		 left: 0.5em;
+		 margin-top: 0;
+	}
+	 .content .h2-games2 {
+		 position: relative;
+		 margin-top: 5em;
+		 left: 0.5em;
+		 top: 0;
+	}
+}
+ @media (max-width: 1100px) {
+	 .content h1 {
+		 position: relative;
+		 font-size: 2.5em;
+		 font-weight: 200;
+		 line-height: 1em;
+		 margin: 1rem;
+		 top: 1rem;
+	}
+	 .content .h2-guardians {
+		 position: relative;
+		 margin-top: 5em;
+		 left: 0.5em;
+		 top: 0;
+	}
+	 .content .h2-merch {
+		 position: relative;
+		 font-size: 1.8em;
+	}
+	 .content .h2-shop {
+		 position: relative;
+		 left: 1em;
+		 top: 0.5em;
+	}
+	 .content p {
+		 position: relative;
+		 padding: 1rem;
+		 margin: 1rem;
+	}
+}
+ @media (min-aspect-ratio: 1.7777777778) {
+	 .video-modal-content {
+		 width: 0;
+		 height: calc(100vh - 10em);
+		 padding-top: 0;
+		 padding-left: calc((100vh - 10em) * 1.7778);
+	}
+}
+ @media (max-width: 900px) {
+	 .video-modal-content {
+		 width: calc(100% - 1em);
+		 padding-top: calc((100% - 1em) * 0.5625);
+	}
+	 .container-comic {
+		 width: 100%;
+		 height: 100%;
+		 margin-top: 8.7rem;
+	}
+}
+ @media screen and (max-width: 900px) {
+	 .header-banner-top .horizontal-nav {
+		 overflow: hidden;
+		 height: 0;
+	}
+	 .header-banner-top .horizontal-nav li {
+		 display: block;
+		 display: block;
+	}
+	 .header-banner-top .horizontal-nav .folder ul {
+		 position: static;
+		 text-align: center;
+		 padding: 0.5em 0;
+		 margin: 0.5em 0;
+		 transition: none;
+		 background-color: #000;
+	}
+	 .header-banner-top .horizontal-nav .folder:hover ul {
+		 display: none;
+		 padding: 0.5em 0;
+	}
+	 .header-banner-top .horizontal-nav .folder-toggle-label a {
+		 cursor: pointer;
+	}
+	 .header-banner-top .horizontal-nav .folder-toggle-label a:before {
+		 content: '+ ';
+	}
+	 .header-banner-top .horizontal-nav .folder-toggle-box:checked ~ .folder-toggle-label a:before {
+		 content: '- ';
+	}
+	 .header-banner-top .horizontal-nav .folder-toggle-box:checked ~ ul {
+		 display: block;
+	}
+	 .header-banner-top .horizontal-nav .folder-toggle-box ~ ul {
+		 display: none;
+	}
+	 .header-banner-top .horizontal-nav a {
+		 padding: 0.75em 1em;
+	}
+	 .header-banner-top .horizontal-nav > ul > li:first-child a {
+		 padding-top: 2em;
+	}
+	 .header-banner-top .horizontal-nav > ul > li:last-child a {
+		 padding-bottom: 2em;
+	}
+	 .header-banner-top .mobile-menu-box {
+		 display: none;
+	}
+	 .header-banner-top .mobile-menu-box:checked ~ .horizontal-nav {
+		 height: auto;
+		 padding: 1em 0;
+	}
+	 .header-banner-top .mobile-menu-box:checked ~ .mobile-menu-label {
+		 color: #fff;
+	}
+	 .header-banner-top .mobile-menu-box:checked ~ .mobile-menu-label:before {
+		 content: 'Close';
+		 content: 'Close';
+	}
+	 .header-banner-top .mobile-menu-label {
+		 display: block;
+		 cursor: pointer;
+		 color: #fff;
+		 background-color: #000;
+		 padding: 1.5em 1em;
+		 text-decoration: none;
+		 text-transform: uppercase;
+		 font-size: 13px;
+		 letter-spacing: 1px;
+	}
+	 .header-banner-top .mobile-menu-label:before {
+		 content: 'Menu';
+	}
+}
+ @media (max-width: 900px) {
+	 .slider-comic {
+		 width: 80%;
+		 overflow: hidden;
+		 margin-left: auto;
+		 margin-right: auto;
+	}
+	 .slider-comic .card-comic {
+		 margin: 1rem;
+	}
+}
+ @media (max-width: 600px) {
+	 .container-grid {
+		 grid-template-columns: 4fr;
+		 margin: -33px 0px;
+		 grid-template-areas: "left-item__movie" "left-item__movies" "right-item__movie";
+	}
+	 .merch-thumb .title-merch {
+		 position: absolute;
+		 text-align: center;
+		 font-size: 1em;
+	}
+	 .container-shop {
+		 width: 100%;
+		 height: auto;
+		 display: flex;
+		 flex-direction: column;
+	}
+	 .container-shop .thumb-title {
+		 position: absolute;
+		 width: 50vw;
+		 display: inline-block;
+		 height: auto;
+		 margin: 1em 0;
+	}
+	 .container-shop .merch-thumb {
+		 margin: 15px;
+		 position: relative;
+		 border-bottom: 2px solid #fff;
+	}
+	 .container-shop .hover-merch {
+		 margin: 5px;
+	}
+	 .container-shop .title-merch {
+		 position: absolute;
+		 text-align: center;
+		 top: -1.5em;
+	}
+	 .container-shop .price-merch {
+		 position: absolute;
+		 text-align: center;
+		 top: 3.5em;
+	}
+	 .container-shops {
+		 width: 100%;
+		 height: auto;
+		 display: flex;
+		 flex-direction: column;
+	}
+	 .container-shops .thumb-title {
+		 position: absolute;
+		 width: 50vw;
+		 display: inline-block;
+		 height: auto;
+		 margin: 1em 0;
+	}
+	 .container-shops .merch-thumb {
+		 margin: 15px;
+		 position: relative;
+		 border-bottom: 2px solid #fff;
+	}
+	 .container-shops .hover-merch {
+		 margin: 5px;
+	}
+	 .container-shops .title-merch {
+		 position: absolute;
+		 text-align: center;
+		 top: -1.5em;
+	}
+	 .container-shops .price-merch {
+		 position: absolute;
+		 text-align: center;
+		 top: 3.5em;
+	}
+
+	 .container-shop1 {
+		 width: 100%;
+		 height: auto;
+		 display: flex;
+		 flex-direction: column;
+	}
+	 .container-shop1 .thumb-title {
+		 position: absolute;
+		 width: 50vw;
+		 display: inline-block;
+		 height: auto;
+		 margin: 1em 0;
+	}
+	 .container-shop1 .hover-merch {
+		 margin: 5px;
+	}
+	 .container-shop1 .merch-thumb {
+		 margin: 15px;
+		 position: relative;
+		 border-bottom: 2px solid #fff;
+	}
+	 .container-shop1 .title-merch {
+		 position: absolute;
+		 text-align: center;
+		 top: 0;
+	}
+	 .container-shop1 .price-merch {
+		 position: absolute;
+		 text-align: center;
+		 top: 0;
+	}
+}
+ 

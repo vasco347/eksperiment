@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang="en">
+{% load static %}
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/>
+  
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <title>Marvel | {{title}}</title>
+</head>
+
+<body>
+
+{% block Header %}
+    <header class="header-banner-top">
+  
+      <div class="main-navigation">
+        <input type="checkbox" name="mobile-menu-toggle" id="mobile-menu-toggle" class="mobile-menu-box" />
+        <nav class="horizontal-nav primary-wrapper" role='navigation'>
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'movie' %}">Movie</a></li>
+            <li><a href="{% url 'comic' %}">Comic</a></li>
+            <li><a href="#">Game</a></li>
+            <li><a href="{% url 'shop' %}">Shop</a></li>
+            <li><a href="{% url 'about' %}">About Me</a></li>
+          </ul>
+        </nav>
+        <label for="mobile-menu-toggle" class="mobile-menu-label hidden"></label>
+      </div>
+      
+    </header>
+    
+      <section class="headline">
+        <h1 class="nav-h1">MARVELIUS</h1>
+      </section>
+    
+{% endblock Header %}
+
+{% block Movies-content %}
+  <div class="content">
+        
+    <h1 class="latest-movie">Latest Movies</h1>
+
+    <div class="container-comics">
+      
+      <div class="container-latest__movie">
+        {% for upload in latest_movies %}
+        <div class="card-latest__movie">
+          <a href="{% url 'detail-movies' upload.id %}">
+          <img class="image-latest__movie" src="{{upload.poster}}">
+          <h2 class="title-latest__movie">{{upload.title}}</h2>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      
+    </div>
+
+    <br><br>
+
+    <h2 class="h2-marvel__movie">MARVEL MOVIES</h2>
+
+    <div class="container-marvel__movie">
+      {% for upload in marvel_movies %}
+      <div class="card-marvel__movie">
+        <a href="{% url 'detail-movies' upload.id %}">
+        <img class="image-marvel__movie" src="{{upload.poster}}">
+        <h2 class="title-marvel__movie">{{upload.title}}</h2>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <br><br><br>
+
+    <h2 class="h2-marvel__movie">MARVEL SERIES</h2>
+
+    <h2 class="h2-movies">MS. MARVEL</h2>
+    <section class="slider-movie">
+        {% for uploads in MM %}
+          <div class="card-movie shadow-movie">
+            <a href="{% url 'detail-series' uploads.id %}">
+              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
+              <h3 class="title-movie">{{uploads.title}}</h3>
+              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
+            </a>
+          </div>
+        {% endfor %}    
+    </section>
+      
+    <h2 class="h2-movies1">WANDA VISION</h2>
+    <section class="slider-movie">
+        {% for uploads in WV %}
+          <div class="card-movie shadow-movie">
+            <a href="{% url 'detail-series' uploads.id %}">
+              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
+              <h3 class="title-movie">{{uploads.title}}</h3>
+              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
+            </a>
+          </div>
+        {% endfor %}    
+    </section>
+
+    <h2 class="h2-movies1">MOON KNIGHT</h2>
+    <section class="slider-movie">
+        {% for uploads in MK %}
+          <div class="card-movie shadow-movie">
+            <a href="{% url 'detail-series' uploads.id %}">
+              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
+              <h3 class="title-movie">{{uploads.title}}</h3>
+              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
+            </a>
+          </div>
+        {% endfor %}    
+    </section>
+
+    <h2 class="h2-movies1">WHAT IF ... ?</h2>
+    <section class="slider-movie">
+        {% for uploads in WI %}
+          <div class="card-movie shadow-movie">
+            <a href="{% url 'detail-series' uploads.id %}">
+              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
+              <h3 class="title-movie">{{uploads.title}}</h3>
+              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
+            </a>
+          </div>
+        {% endfor %}    
+    </section>
+
+    <h2 class="h2-movies1">LOKI</h2>
+    <section class="slider-movie">
+        {% for uploads in L %}
+          <div class="card-movie shadow-movie">
+            <a href="{% url 'detail-series' uploads.id %}">
+              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
+              <h3 class="title-movie">{{uploads.title}}</h3>
+              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
+            </a>
+          </div>
+        {% endfor %}    
+    </section>
+
+  </div>
+{% endblock Movies-content %}
+        
+{% block Footer %}
+
+  <div class="container-foot__Movie">
+
+    <section class="nb-copyright__Movie">
+
+      <div class="copyrt__Movie">
+        <img width="150px" height="120px" src="{% static 'images/marvel-logo.png' %}">
+	      <p class="color">© 2022 MARVEL<p> 
+          <a href="#!">Terms of Use</a>
+          <a href="#!">Contact Us</a>
+          <a href="#!">Privacy Policy</a>
+          <a href="#!">Do Not Sell My Info</a>
+      </div>
+
+    </section>
+
+  </div>
+
+{% endblock Footer %}
+
+<!-- jQuery (always put this first) -->                   
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Slick Script  -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ 
+<!-- Our Script -->
+<script type="text/javascript" src="{% static 'js/slider-movie.js' %}"></script>
+ 
+</body>
+</html>

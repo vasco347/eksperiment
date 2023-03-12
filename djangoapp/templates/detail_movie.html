@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <title>MARVEL | {{upload.title}}</title>
+</head>
+
+<body>
+
+{% block Header %}
+  <header class="header-banner-top">
+
+    <div class="main-navigation">
+      <input type="checkbox" name="mobile-menu-toggle" id="mobile-menu-toggle" class="mobile-menu-box" />
+      <nav class="horizontal-nav primary-wrapper" role='navigation'>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'movie' %}">Movie</a></li>
+          <li><a href="{% url 'comic' %}">Comic</a></li>
+          <li><a href="#">Game</a></li>
+          <li><a href="{% url 'shop' %}">Shop</a></li>
+          <li><a href="{% url 'about' %}">About Me</a></li>
+        </ul>
+      </nav>
+      <label for="mobile-menu-toggle" class="mobile-menu-label hidden"></label>
+    </div>
+    
+  </header>
+  
+    <section class="headline">
+      <h1 class="nav-h1">MARVELIUS</h1>
+    </section>
+  
+{% endblock Header %}
+
+{% block movie-content %}
+
+  <div class="content">
+    <h2 class="h2-Detail__Movie">{{upload.title}}</h2>
+  </div>
+
+  <div class="container-iframe">
+    {% for v in detail_movies %}
+      <iframe class="responsive-iframe" src="{{v.videos}}" frameborder="0" allowfullscreen /></iframe>
+    {% endfor %}
+  </div>
+
+  <br><br>
+
+  <div class="container-detail_movies">
+    {% for d in detail_movies %}
+      <img class="image-detail_movies" src="{{d.poster}}">
+      <div class="box-entity">
+        <h2>{{d.title}}</h2>
+        <p><span>Cast: </span> {{d.cast}}</p>
+        <p><span>Synopsis: </span>{{d.description}}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="content">
+    <h2 class="h2-More__Movie">MORE MOVIES</h2>
+  </div>
+
+  <div class="container-more__movie">
+    {% for mv in more_movies %}
+      <div class="card-more__movie">
+        <a href="{% url 'detail-movies' mv.id %}">
+          <img class="image-more__movie" src="{{mv.poster}}">
+          <h2 class="title-marvel__movie">{{mv.title}}</h2>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock movie-content%}
+
+{% block Footer %}
+
+  <div class="container-foot__DetailMovie">
+
+    <section class="nb-copyright__DetailMovie">
+
+      <div class="copyrt__DetailMovie">
+        <img width="150px" height="120px" src="{% static 'images/marvel-logo.png' %}">
+	      <p class="color">© 2022 MARVEL<p> 
+          <a href="#!">Terms of Use</a>
+          <a href="#!">Contact Us</a>
+          <a href="#!">Privacy Policy</a>
+          <a href="#!">Do Not Sell My Info</a>
+      </div>
+
+    </section>
+
+  </div>
+
+{% endblock Footer %}
+
+<!-- (js script must be put before close tag body)  -->
