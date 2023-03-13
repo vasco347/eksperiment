@@ -75,16 +75,13 @@ def movie(request):
     
 
     # All Marvel Heroes
-    marvel_heroes = MarvelHeroes.objects.all()
-    
-    # All Marvel Villain
-    marvel_villain = MarvelVillain.objects.all()
+    marvel_movies = SubCategoryMovie.objects.all()
 
     # Latest Marvel Movies
     videos = (4, 5, 8, 2)
     latest_movies = SubCategoryMovie.objects.filter(pk__in=videos)
 
-    return render(request, 'movies.html', {'title':"Movies", 'marvel_hero':marvel_heroes, 'marvel_villain':marvel_villain, 'AM':AM, 'VU':VU, 'WV':WV, 'MM':MM, 'JJ':JJ, 'MK':MK, 'IF':IF, 'WI':WI, 'L':L, 'H':H, 'latest_movies':latest_movies})
+    return render(request, 'movies.html', {'title':"Movies", 'marvel_movies':marvel_movies, 'AM':AM, 'VU':VU, 'WV':WV, 'MM':MM, 'JJ':JJ, 'MK':MK, 'IF':IF, 'WI':WI, 'L':L, 'H':H, 'latest_movies':latest_movies})
 
 def character(request):
     
