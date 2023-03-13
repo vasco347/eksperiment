@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 {% load static %}
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -12,10 +13,11 @@
   
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
-  <title>MARVEL | {{add.title}}</title>
+  <title>Marvel | {{title}}</title>
 </head>
 
 <body>
+
 {% block Header %}
     <header class="header-banner-top">
   
@@ -36,69 +38,60 @@
       
     </header>
     
-    <section class="headline">
+      <section class="headline">
         <h1 class="nav-h1">MARVELIUS</h1>
-    </section>
+      </section>
     
 {% endblock Header %}
 
-{% block shop-content %}
-
-  <div class="container text-center mt-5">
-    {% for items in detail_shop %}
-    <img width="350px" height="360px" src="{{items.photos}}">
-    <h1 class="text-white mt-2">{{items.title}}</h1> 
-    <h5 class="text-white">{{items.description}}</h5>
-    <h2 class="h2-price">Rp. {{items.price}}</h2>
-    {% endfor %}
-  </div>
-
-  <div class="show-more">
-    <a href="#!">
-      <button style="--color:#fff;--border:2px;--slant:.5em">ADD TO CHART</button>
-    </a>
-  </div>
-  
-  <div class="show-more">
-    <a href="{% url 'shop' %}">
-      <button style="--color:#fff;--border:2px;--slant:.5em">BACK TO SHOP</button>
-    </a>
-  </div>
-
+{% block Char-content %}
   <div class="content">
-    <h1 class="h2-merch">MARVEL SHOP</h1>
+    <h1 class="text-center">Marvel Characters</h1>
   </div>
+    
+  <div class="content">
 
-    <div class="container-shops">
-      {% for items in random_shop %} 
-        <div class="merch-thumb">
-          <a href="{% url 'detail-shops' items.id %}">
-            <img class="hover-merch" src="{{items.cover}}" />
-            <div class="box-shop">
-              <h2>{{items.title}}</h2>
-              <p>Rp. {{items.price}}<p>
-            </div>
+    <h2 class="title-heroes">MARVEL HEROES</h2>
+    <div class="container-comics">
+      <div class="container-feature__comic">
+        {% for c in marvel_heroes %}
+        <div class="card-feature__comic">
+          <a href="{% url 'detail-heroes' c.id %}">
+          <img class="image-feature__comic" src="{{c.images}}">
+          <h2 class="title-feature__comic">{{c.name}}</h2>
           </a>
         </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
+    </div >
+
+    <br><br>
+
+    <h2 class="title-villain">MARVEL VILLAIN</h2>
+    <div class="container-comics">
+      <div class="container-feature__comic">
+        {% for c in marvel_villain %}
+        <div class="card-feature__comic">
+          <a href="{% url 'detail-villain' c.id %}">
+          <img class="image-feature__comic" src="{{c.images}}">
+          <h2 class="title-feature__comic">{{c.name}}</h2>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
     </div>
 
-    <div class="show-more">
+  </div>
 
-      <a href="{% url 'shop' %}">
-        <button style="--color:#fff;--border:2px;--slant:.5em">MORE SHOP'S</button>
-      </a>
-    
-    </div>
-{% endblock %}
-
+{% endblock Char-content %}
+        
 {% block Footer %}
 
-  <div class="container-foot__DetailShop">
+  <div class="container-foot__Comic">
 
-    <section class="nb-copyright__DetailMovie">
+    <section class="nb-copyright">
 
-      <div class="copyrt__DetailMovie">
+      <div class="copyrt">
         <img width="150px" height="120px" src="{% static 'images/marvel-logo.png' %}">
 	      <p class="color">© 2022 MARVEL<p> 
           <a href="#!">Terms of Use</a>
@@ -121,7 +114,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
  
 <!-- Our Script -->
-<script type="text/javascript" src="{% static 'js/slider-shop.js' %}"></script>
-
+<script type="text/javascript" src="{% static 'js/slider-comic.js' %}"></script>
+ 
 </body>
 </html>

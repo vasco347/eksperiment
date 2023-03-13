@@ -26,7 +26,7 @@
             <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'movie' %}">Movie</a></li>
             <li><a href="{% url 'comic' %}">Comic</a></li>
-            <li><a href="#">Game</a></li>
+            <li><a href="{% url 'character' %}">Character</a></li>
             <li><a href="{% url 'shop' %}">Shop</a></li>
             <li><a href="{% url 'about' %}">About Me</a></li>
           </ul>
@@ -47,113 +47,107 @@
   <div class="content">
     <h2 class="h2-merch">Shop Marvel</h2>
   </div>
-
-  <div class="container-ShowMore">
   
+  <div class="container-ShowMore">
+
 	  <div class="item1">
 
-      <div class="container-shops">
-        {% for add in slide1 %}
-          <div class="merch-thumb">
-            <a href="{% url 'detail-shops' add.id %}">
-              <img class="hover-merch" src="{{add.photos}}" />
-        
-              <div class="thumb-title">  
-                <h3 class="title-merch">{{add.description}}</h3>
-                <p class="price-merch">Rp.{{add.price}}<p>
-              </div>
-            </a>
+    <div class="container-shops">
+      {% for items in shop_1 %} 
+      <div class="merch-thumb">
+        <a href="{% url 'detail-shops' items.id %}">
+          <img class="hover-merch" src="{{items.cover}}" />
+          <div class="box-shop">
+            <h2>{{items.title}}</h2>
+            <p>Rp. {{items.price}}<p>
           </div>
-        {% endfor %}
+        </a>
       </div>
-
-      <div class="container-shops">
-        {% for add in slide2 %}
-          <div class="merch-thumb">
-            <a href="{% url 'detail-shops' add.id %}">
-              <img class="hover-merch" src="{{add.photos}}" />
-        
-              <div class="thumb-title">  
-                <h3 class="title-merch">{{add.description}}</h3>
-                <p class="price-merch">Rp.{{add.price}}<p>
-              </div>
-            </a>
+      {% endfor %}
+    </div>
+    
+    <div class="container-shops">
+      {% for items in shop_2 %} 
+      <div class="merch-thumb">
+        <a href="{% url 'detail-shops' items.id %}">
+          <img class="hover-merch" src="{{items.cover}}" />
+          <div class="box-shop">
+            <h2>{{items.title}}</h2>
+            <p>Rp. {{items.price}}<p>
           </div>
-        {% endfor %}
+        </a>
       </div>
+      {% endfor %}
+    </div>
 
-      <div class="container-shops">
-        {% for add in slide3 %}
-          <div class="merch-thumb">
-            <a href="{% url 'detail-shops' add.id %}">
-              <img class="hover-merch" src="{{add.photos}}" />
-        
-              <div class="thumb-title">  
-                <h3 class="title-merch">{{add.description}}</h3>
-                <p class="price-merch">Rp.{{add.price}}<p>
-              </div>
-            </a>
+    <div class="container-shops">
+      {% for items in shop_3 %} 
+      <div class="merch-thumb">
+        <a href="{% url 'detail-shops' items.id %}">
+          <img class="hover-merch" src="{{items.cover}}" />
+          <div class="box-shop">
+            <h2>{{items.title}}</h2>
+            <p>Rp. {{items.price}}<p>
           </div>
-        {% endfor %}
+        </a>
       </div>
-
+      {% endfor %}
+    </div>
+  
     </div>
 
     <div class="item2">
 
-      <div class="container-shops">
-        {% for add in slide4 %}
-          <div class="merch-thumb">
-            <a href="{% url 'detail-shops' add.id %}">
-              <img class="hover-merch" src="{{add.photos}}" />
-        
-              <div class="thumb-title">  
-                <h3 class="title-merch">{{add.description}}</h3>
-                <p class="price-merch">Rp.{{add.price}}<p>
-              </div>
-            </a>
+    <div class="container-shops">
+      {% for items in shop_1 %} 
+      <div class="merch-thumb">
+        <a href="{% url 'detail-shops' items.id %}">
+          <img class="hover-merch" src="{{items.cover}}" />
+          <div class="box-shop">
+            <h2>{{items.title}}</h2>
+            <p>Rp. {{items.price}}<p>
           </div>
-        {% endfor %}
+        </a>
       </div>
-
-      <div class="container-shops">
-        {% for add in slide5 %}
-          <div class="merch-thumb">
-            <a href="{% url 'detail-shops' add.id %}">
-              <img class="hover-merch" src="{{add.photos}}" />
-        
-              <div class="thumb-title">  
-                <h3 class="title-merch">{{add.description}}</h3>
-                <p class="price-merch">Rp.{{add.price}}<p>
-              </div>
-            </a>
+      {% endfor %}
+    </div>
+    
+    <div class="container-shops">
+      {% for items in shop_2 %} 
+      <div class="merch-thumb">
+        <a href="{% url 'detail-shops' items.id %}">
+          <img class="hover-merch" src="{{items.cover}}" />
+          <div class="box-shop">
+            <h2>{{items.title}}</h2>
+            <p>Rp. {{items.price}}<p>
           </div>
-        {% endfor %}
+        </a>
       </div>
+      {% endfor %}
+    </div>
 
-      <div class="container-shops">
-        {% for add in slide6 %}
-          <div class="merch-thumb">
-            <a href="{% url 'detail-shops' add.id %}">
-              <img class="hover-merch" src="{{add.photos}}" />
-        
-              <div class="thumb-title">  
-                <h3 class="title-merch">{{add.description}}</h3>
-                <p class="price-merch">Rp.{{add.price}}<p>
-              </div>
-            </a>
+    <div class="container-shops">
+      {% for items in shop_3 %} 
+      <div class="merch-thumb">
+        <a href="{% url 'detail-shops' items.id %}">
+          <img class="hover-merch" src="{{items.cover}}" />
+          <div class="box-shop">
+            <h2>{{items.title}}</h2>
+            <p>Rp. {{items.price}}<p>
           </div>
-        {% endfor %}
+        </a>
       </div>
-
+      {% endfor %}
+    </div>
+  
     </div>
 
     <div class="show-more">
-
       <button href="#!" id="nextbtn" style="--color:#fff;--border:2px;--slant:.5em">SHOW MORE</button>
       <button href="#!" id="prevbtn" style="--color:#fff;--border:2px;--slant:.5em">SHOW LESS</button>
-    
     </div>
+  
+  </div>
 
 {% endblock shops-content %}
         

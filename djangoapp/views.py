@@ -3,7 +3,8 @@ from django.shortcuts import get_object_or_404
 from . models import CategoryComic, SubCategoryComic, DetailComic
 from . models import CategoryMovie, SubCategoryMovie, DetailMovie
 from . models import CategorySeries, SubCategorySeries, DetailSeries
-from . models import CategoryShop, DetailShop
+from . models import Shop, DetailShop
+from . models import MarvelHeroes, MarvelVillain, DetailHeroes, DetailVillain
 import random
 
 def home(request):
@@ -16,17 +17,28 @@ def home(request):
     comic_deadpool = SubCategoryComic.objects.filter(pk__in=comic)
 
     comic = [16, 17, 18, 19]
-    comic_guardians = SubCategoryComic.objects.filter(pk__in=comic)
-
-
-    # Shop Views
-    marvel_shop = CategoryShop.objects.filter(parent=1)    
+    comic_guardians = SubCategoryComic.objects.filter(pk__in=comic)   
     
-    return render(request, 'home.html', {'title':"Home", 'marvel_shop':marvel_shop, 'comic_spiderman':comic_spiderman, 'comic_deadpool':comic_deadpool, 'comic_guardians':comic_guardians})
+    shop = list(Shop.objects.all())
+    random_shop = random.sample(shop, 12)
+
+    # All Marvel Heroes
+    marvel_heroes = MarvelHeroes.objects.all()
+    
+    # All Marvel Villain
+    marvel_villain = MarvelVillain.objects.all()
+
+    return render(request, 'home.html', {'title':"Home", 'marvel_heroes':marvel_heroes, 'marvel_villain':marvel_villain, 'random_shop':random_shop, 'comic_spiderman':comic_spiderman, 'comic_deadpool':comic_deadpool, 'comic_guardians':comic_guardians})
 
 def shop(request):
-    marvel_shop = CategoryShop.objects.filter(parent=1) 
-    return render(request, 'shop.html', {'title':"Shop", 'marvel_shop':marvel_shop})
+
+    shop_1 = Shop.objects.all().order_by('id')[0:4]
+    shop_2 = Shop.objects.all().order_by('id')[4:8]
+    shop_3 = Shop.objects.all().order_by('id')[8:12]
+    shop_4 = Shop.objects.all().order_by('id')[12:16]
+    shop_5 = Shop.objects.all().order_by('id')[16:20]
+
+    return render(request, 'shop.html', {'title':"Shop", 'shop_1':shop_1, 'shop_2':shop_2, 'shop_3':shop_3, 'shop_4':shop_4, 'shop_5':shop_5})
 
 def comic(request):
     SC = SubCategoryComic.objects.filter(child=2)
@@ -37,7 +49,7 @@ def comic(request):
     DP = SubCategoryComic.objects.filter(child=3)
     GOTG = SubCategoryComic.objects.filter(child=5)
 
-    items = [1, 2, 3, 4, 5]
+    items = [1, 6, 11, 16, 21]
     feature_comic = SubCategoryComic.objects.filter(pk__in=items)
 
     items = list(SubCategoryComic.objects.all())
@@ -62,14 +74,27 @@ def movie(request):
     IF = SubCategorySeries.objects.filter(child=8)
     
 
-    # All Marvel Movies
-    marvel_movies = SubCategoryMovie.objects.all()
+    # All Marvel Heroes
+    marvel_heroes = MarvelHeroes.objects.all()
+    
+    # All Marvel Villain
+    marvel_villain = MarvelVillain.objects.all()
 
     # Latest Marvel Movies
     videos = (4, 5, 8, 2)
     latest_movies = SubCategoryMovie.objects.filter(pk__in=videos)
 
-    return render(request, 'movies.html', {'title':"Movies", 'AM':AM, 'VU':VU, 'WV':WV, 'MM':MM, 'JJ':JJ, 'MK':MK, 'IF':IF, 'WI':WI, 'L':L, 'H':H, 'latest_movies':latest_movies, 'marvel_movies':marvel_movies})
+    return render(request, 'movies.html', {'title':"Movies", 'marvel_hero':marvel_heroes, 'marvel_villain':marvel_villain, 'AM':AM, 'VU':VU, 'WV':WV, 'MM':MM, 'JJ':JJ, 'MK':MK, 'IF':IF, 'WI':WI, 'L':L, 'H':H, 'latest_movies':latest_movies})
+
+def character(request):
+    
+    # All Marvel Heroes
+    marvel_heroes = MarvelHeroes.objects.all()
+    
+    # All Marvel Villain
+    marvel_villain = MarvelVillain.objects.all()
+
+    return render(request, 'char.html', {'title':"Characters", 'marvel_heroes':marvel_heroes, 'marvel_villain':marvel_villain})
 
 def detail_comics(request, id):
     # Random Comics Views
@@ -104,19 +129,29 @@ def detail_series(request, id):
     
     return render(request, 'detail_series.html', {'title':"Series", 'uploads':uploads, 'detail_series':detail_series, 'more_series':more_series})
 
-
 def detail_shops(request, id):
-    add = get_object_or_404(CategoryShop, id=id)
-    detail_movies = DetailShop.objects.filter(add=add)
 
-    items = list(CategoryShop.objects.all())
-    # change 3 to how many random items you want
-    random_items = random.sample(items, 5)
+    items = get_object_or_404(Shop, id=id)
+    detail_shop = DetailShop.objects.filter(items=items)
 
-    items = list(CategoryShop.objects.all())
-    # change 3 to how many random items you want
-    random_items1 = random.sample(items, 5)
-    return render(request, 'detail_shop.html', {'title':"Shop", 'add':add, 'detail_movies':detail_movies, 'items':items, 'random_items':random_items, 'random_items1':random_items1})
+    shop = list(Shop.objects.all())
+    random_shop = random.sample(shop, 8) 
+
+    return render(request, 'detail_shop.html', {'title':"Shop", 'random_shop':random_shop, 'detail_shop':detail_shop})
+
+def detail_heroes(request, id):
+
+    items = get_object_or_404(MarvelHeroes, id=id)
+    detail_heroes = DetailHeroes.objects.filter(char_heroes=items)
+
+    return render(request, 'detail_heroes.html', {'title':"Marvel Characters", 'detail_heroes':detail_heroes})
+
+def detail_villain(request, id):
+
+    items = get_object_or_404(MarvelVillain, id=id)
+    detail_villain = DetailVillain.objects.filter(char_villain=items)
+
+    return render(request, 'detail_villain.html', {'title':"Marvel Characters", 'detail_villain':detail_villain})
 
 
 def about(request):

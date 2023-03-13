@@ -606,8 +606,7 @@
 	 display: flex;
 	 flex-direction: row;
 	 background: #000;
-	 width: 100vw;
-	 margin: auto -12em;
+	 width: 100%;
 	 margin-top: 10%;
 }
  .nb-copyright {
@@ -797,105 +796,6 @@
  .card-game:hover .title-game {
 	 opacity: 1;
 	 z-index: 2;
-}
- .merch-thumb .hover-merch {
-	 width: 150px;
-	 height: 150px;
-	 transition: ease 0.3s;
-	 -moz-transition: ease 0.3s;
-	 -ms-transition: ease 0.3s;
-	 -o-transition: ease 0.3s;
-	 -webkit-transition: ease 0.3s;
-}
- .merch-thumb:hover .hover-merch {
-	 width: 150px;
-	 height: 150px;
-	 transform: translateY(-8px);
-	 -moz-transform: translateY(-8px);
-	 -ms-transform: translateY(-8px);
-	 -o-transform: translateY(-8px);
-	 -webkit-transform: translateY(-8px);
-}
-
-.merch-thumb .image-detail__shop{
-	width: 400px;
-	height: auto;
-}
-
- .thumb-title {
-	 width: 80%;
-}
- .thumb-title .title-merch {
-	 margin: 10px 15px;
-	 width: 100%;
-	 text-decoration: none;
-	 letter-spacing: 0.5px;
-	 line-height: 1.15;
-	 font-size: 15px;
-	 color: #fff;
-	 font-family: sans-serif;
-	 text-align: center;
-}
- .thumb-title .price-merch {
-	 margin: 10px 15px;
-	 width: 100%;
-	 text-decoration: none;
-	 letter-spacing: 0.5px;
-	 line-height: 1.15;
-	 font-size: 18px;
-	 font-weight: bold;
-	 color: #fff;
-	 font-family: sans-serif;
-	 text-align: center;
-}
- a {
-	 text-decoration: none;
-}
- .container-shop {
-	 margin-top: 1em;
-	 width: 50vw;
-	 height: auto;
-	 display: flex;
-	 flex-direction: row;
-	 margin-left: auto;
-	 margin-right: auto;
-	 font-family: sans-serif;
-}
-
-.container-shop .merch-thumb {
-	margin: 10px;
-}
-
-.container-shops {
-	margin-top: 1em;
-	width: 80%;
-	height: auto;
-	display: flex;
-	flex-direction: row;
-	margin-left: auto;
-	margin-right: auto;
-	font-family: sans-serif;
-}
-
-.container-shops .merch-thumb {
-	margin:0 20px;
-}
-
- .container-shop1 {
-	 width: 50vw;
-	 height: auto;
-	 display: flex;
-	 flex-direction: row;
-	 margin-left: auto;
-	 margin-right: auto;
-	 font-family: sans-serif;
-}
- .container-shop1 .merch-thumb {
-	 margin: 10px;
-}
- .container-ShowMore {
-	 margin: 0 auto;
-	 width: 75%;
 }
  .container-ShowMore .step2 {
 	 display: none;
@@ -1927,6 +1827,10 @@ button {
 	margin: 0 20px;
 }
 
+.none{
+	text-decoration: none;
+}
+
 .box-entity h2{
 	font-size: 1.8em;
 	font-weight: bold;
@@ -1952,6 +1856,178 @@ button {
 	margin: 10px 0;
 }
 
+.container-shops{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	gap: 10px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+}
+
+.merch-thumb {
+	position: relative;
+	transition: ease 0.3s;
+}
+
+.merch-thumb .hover-merch{
+	width: 100%;
+	height: 75%;
+	transition: ease 0.3s;
+}
+
+.merch-thumb .hover-merch:hover{
+	transform: translateY(-8px);
+	-webkit-transform: translateY(-8px);
+	-o-transform: translateY(-8px);
+	-moz-transform: translateY(-8px);
+	-ms-transform: translateY(-8px);
+}
+
+.box-shop{
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+.merch-thumb a{
+	text-decoration: none;
+}
+.box-shop{
+	width: 100%;
+}
+
+.box-shop h2{
+	text-align: center;
+	z-index: 5;
+	color: #fff;
+	font-size: 80%;
+	font-weight: 500;
+	text-shadow: 0 0 2px #000;
+}
+
+.content .title-heroes{
+	color: #fff;
+	font-size: 1.3em;
+	font-weight: 500;
+	text-align: left;
+	margin-top: 2em;
+}
+
+.content .title-villain{
+	color: #fff;
+	font-size: 1.3em;
+	font-weight: 500;
+	text-align: left;
+	margin-top: 2em;
+}
+
+.box-shop p{
+	text-align: center;
+	z-index: 5;
+	color: #fff;
+	font-size: 80%;
+	font-weight: bold;
+	text-shadow: 0 0 2px #000;
+}
+
+.container-detail_heroes{
+	width: 80%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.card-detail_heroes{
+	overflow: hidden;
+	transition: ease .3s;
+	position: relative;
+}
+
+.card-detail_heroes .hover-detail_heroes{
+	width: 100%;
+	height: auto;
+	transition: ease .3s;
+}
+
+.card-detail_heroes .hover-detail_heroes:hover{
+	transform: translateY(-8px);
+	-webkit-transform: translateY(-8px);
+	-moz-transform: translateY(-8px);
+	-o-transform: translateY(-8px);
+	-ms-transform: translateY(-8px);
+}
+
+.box-detail_heroes{
+	width: 100%;
+}
+
+.box-detail_heroes h1{
+	color: #fff;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box-detail_heroes h2{
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: 500;
+	margin: 2em 0 0;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box-detail_heroes p{
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: 500;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box-detail_heroes span{
+	display: flex;
+	flex-direction: column;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.2em;
+	font-weight: 600;
+	margin: 5px 0;
+}
+
+@media (max-width:600px){
+	.container-shops {
+		display: flex;
+		flex-direction: column;
+	}
+	.container-shops .merch-thumb{
+		margin: 10px;
+		position: relative;
+		width: 100%;
+		border-bottom: 2px solid #fff;
+	}
+	.container-detail_heroes{
+		display: flex;
+		flex-direction: column;
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.container-detail_heroes .card-detail_heroes{
+		width: 95%;
+		height: auto;
+	}
+	.box-detail_heroes p{
+		font-size: 1em;
+	}
+	.box-detail_heroes{
+		width: 95%;
+	}
+}
+
 @media(max-width:600px){
 	.container-detail_movies{
 		width: 100%;
@@ -1968,7 +2044,6 @@ button {
 		margin: 5px 0;
 	}
 }
-
 
 @media(max-width:600px){
 	.responsive-iframe {
@@ -1992,7 +2067,6 @@ button {
 		margin-top: 3em;
 	}
 }
-
 
 @media (max-width: 600px){
 	.container-marvel__comic{
@@ -2567,105 +2641,6 @@ button {
 		 grid-template-columns: 4fr;
 		 margin: -33px 0px;
 		 grid-template-areas: "left-item__movie" "left-item__movies" "right-item__movie";
-	}
-	 .merch-thumb .title-merch {
-		 position: absolute;
-		 text-align: center;
-		 font-size: 1em;
-	}
-	 .container-shop {
-		 width: 100%;
-		 height: auto;
-		 display: flex;
-		 flex-direction: column;
-	}
-	 .container-shop .thumb-title {
-		 position: absolute;
-		 width: 50vw;
-		 display: inline-block;
-		 height: auto;
-		 margin: 1em 0;
-	}
-	 .container-shop .merch-thumb {
-		 margin: 15px;
-		 position: relative;
-		 border-bottom: 2px solid #fff;
-	}
-	 .container-shop .hover-merch {
-		 margin: 5px;
-	}
-	 .container-shop .title-merch {
-		 position: absolute;
-		 text-align: center;
-		 top: -1.5em;
-	}
-	 .container-shop .price-merch {
-		 position: absolute;
-		 text-align: center;
-		 top: 3.5em;
-	}
-	 .container-shops {
-		 width: 100%;
-		 height: auto;
-		 display: flex;
-		 flex-direction: column;
-	}
-	 .container-shops .thumb-title {
-		 position: absolute;
-		 width: 50vw;
-		 display: inline-block;
-		 height: auto;
-		 margin: 1em 0;
-	}
-	 .container-shops .merch-thumb {
-		 margin: 15px;
-		 position: relative;
-		 border-bottom: 2px solid #fff;
-	}
-	 .container-shops .hover-merch {
-		 margin: 5px;
-	}
-	 .container-shops .title-merch {
-		 position: absolute;
-		 text-align: center;
-		 top: -1.5em;
-	}
-	 .container-shops .price-merch {
-		 position: absolute;
-		 text-align: center;
-		 top: 3.5em;
-	}
-
-	 .container-shop1 {
-		 width: 100%;
-		 height: auto;
-		 display: flex;
-		 flex-direction: column;
-	}
-	 .container-shop1 .thumb-title {
-		 position: absolute;
-		 width: 50vw;
-		 display: inline-block;
-		 height: auto;
-		 margin: 1em 0;
-	}
-	 .container-shop1 .hover-merch {
-		 margin: 5px;
-	}
-	 .container-shop1 .merch-thumb {
-		 margin: 15px;
-		 position: relative;
-		 border-bottom: 2px solid #fff;
-	}
-	 .container-shop1 .title-merch {
-		 position: absolute;
-		 text-align: center;
-		 top: 0;
-	}
-	 .container-shop1 .price-merch {
-		 position: absolute;
-		 text-align: center;
-		 top: 0;
 	}
 }
  

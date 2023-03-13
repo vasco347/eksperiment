@@ -12,10 +12,9 @@
   
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
-  <title>MARVEL | {{add.title}}</title>
+    <title>MARVEL | {{post.title}}</title>
 </head>
 
-<body>
 {% block Header %}
     <header class="header-banner-top">
   
@@ -36,69 +35,42 @@
       
     </header>
     
-    <section class="headline">
+      <section class="headline">
         <h1 class="nav-h1">MARVELIUS</h1>
-    </section>
+      </section>
     
 {% endblock Header %}
 
-{% block shop-content %}
-
-  <div class="container text-center mt-5">
-    {% for items in detail_shop %}
-    <img width="350px" height="360px" src="{{items.photos}}">
-    <h1 class="text-white mt-2">{{items.title}}</h1> 
-    <h5 class="text-white">{{items.description}}</h5>
-    <h2 class="h2-price">Rp. {{items.price}}</h2>
-    {% endfor %}
-  </div>
-
-  <div class="show-more">
-    <a href="#!">
-      <button style="--color:#fff;--border:2px;--slant:.5em">ADD TO CHART</button>
-    </a>
-  </div>
-  
-  <div class="show-more">
-    <a href="{% url 'shop' %}">
-      <button style="--color:#fff;--border:2px;--slant:.5em">BACK TO SHOP</button>
-    </a>
-  </div>
+{% block detail-char %}
 
   <div class="content">
-    <h1 class="h2-merch">MARVEL SHOP</h1>
+    <h2 class="h2-Detail__Comic">{{post.title}}</h2>
   </div>
 
-    <div class="container-shops">
-      {% for items in random_shop %} 
-        <div class="merch-thumb">
-          <a href="{% url 'detail-shops' items.id %}">
-            <img class="hover-merch" src="{{items.cover}}" />
-            <div class="box-shop">
-              <h2>{{items.title}}</h2>
-              <p>Rp. {{items.price}}<p>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
+  <div class="container-detail_heroes">
 
-    <div class="show-more">
-
-      <a href="{% url 'shop' %}">
-        <button style="--color:#fff;--border:2px;--slant:.5em">MORE SHOP'S</button>
-      </a>
-    
+    {% for c in detail_heroes %}
+    <div class="card-detail_heroes">
+      <img class="hover-detail_heroes" src="{{c.images}}">
+      <div class="box-detail_heroes">
+        <h1>{{c.name}}</h1>
+        <h2><span>Multiverse:</span>{{c.multiverse}}</h2>
+        <p><span>Story:</span>{{c.story}}</p>
+      </div>
     </div>
-{% endblock %}
+    {% endfor %}
+
+  </div>
+
+{% endblock detail-char %}
 
 {% block Footer %}
 
-  <div class="container-foot__DetailShop">
+  <div class="container-foot__Comic">
 
-    <section class="nb-copyright__DetailMovie">
+    <section class="nb-copyright">
 
-      <div class="copyrt__DetailMovie">
+      <div class="copyrt">
         <img width="150px" height="120px" src="{% static 'images/marvel-logo.png' %}">
 	      <p class="color">© 2022 MARVEL<p> 
           <a href="#!">Terms of Use</a>
@@ -113,14 +85,14 @@
 
 {% endblock Footer %}
 
-<!-- (js script must be put before close tag body)  -->
 <!-- jQuery (always put this first) -->                   
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <!-- Slick Script  -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
- 
+
 <!-- Our Script -->
+<script type="text/javascript" src="{% static 'js/slider-detail-comic.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/slider-shop.js' %}"></script>
 
 </body>
