@@ -2028,6 +2028,14 @@ button {
 	}
 }
 
+@media (max-width: 900px){
+	.container-shops {
+		display: flex;
+		flex-direction: column;
+		
+	}
+}
+
 @media(max-width:600px){
 	.container-detail_movies{
 		width: 100%;
