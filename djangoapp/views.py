@@ -68,9 +68,9 @@ def movie(request):
     MM = SubCategorySeries.objects.filter(child=4)
     MK = SubCategorySeries.objects.filter(child=5)
     L = SubCategorySeries.objects.filter(child=1)
-    H = SubCategorySeries.objects.filter(child=6)
+    H = SubCategorySeries.objects.filter(child=7)
     WI = SubCategorySeries.objects.filter(child=3)
-    JJ = SubCategorySeries.objects.filter(child=7)
+    JJ = SubCategorySeries.objects.filter(child=6)
     IF = SubCategorySeries.objects.filter(child=8)
     
 
