@@ -134,21 +134,21 @@ def detail_shops(request, id):
     shop = list(Shop.objects.all())
     random_shop = random.sample(shop, 8) 
 
-    return render(request, 'detail_shop.html', {'title':"Shop", 'random_shop':random_shop, 'detail_shop':detail_shop})
+    return render(request, 'detail_shop.html', {'title':"Shop", 'items':items, 'random_shop':random_shop, 'detail_shop':detail_shop})
 
 def detail_heroes(request, id):
 
     items = get_object_or_404(MarvelHeroes, id=id)
     detail_heroes = DetailHeroes.objects.filter(char_heroes=items)
 
-    return render(request, 'detail_heroes.html', {'title':"Marvel Characters", 'detail_heroes':detail_heroes})
+    return render(request, 'detail_heroes.html', {'title':"Marvel Characters",  'char_heroes':items, 'detail_heroes':detail_heroes})
 
 def detail_villain(request, id):
 
     items = get_object_or_404(MarvelVillain, id=id)
     detail_villain = DetailVillain.objects.filter(char_villain=items)
 
-    return render(request, 'detail_villain.html', {'title':"Marvel Characters", 'detail_villain':detail_villain})
+    return render(request, 'detail_villain.html', {'title':"Marvel Characters", 'char_villain':items, 'detail_villain':detail_villain})
 
 
 def about(request):
