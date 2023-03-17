@@ -1791,7 +1791,7 @@ button {
 .container-iframe {
 	position: relative;
 	overflow: hidden;
-	width: 80%;
+	width: 99%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
@@ -1805,7 +1805,7 @@ button {
 	bottom: 0;
 	right: 0;
 	width: 100%;
-	height: 80%;
+	height: 90%;
   }
 
 .container-detail_movies{
@@ -2028,23 +2028,34 @@ button {
 	}
 }
 
-@media (max-width: 900px){
+@media (max-width: 960px){
 	.container-shops {
 		display: flex;
 		flex-direction: column;
 		
 	}
+	.container-detail_movies{
+		width: 80%;
+		display: flex;
+		flex-direction: row;
+	}
 }
 
 @media(max-width:600px){
 	.container-detail_movies{
+		display: flex;
+		flex-direction: row;
 		width: 100%;
 	}
+	.container-detail_movies .image-detail_movies{
+		width: 95%;
+		height: 95%;
+	}
 	.box-entity h2{
-		font-size: 1.3em;
+		font-size: 1em;
 	}
 	.box-entity p{
-		font-size: 1em;
+		font-size: 0.8em;
 	}
 	.box-entity span{
 		font-size: 1em;
