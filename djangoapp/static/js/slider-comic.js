@@ -1,6 +1,6 @@
 $(document).ready(function(){
       $('.slider-comic').slick({
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
@@ -9,18 +9,21 @@ $(document).ready(function(){
         infinite: false,
         responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          centerMode: false,
+          slidesToShow: 4,
+          slidesToScroll: 1
         }
       },
       {
-        breakpoint: 767,
+        breakpoint: 600,
         settings: {
-          centerMode: true,
-          slidesToShow: 1,
+          centerMode: false,
+          slidesToShow: 3,
+          slidesToScroll: 1
         }
-      }
+      },
     ]
       });
     });

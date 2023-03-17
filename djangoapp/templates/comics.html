@@ -47,139 +47,153 @@
 {% endblock Header %}
 
 {% block Cspider-content %}
-    <div class="content">
+  <div class="content">
 
-        <h1 class="featured-comic">Featured Comic</h1>
+    <h2 class="featured-comic">FEATURED COMICS</h2>
 
-        <div class="container-comics">
+    <div class="container-comics">
           
-          <div class="container-feature__comic">
-            {% for fc in feature_comic %}
-            <div class="card-feature__comic">
-              <a href="{% url 'detail-comics' fc.id %}">
+      <div class="container-feature__comic">
+        {% for fc in feature_comic %}
+          <div class="card-feature__comic">
+            <a href="{% url 'detail-comics' fc.id %}">
               <img class="image-feature__comic" src="{{fc.covers}}">
               <h2 class="title-feature__comic">{{fc.title}}</h2>
-              </a>
-            </div>
-            {% endfor %}
-          </div>
-          
-        </div>
-
-        <br><br>
-
-        <h2 class="h2-marvel__comic">MARVEL COMICS</h2>
-
-        <div class="container-marvel__comic">
-          {% for post in marvel_items %}
-          <div class="card-marvel__comic">
-            <a href="{% url 'detail-comics' post.id %}">
-            <img class="image-marvel__comic" src="{{post.covers}}">
-            <h2 class="title-marvel__comic">{{post.title}}</h2>
             </a>
           </div>
-          {% endfor %}
-        </div>
-
-        <h2 class="h2-comics">MARVEL ACTION SPIDER-MAN (2018)</h2>
-        
-        <section class="slider-comic">
-
-          {% for post in SC %}
-            <div class="card-comic comic-shadow">
-                <a href="{% url 'detail-comics' post.id %}">
-                    <img class="hover-comic" src="{{post.covers}}"/>
-                    <h3 class="title-comic">{{post.title}}</h3>
-                </a>
-            </div>
-          {% endfor %}
+        {% endfor %}
+      </div>
           
-        </section>
-      
-        <h2 class="h2-comics1">GUARDIANS OF THE GALAXY (2019)</h2>
-        
-        <section class="slider-comic">
-          {% for post in GOTG %}
-            <div class="card-comic comic-shadow">
-                <a href="{% url 'detail-comics' post.id %}">
-                    <img class="hover-comic" src="{{post.covers}}"/>
-                    <h3 class="title-comic">{{post.title}}</h3>
-                </a>
-            </div>
-            {% endfor %}
-        </section>
-
-        <h2 class="h2-comics1">FANTASTIC FOUR POWERPACK</h2>
-
-        <section class="slider-comic">
-          {% for post in FF %}
-            <div class="card-comic comic-shadow">
-                <a href="{% url 'detail-comics' post.id %}">
-                    <img class="hover-comic" src="{{post.covers}}"/>
-                    <h3 class="title-comic">{{post.title}}</h3>
-                </a>
-            </div>
-            {% endfor %}
-        </section>
-        
-        <h2 class="h2-comics1">MARVEL RISING (2019)</h2>
-        
-        <section class="slider-comic">
-          {% for post in MR %}
-            <div class="card-comic comic-shadow">
-                <a href="{% url 'detail-comics' post.id %}">
-                    <img class="hover-comic" src="{{post.covers}}"/>
-                    <h3 class="title-comic">{{post.title}}</h3>
-                </a>
-            </div>
-            {% endfor %}
-        </section>
-
-        <h2 class="h2-comics1">Deadpool (2018)</h2>
-        
-        <section class="slider-comic">
-          {% for post in DP %}
-            <div class="card-comic comic-shadow">
-                <a href="{% url 'detail-comics' post.id %}">
-                    <img class="hover-comic" src="{{post.covers}}"/>
-                    <h3 class="title-comic">{{post.title}}</h3>
-                </a>
-            </div>
-            {% endfor %}
-        </section>
-
-        <h2 class="h2-comics1">DOCTOR STRANGE</h2>
-        
-        <section class="slider-comic">
-          {% for post in DS %}
-            <div class="card-comic comic-shadow">
-                <a href="{% url 'detail-comics' post.id %}">
-                    <img class="hover-comic" src="{{post.covers}}"/>
-                    <h3 class="title-comic">{{post.title}}</h3>
-                </a>
-            </div>
-            {% endfor %}
-        </section>
-
-        <h2 class="h2-comics1">LOCKJAW AND THE PET AVENGERS</h2>
-        
-        <section class="slider-comic">
-          {% for post in LATPA %}
-            <div class="card-comic comic-shadow">
-                <a href="{% url 'detail-comics' post.id %}">
-                    <img class="hover-comic" src="{{post.covers}}"/>
-                    <h3 class="title-comic">{{post.title}}</h3>
-                </a>
-            </div>
-            {% endfor %}
-        </section>
-
     </div>
+
+    <br><br>
+
+    <h2 class="h2-marvel__comic">MARVEL COMICS</h2>
+
+    <div class="container-marvel__comic">
+      {% for post in marvel_items %}
+        <div class="card-marvel__comic">
+          <a href="{% url 'detail-comics' post.id %}">
+            <img class="image-marvel__comic" src="{{post.covers}}">
+            <h2 class="title-marvel__comic">{{post.title}}</h2>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+
+  <div class="cont-text__slider-comic">
+    <h2 class="h2-comics mt-5">MARVEL ACTION SPIDER-MAN (2018)</h2>
+  </div>
+
+  <section class="slider-comic">
+    {% for post in SC %}
+      <div class="card-comics">
+        <a href="{% url 'detail-comics' post.id %}">
+          <img class="hover-comics" src="{{post.covers}}"/>
+          <h3 class="title-comics">{{post.title}}</h3>
+        </a>
+      </div>
+    {% endfor %}
+        
+  </section>
+      
+  <div class="cont-text__slider-comic">
+    <h2 class="h2-comics mt-5">GUARDIANS OF THE GALAXY (2019)</h2>
+  </div>
+
+  <section class="slider-comic">
+    {% for post in GOTG %}
+      <div class="card-comics">
+        <a href="{% url 'detail-comics' post.id %}">
+          <img class="hover-comics" src="{{post.covers}}"/>
+          <h3 class="title-comics">{{post.title}}</h3>
+        </a>
+      </div>
+    {% endfor %}
+  </section>
+
+  <div class="cont-text__slider-comic">
+    <h2 class="h2-comics mt-5">FANTASTIC FOUR POWERPACK</h2>
+  </div>
+      
+  <section class="slider-comic">
+    {% for post in FF %}
+      <div class="card-comics">
+        <a href="{% url 'detail-comics' post.id %}">
+          <img class="hover-comics" src="{{post.covers}}"/>
+          <h3 class="title-comics">{{post.title}}</h3>
+        </a>
+      </div>
+    {% endfor %}
+  </section>
+        
+  <div class="cont-text__slider-comic">
+    <h2 class="h2-comics mt-5">MARVEL RISING (2019)</h2>
+  </div>
+
+  <section class="slider-comic">
+    {% for post in MR %}
+      <div class="card-comics">
+        <a href="{% url 'detail-comics' post.id %}">
+          <img class="hover-comics" src="{{post.covers}}"/>
+          <h3 class="title-comics">{{post.title}}</h3>
+        </a>
+      </div>
+    {% endfor %}
+  </section>
+
+  <div class="cont-text__slider-comic">
+    <h2 class="h2-comics mt-5">Deadpool (2018)</h2>
+  </div>
+
+  <section class="slider-comic">
+    {% for post in DP %}
+      <div class="card-comics">
+        <a href="{% url 'detail-comics' post.id %}">
+          <img class="hover-comics" src="{{post.covers}}"/>
+          <h3 class="title-comics">{{post.title}}</h3>
+        </a>
+      </div>
+    {% endfor %}
+  </section>
+
+  <div class="cont-text__slider-comic">
+    <h2 class="h2-comics mt-5">DOCTOR STRANGE</h2>
+  </div>
+
+  <section class="slider-comic">
+    {% for post in DS %}
+      <div class="card-comics">
+        <a href="{% url 'detail-comics' post.id %}">
+          <img class="hover-comics" src="{{post.covers}}"/>
+          <h3 class="title-comics">{{post.title}}</h3>
+        </a>
+      </div>
+    {% endfor %}
+  </section>
+
+  <div class="cont-text__slider-comic">
+    <h2 class="h2-comics">LOCKJAW AND THE PET AVENGERS</h2>
+  </div>
+
+  <section class="slider-comic">
+    {% for post in LATPA %}
+      <div class="card-comics">
+        <a href="{% url 'detail-comics' post.id %}">
+          <img class="hover-comics" src="{{post.covers}}"/>
+          <h3 class="title-comics">{{post.title}}</h3>
+        </a>
+      </div>
+    {% endfor %}
+  </section>
+
 {% endblock Cspider-content %}
         
 {% block Footer %}
 
-  <div class="container-foot__Comic">
+  <div class="container-foot">
 
     <section class="nb-copyright">
 

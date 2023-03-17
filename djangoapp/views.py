@@ -10,13 +10,13 @@ import random
 def home(request):
     # Comic Views
 
-    comic = [1, 2, 3, 4]
+    comic = [1, 2, 3, 4, 5]
     comic_spiderman = SubCategoryComic.objects.filter(pk__in=comic)
 
-    comic = [21, 22, 23, 24]
+    comic = [21, 22, 23, 24, 25]
     comic_deadpool = SubCategoryComic.objects.filter(pk__in=comic)
 
-    comic = [16, 17, 18, 19]
+    comic = [16, 17, 18, 19, 20]
     comic_guardians = SubCategoryComic.objects.filter(pk__in=comic)   
     
     shop = list(Shop.objects.all())
