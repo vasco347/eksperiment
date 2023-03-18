@@ -32,13 +32,10 @@ def home(request):
 
 def shop(request):
 
-    shop_1 = Shop.objects.all().order_by('id')[0:4]
-    shop_2 = Shop.objects.all().order_by('id')[4:8]
-    shop_3 = Shop.objects.all().order_by('id')[8:12]
-    shop_4 = Shop.objects.all().order_by('id')[12:16]
-    shop_5 = Shop.objects.all().order_by('id')[16:20]
+    shop_1 = Shop.objects.all().order_by('id')[0:12]
+    shop_2 = Shop.objects.all().order_by('id')[12:20]
 
-    return render(request, 'shop.html', {'title':"Shop", 'shop_1':shop_1, 'shop_2':shop_2, 'shop_3':shop_3, 'shop_4':shop_4, 'shop_5':shop_5})
+    return render(request, 'shop.html', {'title':"Shop", 'shop_1':shop_1, 'shop_2':shop_2})
 
 def comic(request):
     SC = SubCategoryComic.objects.filter(child=2)

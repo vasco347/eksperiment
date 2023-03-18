@@ -968,6 +968,12 @@ button {
 	 color: #fff;
 }
 
+@media (max-width: 600px){
+	.content .featured-comic{
+		margin: 1em 0 -0.2em;
+	}
+}
+
 .container-foot__Comic {
 	 display: flex;
 	 flex-direction: row;
@@ -1642,15 +1648,54 @@ button {
 	margin-right: auto;
 	color: #fff;
 }
+@media (max-width:900px){
+	.container-shops{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		width: 99%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (max-width:600px){
+	.container-shops{
+		display: grid;
+		grid-template-columns: auto auto;
+		width: 99%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+.container-shops .merch-thumb{
+	background: #000;
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff;
+	border-top: 2px solid #fff;
+}
+
+.merch-thumb{
+	margin: 10px 0 0;
+}
+.merch-thumb h2{
+	margin: 10px 0 0;
+}
+.merch-thumb .hover-merch{
+	margin: 15px 0 0;
+}
 
 .merch-thumb {
+	width: 100%;
+	height: auto;
 	position: relative;
 	transition: ease 0.3s;
 }
 
 .merch-thumb .hover-merch{
 	width: 100%;
-	height: 75%;
+	height: auto;
 	transition: ease 0.3s;
 }
 
@@ -1667,14 +1712,11 @@ button {
 	flex-direction: column;
 	color: #fff;
 	text-decoration: none;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
 .merch-thumb a{
 	text-decoration: none;
-}
-.box-shop{
-	width: 100%;
 }
 
 .box-shop h2{
@@ -1683,6 +1725,15 @@ button {
 	color: #fff;
 	font-size: 80%;
 	font-weight: 500;
+	text-shadow: 0 0 2px #000;
+}
+
+.box-shop p{
+	text-align: center;
+	z-index: 5;
+	color: #fff;
+	font-size: 80%;
+	font-weight: bold;
 	text-shadow: 0 0 2px #000;
 }
 
@@ -1700,15 +1751,6 @@ button {
 	font-weight: 500;
 	text-align: left;
 	margin-top: 2em;
-}
-
-.box-shop p{
-	text-align: center;
-	z-index: 5;
-	color: #fff;
-	font-size: 80%;
-	font-weight: bold;
-	text-shadow: 0 0 2px #000;
 }
 
 .container-detail_heroes{
@@ -1894,16 +1936,6 @@ button {
 }
 
 @media (max-width:600px){
-	.container-shops {
-		display: flex;
-		flex-direction: column;
-	}
-	.container-shops .merch-thumb{
-		margin: 10px;
-		position: relative;
-		width: 100%;
-		border-bottom: 2px solid #fff;
-	}
 	.container-detail_heroes{
 		display: flex;
 		flex-direction: column;
@@ -1924,11 +1956,6 @@ button {
 }
 
 @media (max-width: 960px){
-	.container-shops {
-		display: flex;
-		flex-direction: column;
-		
-	}
 	.container-detail_movies{
 		width: 80%;
 		display: flex;
@@ -2498,23 +2525,19 @@ button {
 		 content: 'Menu';
 	}
 }
- @media (max-width: 960px) {
+ @media (max-width: 600px) {
 	 .slider-comic{
-		width: 80%;
+		width: 98%;
 		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cont-text__slider-comic{
+		width: 98%;
 	}
 }
 
-@media (max-width: 767px){
-	.slider-comic .slick-track{
-		margin: 0 -42% 0;
-	}
-}
-@media (max-width: 600px){
-	.slider-comic .slick-track{
-		margin: 0 -33% 0;
-	}
-}
 
  @media (max-width: 600px) {
 	 .container-grid {

@@ -67,69 +67,13 @@
       </div>
       {% endfor %}
     </div>
-    
-    <div class="container-shops">
-      {% for items in shop_2 %} 
-      <div class="merch-thumb">
-        <a href="{% url 'detail-shops' items.id %}">
-          <img class="hover-merch" src="{{items.cover}}" />
-          <div class="box-shop">
-            <h2>{{items.title}}</h2>
-            <p>Rp. {{items.price}}<p>
-          </div>
-        </a>
-      </div>
-      {% endfor %}
-    </div>
-
-    <div class="container-shops">
-      {% for items in shop_3 %} 
-      <div class="merch-thumb">
-        <a href="{% url 'detail-shops' items.id %}">
-          <img class="hover-merch" src="{{items.cover}}" />
-          <div class="box-shop">
-            <h2>{{items.title}}</h2>
-            <p>Rp. {{items.price}}<p>
-          </div>
-        </a>
-      </div>
-      {% endfor %}
-    </div>
   
     </div>
 
     <div class="item2">
 
     <div class="container-shops">
-      {% for items in shop_4 %} 
-      <div class="merch-thumb">
-        <a href="{% url 'detail-shops' items.id %}">
-          <img class="hover-merch" src="{{items.cover}}" />
-          <div class="box-shop">
-            <h2>{{items.title}}</h2>
-            <p>Rp. {{items.price}}<p>
-          </div>
-        </a>
-      </div>
-      {% endfor %}
-    </div>
-    
-    <div class="container-shops">
-      {% for items in shop_5 %} 
-      <div class="merch-thumb">
-        <a href="{% url 'detail-shops' items.id %}">
-          <img class="hover-merch" src="{{items.cover}}" />
-          <div class="box-shop">
-            <h2>{{items.title}}</h2>
-            <p>Rp. {{items.price}}<p>
-          </div>
-        </a>
-      </div>
-      {% endfor %}
-    </div>
-
-    <div class="container-shops">
-      {% for items in shop_6 %} 
+      {% for items in shop_2 %} 
       <div class="merch-thumb">
         <a href="{% url 'detail-shops' items.id %}">
           <img class="hover-merch" src="{{items.cover}}" />
