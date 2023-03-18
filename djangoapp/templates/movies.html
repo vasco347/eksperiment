@@ -48,9 +48,9 @@
 {% endblock Header %}
 
 {% block Movies-content %}
-  <div class="content">
-        
+  <div class="cont-text">        
     <h1 class="latest-movie">Latest Movies</h1>
+  </div>
 
     <div class="container-comics">
       
@@ -69,6 +69,8 @@
 
     <br><br>
 
+    <div class="content">
+
     <h2 class="h2-marvel__movie">MARVEL MOVIES</h2>
 
     <div class="container-marvel__movie">
@@ -86,6 +88,9 @@
 
     <h2 class="h2-marvel__movie">MARVEL SERIES</h2>
 
+  </div>
+
+  <div class="cont-text">
     <h2 class="h2-movies">MS. MARVEL</h2>
     <section class="slider-movie">
         {% for uploads in MM %}
@@ -188,7 +193,7 @@
 
       <div class="copyrt__Movie">
         <img width="150px" height="120px" src="{% static 'images/marvel-logo.png' %}">
-	      <p class="color">© 2022 MARVEL<p> 
+	      <p class="color">© 2023 MARVEL<p> 
           <a href="#!">Terms of Use</a>
           <a href="#!">Contact Us</a>
           <a href="#!">Privacy Policy</a>

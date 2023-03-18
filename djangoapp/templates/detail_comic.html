@@ -49,22 +49,16 @@
     <h2 class="h2-Detail__Comic">{{post.title}}</h2>
   </div>
 
-  <div class="container">
-
-    <section class="slider-detail__comic">
-
-      {% for p in detail_comics %}
-      <div>
-        <img class="img__comic" src="{{p.comics}}">
-      </div>
-      {% endfor %}
-      
-    </section>
-
-  </div>
+  <section class="slider-detail__comic">
+    {% for p in detail_comics %}
+    <div>
+      <img class="img__comic" src="{{p.comics}}">
+    </div>
+    {% endfor %}
+  </section>
 
   <div class="content">
-    <h2 class="h2-Detail__Comic">MORE COMICS</h2>
+    <h2 class="h2-more__comic">MORE COMICS</h2>
   </div>
 
   <div class="container-more">
@@ -82,13 +76,13 @@
 
 {% block Footer %}
 
-  <div class="container-foot__Comic">
+  <div class="container-foot">
 
     <section class="nb-copyright">
 
       <div class="copyrt">
         <img width="150px" height="120px" src="{% static 'images/marvel-logo.png' %}">
-	      <p class="color">© 2022 MARVEL<p> 
+	      <p class="color">© 2023 MARVEL<p> 
           <a href="#!">Terms of Use</a>
           <a href="#!">Contact Us</a>
           <a href="#!">Privacy Policy</a>
