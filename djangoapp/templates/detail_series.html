@@ -70,7 +70,7 @@
     <h2 class="h2-More__Movie">MORE SERIES</h2>
   </div>
 
-  <div class="container-more_movie">
+  <div class="container-more__movie">
     {% for mv in more_series %}
       <div class="card-more__movie">
         <a href="{% url 'movie' %}">
@@ -85,11 +85,11 @@
 
 {% block Footer %}
 
-  <div class="container-foot__DetailMovie">
+  <div class="container-foot">
 
-    <section class="nb-copyright__DetailMovie">
+    <section class="nb-copyright">
 
-      <div class="copyrt__DetailMovie">
+      <div class="copyrt">
         <img width="150px" height="120px" src="{% static 'images/marvel-logo.png' %}">
 	      <p class="color">© 2023 MARVEL<p> 
           <a href="#!">Terms of Use</a>

@@ -1,39 +1,15 @@
 $(document).ready(function(){
-      $('.slider-movie').slick({
-        slidesToShow: 7,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        speed: 300,
-        variableWidth: true,
-        infinite: false,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              arrows: false,
-              dots: false,
-              speed: 300,
-              variableWidth: true,
-              infinite: false,
-            }
-          },
-          {
-            breakpoint: 960,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              arrows: false,
-              dots: false,
-              speed: 300,
-              variableWidth: true,
-              infinite: false,
-            }
-          },
+  $('.slider-movie').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    speed: 300,
+    variableWidth: true,
+    infinite: false,
+    responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -43,7 +19,31 @@ $(document).ready(function(){
           variableWidth: true,
           infinite: false,
         }
-      }
-    ]
-      });
-    });
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false,
+          speed: 300,
+          variableWidth: true,
+          infinite: false,
+        }
+      },
+  {
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      speed: 300,
+      variableWidth: true,
+      infinite: false,
+    }
+  }
+]
+  });
+});

@@ -69,6 +69,7 @@ def movie(request):
     WI = SubCategorySeries.objects.filter(child=3)
     JJ = SubCategorySeries.objects.filter(child=6)
     IF = SubCategorySeries.objects.filter(child=8)
+    CD = SubCategorySeries.objects.filter(child=9) 
     
 
     # All Marvel Heroes
@@ -78,7 +79,7 @@ def movie(request):
     videos = (4, 5, 8, 2)
     latest_movies = SubCategoryMovie.objects.filter(pk__in=videos)
 
-    return render(request, 'movies.html', {'title':"Movies", 'marvel_movies':marvel_movies, 'AM':AM, 'VU':VU, 'WV':WV, 'MM':MM, 'JJ':JJ, 'MK':MK, 'IF':IF, 'WI':WI, 'L':L, 'H':H, 'latest_movies':latest_movies})
+    return render(request, 'movies.html', {'title':"Movies", 'marvel_movies':marvel_movies, 'CD':CD, 'AM':AM, 'VU':VU, 'WV':WV, 'MM':MM, 'JJ':JJ, 'MK':MK, 'IF':IF, 'WI':WI, 'L':L, 'H':H, 'latest_movies':latest_movies})
 
 def character(request):
     
