@@ -83,46 +83,37 @@ class DetailMovie(models.Model):
 # ========================================================================================================================
 
 # Series
-class CategorySeries(models.Model):
-    parent = models.ForeignKey('self', related_name='children', on_delete=models.CASCADE, blank=True, null=True)
+class Series(models.Model):
+    parent = models.ForeignKey('self', related_name='series', on_delete=models.CASCADE, blank=True, null=True)
     slug = AutoSlugField(populate_from='title', unique=True, null=False, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100)
     poster = models.CharField(max_length=2000)
+    cast = models.CharField(max_length=2000)
+    description = models.TextField()   
+    total_season = models.IntegerField()
+    total_episode = models.IntegerField()
 
     def __str__(self):
         return self.title
     
-    class Meta:
-        unique_together = ('slug', 'parent')    
-        verbose_name_plural = "series categories"
-
-    def __str__(self):                           
-        full_path = [self.title]                  
-        k = self.parent
-        while k is not None:
-            full_path.append(k.title)
-            k = k.parent
-        return ' -> '.join(full_path[::-1])
-
-class SubCategorySeries(models.Model):
-    child = models.ForeignKey(CategorySeries, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    title = models.CharField(max_length=255, null=False)
-    thumbnail = models.CharField(max_length=2000)
+class Season(models.Model):
+    series = models.ForeignKey(Series, default=None, on_delete=models.CASCADE, blank=True, null=True)
+    title = models.CharField(max_length=300)
+    season = models.CharField(max_length=300, blank=True)
 
     def __str__(self):
         return self.title
 
-class DetailSeries(models.Model):
-    uploads = models.ForeignKey(SubCategorySeries, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    cast = models.CharField(max_length=300) 
-    poster = models.CharField(max_length=2000)
-    videos = models.CharField(max_length=2000)
-
+class Episode(models.Model):
+    season = models.ForeignKey(Season, default=None, on_delete=models.CASCADE, blank=True, null=True)
+    episode = models.CharField(max_length=300)
+    thumbnail = models.CharField(max_length=2000)
+    videos = models.CharField(max_length=2000) 
+    
     def __str__(self):
-        return self.uploads.title
+        return self.episode
+
 # ========================================================================================================================
 
 # Shop

@@ -45,25 +45,28 @@
 
 {% block movie-content %}
 
-  <div class="content">
-    <h2 class="h2-Detail__Movie">{{upload.title}}</h2>
-  </div>
-
-  <div class="container-iframe">
-    {% for m in detail_movies %}
-      <iframe class="responsive-iframe" src="{{m.videos}}" frameborder="0" allowfullscreen /></iframe>
-    {% endfor %}
-  </div>
+    <br><br><br>
 
   <div class="container-detail_movies mt-6">
-    {% for d in detail_movies %}
-      <img class="image-detail_movies" src="{{d.poster}}">
+      <img class="image-detail_movies" src="{{series.poster}}">
       <div class="box-entity">
-        <h2>{{d.title}}</h2>
-        <p><span>Cast: </span> {{d.cast}}</p>
-        <p><span>Synopsis: </span>{{d.description}}</p>
+        <h2>{{series.title}}</h2>
+        <p><span>Cast: </span> {{series.cast}}</p>
+        <p><span>Synopsis: </span>{{series.description}}</p>
+        <p><span>Seasons: </span>{{series.total_season}}</p>
+        <p><span>Episodes: </span>{{series.total_episode}}</p>
+
+        {% for season in season %}
+        <h2>{{season.season}}</h2>
+        {% for episode in season.episode_set.all %}
+        <h2>{{episode.episode}}</h2>
+        <a href="{% url 'detail-series' episode.id %}">
+        <img width="200px" heigth="200px" src="{{episode.thumbnail}}">
+        </a>
+        {% endfor %}
+        <br><br><br>
+        {% endfor %}
       </div>
-    {% endfor %}
   </div>
 
   <div class="content">
@@ -71,7 +74,7 @@
   </div>
 
   <div class="container-more__movie">
-    {% for mv in more_movies %}
+    {% for mv in more_series %}
       <div class="card-more__movie">
         <a href="{% url 'detail-movies' mv.id %}">
           <img class="image-more__movie" src="{{mv.poster}}">

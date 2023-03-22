@@ -1,7 +1,7 @@
 from django.contrib import admin
 from . models import CategoryComic, SubCategoryComic, DetailComic
 from . models import CategoryMovie, SubCategoryMovie, DetailMovie
-from . models import CategorySeries, SubCategorySeries, DetailSeries
+from . models import Series, Season, Episode
 from . models import Shop, DetailShop
 from . models import MarvelHeroes, MarvelVillain, DetailHeroes, DetailVillain
 # Register your models here.
@@ -58,27 +58,27 @@ class CategoryMovieAdmin(admin.ModelAdmin):
 # =====================================================================
 
 # Series
-class CategorySeriesAdmin(admin.StackedInline):
-    model = CategorySeries
+class SeriesAdmin(admin.StackedInline):
+    model = Series
 
-class SubCategorySeriesAdmin(admin.StackedInline):
-    model = SubCategorySeries
+class SeasonAdmin(admin.StackedInline):
+    model = Season
 
-class DetailSeriesAdmin(admin.StackedInline):
-    model = DetailSeries
+class EpisodeAdmin(admin.StackedInline):
+    model = Episode
 
-@admin.register(SubCategorySeries)
-class SubCategorySeriesAdmin(admin.ModelAdmin):
-    inlines = [DetailSeriesAdmin]
+@admin.register(Season)
+class SeasonAdmin(admin.ModelAdmin):
+    inlines = [EpisodeAdmin]
 
     class Meta:
-       model = SubCategorySeries
+       model = Season
 
-@admin.register(DetailSeries)
-class DetailSeriesAdmin(admin.ModelAdmin):
+@admin.register(Series)
+class SeriesAdmin(admin.ModelAdmin):
     pass
-@admin.register(CategorySeries)
-class CategorySeriesAdmin(admin.ModelAdmin):
+@admin.register(Episode)
+class EpisodeAdmin(admin.ModelAdmin):
     pass
 # ======================================================================
 

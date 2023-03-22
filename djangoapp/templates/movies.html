@@ -89,112 +89,17 @@
 
   </div>
 
-  <div class="cont-text">
-    <h2 class="h2-movies">MS. MARVEL</h2>
-    <section class="slider-movie">
-        {% for uploads in MM %}
-          <div class="card-movie shadow-movie">
-            <a href="{% url 'detail-series' uploads.id %}">
-              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
-              <h3 class="title-movie">{{uploads.title}}</h3>
-              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
-            </a>
-          </div>
-        {% endfor %}    
-    </section>
-      
-    <h2 class="h2-movies1">WANDA VISION</h2>
-    <section class="slider-movie">
-        {% for uploads in WV %}
-          <div class="card-movie shadow-movie">
-            <a href="{% url 'detail-series' uploads.id %}">
-              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
-              <h3 class="title-movie">{{uploads.title}}</h3>
-              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
-            </a>
-          </div>
-        {% endfor %}    
-    </section>
-
-    <h2 class="h2-movies1">MOON KNIGHT</h2>
-    <section class="slider-movie">
-        {% for uploads in MK %}
-          <div class="card-movie shadow-movie">
-            <a href="{% url 'detail-series' uploads.id %}">
-              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
-              <h3 class="title-movie">{{uploads.title}}</h3>
-              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
-            </a>
-          </div>
-        {% endfor %}    
-    </section>
-
-    <h2 class="h2-movies1">WHAT IF ... ?</h2>
-    <section class="slider-movie">
-        {% for uploads in WI %}
-          <div class="card-movie shadow-movie">
-            <a href="{% url 'detail-series' uploads.id %}">
-              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
-              <h3 class="title-movie">{{uploads.title}}</h3>
-              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
-            </a>
-          </div>
-        {% endfor %}    
-    </section>
-
-    <h2 class="h2-movies1">LOKI</h2>
-    <section class="slider-movie">
-        {% for uploads in L %}
-          <div class="card-movie shadow-movie">
-            <a href="{% url 'detail-series' uploads.id %}">
-              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
-              <h3 class="title-movie">{{uploads.title}}</h3>
-              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
-            </a>
-          </div>
-        {% endfor %}    
-    </section>
-
-    <h2 class="h2-movies1">IRON FIST</h2>
-    <section class="slider-movie">
-        {% for uploads in IF %}
-          <div class="card-movie shadow-movie">
-            <a href="{% url 'detail-series' uploads.id %}">
-              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
-              <h3 class="title-movie">{{uploads.title}}</h3>
-              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
-            </a>
-          </div>
-        {% endfor %}    
-    </section>
-
-    <h2 class="h2-movies1">HAWKEYE</h2>
-    <section class="slider-movie">
-        {% for uploads in H %}
-          <div class="card-movie shadow-movie">
-            <a href="{% url 'detail-series' uploads.id %}">
-              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
-              <h3 class="title-movie">{{uploads.title}}</h3>
-              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
-            </a>
-          </div>
-        {% endfor %}    
-    </section>
-
-    <h2 class="h2-movies1">CLOAK & DAGGER</h2>
-    <section class="slider-movie">
-        {% for uploads in CD %}
-          <div class="card-movie shadow-movie">
-            <a href="{% url 'detail-series' uploads.id %}">
-              <img class="hover-movie" src="{{uploads.thumbnail}}"/>
-              <h3 class="title-movie">{{uploads.title}}</h3>
-              <img class="video-banner-icon-play__Movie" alt="Play Video" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAKCXZlcnNpb249IjEuMSIgCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgl4PSIwIgoJeT0iMCIKCXZpZXdCb3g9IjAgMCA3MiA3MiIgCglzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MiA3MjsiIAoJeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgCgl3aWR0aD0iIiAKCWhlaWdodD0iIiAKPgogICAgICAgIDxwYXRoIGQ9Ik0zNiw3MiBDNTUuOSw3MiA3Miw1NS45IDcyLDM2IEM3MiwxNi4xIDU1LjksMCAzNiwwIEMxNi4xLDAgMCwxNi4xIDAsMzYgQzAsNTUuOSAxNi4xLDcyIDM2LDcyIFogTTM2LDggQzUxLjQsOCA2NCwyMC42IDY0LDM2IEM2NCw1MS40IDUxLjQsNjQgMzYsNjQgQzIwLjYsNjQgOCw1MS40IDgsMzYgQzgsMjAuNiAyMC42LDggMzYsOCBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik0yNiw1MS43IEMyNi4zLDUxLjkgMjYuNyw1MiAyNyw1MiBDMjcuMyw1MiAyNy43LDUxLjkgMjgsNTEuNyBMNTIsMzcuNyBDNTIuNiwzNy4zIDUzLDM2LjcgNTMsMzYgQzUzLDM1LjMgNTIuNiwzNC42IDUyLDM0LjMgTDI4LDIwLjMgQzI3LjQsMTkuOSAyNi42LDE5LjkgMjYsMjAuMyBDMjUuNCwyMC43IDI1LDIxLjMgMjUsMjIgTDI1LDUwIEMyNSw1MC43IDI1LjQsNTEuNCAyNiw1MS43IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg=="/>
-            </a>
-          </div>
-        {% endfor %}    
-    </section>
-
+  <div class="container-marvel__movie">
+    {% for upload in marvel_series %}
+    <div class="card-marvel__movie">
+      <a href="{% url 'series' upload.id %}">
+      <img class="image-marvel__movie" src="{{upload.poster}}">
+      <h2 class="title-marvel__movie">{{upload.title}}</h2>
+      </a>
+    </div>
+    {% endfor %}
   </div>
+
 {% endblock Movies-content %}
         
 {% block Footer %}

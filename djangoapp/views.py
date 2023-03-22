@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from . models import CategoryComic, SubCategoryComic, DetailComic
 from . models import CategoryMovie, SubCategoryMovie, DetailMovie
-from . models import CategorySeries, SubCategorySeries, DetailSeries
+from . models import Series, Season, Episode
 from . models import Shop, DetailShop
 from . models import MarvelHeroes, MarvelVillain, DetailHeroes, DetailVillain
 import random
@@ -61,16 +61,7 @@ def movie(request):
     VU = SubCategoryMovie.objects.filter(child=2)
 
     # Series Views
-    WV = SubCategorySeries.objects.filter(child=2)
-    MM = SubCategorySeries.objects.filter(child=4)
-    MK = SubCategorySeries.objects.filter(child=5)
-    L = SubCategorySeries.objects.filter(child=1)
-    H = SubCategorySeries.objects.filter(child=7)
-    WI = SubCategorySeries.objects.filter(child=3)
-    JJ = SubCategorySeries.objects.filter(child=6)
-    IF = SubCategorySeries.objects.filter(child=8)
-    CD = SubCategorySeries.objects.filter(child=9) 
-    
+    marvel_series = Series.objects.all()
 
     # All Marvel Heroes
     marvel_movies = SubCategoryMovie.objects.all()
@@ -79,7 +70,7 @@ def movie(request):
     videos = (4, 5, 8, 2)
     latest_movies = SubCategoryMovie.objects.filter(pk__in=videos)
 
-    return render(request, 'movies.html', {'title':"Movies", 'marvel_movies':marvel_movies, 'CD':CD, 'AM':AM, 'VU':VU, 'WV':WV, 'MM':MM, 'JJ':JJ, 'MK':MK, 'IF':IF, 'WI':WI, 'L':L, 'H':H, 'latest_movies':latest_movies})
+    return render(request, 'movies.html', {'title':"Movies", 'marvel_movies':marvel_movies, 'marvel_series':marvel_series, 'latest_movies':latest_movies})
 
 def character(request):
     
@@ -113,16 +104,20 @@ def detail_movies(request, id):
     
     return render(request, 'detail_movie.html', {'title':"Movie", 'upload':upload, 'detail_movies':detail_movies, 'more_movies':more_movies})
 
-def detail_series(request, id):
-    uploads = get_object_or_404(SubCategorySeries, id=id)
-    detail_series = DetailSeries.objects.filter(uploads=uploads)
+def series(request, id):
 
-    # Random Movies Views
-    items = list(CategorySeries.objects.all())
-    # change 3 to how many random items you want
-    more_series = random.sample(items, 8)
-    
-    return render(request, 'detail_series.html', {'title':"Series", 'uploads':uploads, 'detail_series':detail_series, 'more_series':more_series})
+    series = get_object_or_404(Series, id=id)
+
+    season = Season.objects.filter(series=series)
+    episode = Episode.objects.filter(season__in=season)
+
+    return render(request, 'series.html', {'title':"Series", 'series':series, 'season':season, 'episode':episode})
+
+def detail_series(request, id):
+
+    uploads = get_object_or_404(Episode, id=id)
+
+    return render(request, 'detail_series.html', {'title':"Episode", 'uploads':uploads })
 
 def detail_shops(request, id):
 
