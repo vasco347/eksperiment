@@ -108,6 +108,7 @@ class Season(models.Model):
 class Episode(models.Model):
     season = models.ForeignKey(Season, default=None, on_delete=models.CASCADE, blank=True, null=True)
     episode = models.CharField(max_length=300)
+    title = models.CharField(max_length=300, blank=True)
     thumbnail = models.CharField(max_length=2000)
     videos = models.CharField(max_length=2000) 
     

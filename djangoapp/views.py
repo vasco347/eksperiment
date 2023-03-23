@@ -111,13 +111,21 @@ def series(request, id):
     season = Season.objects.filter(series=series)
     episode = Episode.objects.filter(season__in=season)
 
-    return render(request, 'series.html', {'title':"Series", 'series':series, 'season':season, 'episode':episode})
+    items = list(Series.objects.all())
+    # change 3 to how many random items you want
+    more_series = random.sample(items, 8)
+
+    return render(request, 'series.html', {'title':"Series", 'series':series, 'more_series':more_series, 'season':season, 'episode':episode})
 
 def detail_series(request, id):
 
     uploads = get_object_or_404(Episode, id=id)
 
-    return render(request, 'detail_series.html', {'title':"Episode", 'uploads':uploads })
+    items = list(Series.objects.all())
+    # change 3 to how many random items you want
+    more_series = random.sample(items, 8)
+
+    return render(request, 'detail_series.html', {'title':"Episode", 'uploads':uploads, 'more_series':more_series })
 
 def detail_shops(request, id):
 

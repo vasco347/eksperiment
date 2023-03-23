@@ -45,40 +45,57 @@
 
 {% block movie-content %}
 
-    <br><br><br>
+  <br>
 
-  <div class="container-detail_movies mt-6">
-      <img class="image-detail_movies" src="{{series.poster}}">
-      <div class="box-entity">
-        <h2>{{series.title}}</h2>
-        <p><span>Cast: </span> {{series.cast}}</p>
-        <p><span>Synopsis: </span>{{series.description}}</p>
-        <p><span>Seasons: </span>{{series.total_season}}</p>
-        <p><span>Episodes: </span>{{series.total_episode}}</p>
-
-        {% for season in season %}
-        <h2>{{season.season}}</h2>
-        {% for episode in season.episode_set.all %}
-        <h2>{{episode.episode}}</h2>
-        <a href="{% url 'detail-series' episode.id %}">
-        <img width="200px" heigth="200px" src="{{episode.thumbnail}}">
-        </a>
-        {% endfor %}
-        <br><br><br>
-        {% endfor %}
-      </div>
+  <div class="container-detail_movies">
+    <img class="image-detail_movies" src="{{series.poster}}">
+    <div class="box-entity">
+      <h2>{{series.title}}</h2>
+      <p><span>Cast: </span> {{series.cast}}</p>
+      <p><span>Synopsis: </span>{{series.description}}</p>
+    </div>
   </div>
 
+  <div class="container-series">
+  <ul class="list img-list">
+    {% for season in season %}
+      <div class="cont-text__series">
+        <h2 class="season-series">{{season.season}}</h2>
+      </div>
+
+      {% for e in season.episode_set.all %}
+        <li>
+          <a href="{% url 'detail-series' e.id %}" class="inner">
+            <div class="li-img">
+              <img src="{{e.thumbnail}}" alt="" />
+            </div>
+            <div class="li-text">
+              <h4 class="li-head">{{e.episode}}</h4>
+              <div class="li-sub">
+                <h3>{{e.title}}</h3>
+              </div>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+
+    {% endfor %}
+    
+  </ul>
+</div>
+
+<br><br>
+
   <div class="content">
-    <h2 class="h2-More__Movie">MORE MOVIES</h2>
+    <h2 class="h2-More__Movie">MORE SERIES</h2>
   </div>
 
   <div class="container-more__movie">
-    {% for mv in more_series %}
+    {% for s in more_series %}
       <div class="card-more__movie">
-        <a href="{% url 'detail-movies' mv.id %}">
-          <img class="image-more__movie" src="{{mv.poster}}">
-          <h2 class="title-marvel__movie">{{mv.title}}</h2>
+        <a href="{% url 'series' s.id %}">
+          <img class="image-more__movie" src="{{s.poster}}">
+          <h2 class="title-marvel__movie">{{s.title}}</h2>
         </a>
       </div>
     {% endfor %}

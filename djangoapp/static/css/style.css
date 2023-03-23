@@ -55,6 +55,32 @@
 	 margin-top: 1em;
 	 color: #fff;
 }
+
+.content .h2-Episode__Series {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 2em;
+	line-height: 1em;
+	color: #fff;
+	text-align: center;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.155em;
+	margin-top: 1em;
+	color: #fff;
+}
+
+.content .h2-Title__Series {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 2em;
+	line-height: 1em;
+	color: #fff;
+	text-align: center;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.155em;
+	color: #fff;
+}
+
  .content .h2-Detail__Comic {
 	 font-family: 'Source Sans Pro', sans-serif;
 	 font-size: 1em;
@@ -1985,6 +2011,98 @@ button {
 	color: azure;
 	opacity: 0;
 	z-index: 0;
+}
+
+.cont-text__series{
+	width: 90%
+}
+.cont-text__series .season-series{
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 1em;
+	color: #fff;
+	font-size: 1.3em;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-top: 2em;
+	text-align: left;
+	color: #fff;
+}
+
+.container-series{
+	width: 90%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.list {
+	width: 90%;
+	margin: 20px auto;
+  }
+  .img-list a {
+	text-decoration: none;
+  }
+
+  .img-list h4{
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.5em;
+  }
+  .img-list h3{
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: 500;
+	line-height: 1.5em;
+  }
+  
+  .li-sub p {
+	margin: 0;
+  }
+  .inner {
+	display: flex;
+}
+  .list li {
+	border-bottom: 2px solid #ccc;
+  }
+
+  .inner {
+	overflow: hidden;
+  }
+  .li-img {
+	vertical-align: middle;
+	width: 300px;
+	height: auto;
+	padding-right: 1em;
+	margin: 1em 0 0;
+  }
+  .li-img img {
+	display: block;
+	width: 100%;
+	height: auto;
+  }
+  .li-text {
+	vertical-align: middle;
+	width: 80%;
+  }
+  .li-head {
+	margin: 10px 0 0 0;
+  }
+  .li-sub {
+	margin: 0;
+  }
+  
+@media(max-width: 600px){
+	.list {
+		width: 99%;
+		margin-left: -15px;
+	  }
+	.container-series{
+		width: 99%;
+	}
+	.inner {
+		display: flex;
+	}
 }
 
 @media (max-width: 600px){
