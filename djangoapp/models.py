@@ -87,12 +87,13 @@ class Series(models.Model):
     parent = models.ForeignKey('self', related_name='series', on_delete=models.CASCADE, blank=True, null=True)
     slug = AutoSlugField(populate_from='title', unique=True, null=False, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=2000)
     poster = models.CharField(max_length=2000)
     cast = models.CharField(max_length=2000)
     description = models.TextField()   
-    total_season = models.IntegerField()
-    total_episode = models.IntegerField()
+    release = models.CharField(max_length=2000)
+    imdb_rating = models.CharField(max_length=2000)
+    rotten_rating = models.CharField(max_length=2000)
 
     def __str__(self):
         return self.title
@@ -108,7 +109,7 @@ class Season(models.Model):
 class Episode(models.Model):
     season = models.ForeignKey(Season, default=None, on_delete=models.CASCADE, blank=True, null=True)
     episode = models.CharField(max_length=300)
-    title = models.CharField(max_length=300, blank=True)
+    title = models.CharField(max_length=2000, blank=True)
     thumbnail = models.CharField(max_length=2000)
     videos = models.CharField(max_length=2000) 
     

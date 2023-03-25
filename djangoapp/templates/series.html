@@ -51,8 +51,11 @@
     <img class="image-detail_movies" src="{{series.poster}}">
     <div class="box-entity">
       <h2>{{series.title}}</h2>
-      <p><span>Cast: </span> {{series.cast}}</p>
-      <p><span>Synopsis: </span>{{series.description}}</p>
+      <p><tag>Release:</tag> {{series.release}}</p>
+      <p><tag>Cast:</tag> {{series.cast}}</p>
+      <p><tag>Synopsis:</tag> {{series.description}}</p>
+      <p><tag>IMDb:</tag> {{series.imdb_rating}}</i></p>
+      <p><tag>Rotten Tomatoes:</tag> {{series.rotten_rating}}</p>
     </div>
   </div>
 
@@ -69,8 +72,9 @@
             <div class="li-img">
               <img src="{{e.thumbnail}}" alt="" />
             </div>
+            
             <div class="li-text">
-              <h4 class="li-head">{{e.episode}}</h4>
+              <h2 class="li-head">{{e.episode}}</h2>
               <div class="li-sub">
                 <h3>{{e.title}}</h3>
               </div>
