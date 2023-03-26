@@ -67,7 +67,7 @@ def movie(request):
     marvel_movies = SubCategoryMovie.objects.all()
 
     # Latest Marvel Movies
-    videos = (4, 5, 8, 2)
+    videos = (3, 6, 8, 10)
     latest_movies = SubCategoryMovie.objects.filter(pk__in=videos)
 
     return render(request, 'movies.html', {'title':"Movies", 'marvel_movies':marvel_movies, 'marvel_series':marvel_series, 'latest_movies':latest_movies})
