@@ -56,15 +56,18 @@
   </div>
 
   <div class="container-detail_movies mt-6">
-    {% for d in detail_movies %}
-      <img class="image-detail_movies" src="{{d.poster}}">
-      <div class="box-entity">
-        <h2>{{d.title}}</h2>
-        <p><span>Cast: </span> {{d.cast}}</p>
-        <p><span>Synopsis: </span>{{d.description}}</p>
-      </div>
-    {% endfor %}
-  </div>
+      {% for d in detail_movies %}
+        <img class="image-detail_movies" src="{{d.poster}}">
+        <div class="box-entity">
+          <h2>{{d.title}}</h2>
+          <p><tag>Release:</tag> {{d.release}}</p>
+          <p><tag>Cast:</tag> {{d.cast}}</p>
+          <p><tag>Synopsis:</tag> {{d.synopsis}}</p>
+          <p><tag>IMDb:</tag> {{d.imdb_rating}}</i></p>
+          <p><tag>Rotten Tomatoes:</tag> {{d.rotten_rating}}</p>
+        </div>
+      {% endfor %}
+    </div>
 
   <div class="content">
     <h2 class="h2-More__Movie">MORE MOVIES</h2>

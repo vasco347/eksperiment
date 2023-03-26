@@ -49,18 +49,6 @@ class CategoryMovie(models.Model):
 
     def __str__(self):
         return self.title
-        
-    class Meta:
-        unique_together = ('slug', 'parent')    
-        verbose_name_plural = "movies categories"
-
-    def __str__(self):                           
-        full_path = [self.title]                  
-        k = self.parent
-        while k is not None:
-            full_path.append(k.title)
-            k = k.parent
-        return ' -> '.join(full_path[::-1])
 
 class SubCategoryMovie(models.Model):
     child = models.ForeignKey(CategoryMovie, default=None, on_delete=models.CASCADE, blank=True, null=True)
@@ -72,10 +60,13 @@ class SubCategoryMovie(models.Model):
 
 class DetailMovie(models.Model):
     upload = models.ForeignKey(SubCategoryMovie, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    title = models.CharField(max_length=255, null=False)
-    description = models.TextField(max_length=1000, null=False)
-    cast = models.CharField(max_length=300, null=False)
+    title = models.CharField(max_length=300)
+    release = models.CharField(max_length=100)
+    cast = models.CharField(max_length=300)
+    synopsis = models.TextField(max_length=2000)
     poster = models.CharField(max_length=2000)
+    imdb_rating = models.CharField(max_length=100)
+    rotten_rating = models.CharField(max_length=100)
     videos = models.CharField(max_length=2000)
 
     def __str__(self):
