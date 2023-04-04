@@ -53,10 +53,11 @@ class CategoryMovie(models.Model):
 class SubCategoryMovie(models.Model):
     child = models.ForeignKey(CategoryMovie, default=None, on_delete=models.CASCADE, blank=True, null=True)
     title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     poster = models.CharField(max_length=2000)
 
     def __str__(self):
-        return self.title
+        return self.name
 
 class DetailMovie(models.Model):
     upload = models.ForeignKey(SubCategoryMovie, default=None, on_delete=models.CASCADE, blank=True, null=True)
@@ -78,31 +79,34 @@ class Series(models.Model):
     parent = models.ForeignKey('self', related_name='series', on_delete=models.CASCADE, blank=True, null=True)
     slug = AutoSlugField(populate_from='title', unique=True, null=False, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
-    title = models.CharField(max_length=2000)
-    poster = models.CharField(max_length=2000)
-    cast = models.CharField(max_length=2000)
+    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    poster = models.CharField(max_length=1000)
+    cast = models.CharField(max_length=300)
     description = models.TextField()   
-    release = models.CharField(max_length=2000)
-    imdb_rating = models.CharField(max_length=2000)
-    rotten_rating = models.CharField(max_length=2000)
+    release = models.CharField(max_length=100)
+    imdb_rating = models.CharField(max_length=11)
+    rotten_rating = models.CharField(max_length=11)
 
     def __str__(self):
         return self.title
     
 class Season(models.Model):
     series = models.ForeignKey(Series, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    title = models.CharField(max_length=300)
-    season = models.CharField(max_length=300, blank=True)
+    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    season = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         return self.title
 
 class Episode(models.Model):
     season = models.ForeignKey(Season, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    episode = models.CharField(max_length=300)
-    title = models.CharField(max_length=2000, blank=True)
-    thumbnail = models.CharField(max_length=2000)
-    videos = models.CharField(max_length=2000) 
+    episode = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    thumbnail = models.CharField(max_length=1000)
+    videos = models.CharField(max_length=1000) 
     
     def __str__(self):
         return self.episode

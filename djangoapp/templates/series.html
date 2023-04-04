@@ -12,7 +12,7 @@
   
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
-    <title>MARVEL | {{upload.title}}</title>
+    <title>MARVEL | {{series.name}}</title>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
   <div class="container-detail_movies">
     <img class="image-detail_movies" src="{{series.poster}}">
     <div class="box-entity">
-      <h2>{{series.title}}</h2>
+      <h2>{{series.name}}</h2>
       <p><tag>Release:</tag> {{series.release}}</p>
       <p><tag>Cast:</tag> {{series.cast}}</p>
       <p><tag>Synopsis:</tag> {{series.description}}</p>
@@ -68,7 +68,7 @@
 
       {% for e in season.episode_set.all %}
         <li>
-          <a href="{% url 'detail-series' e.id %}" class="inner">
+          <a href="{% url 'detail-series' e.season e.title %}" class="inner">
             <div class="li-img">
               <img src="{{e.thumbnail}}" alt="" />
             </div>
@@ -76,7 +76,7 @@
             <div class="li-text">
               <h2 class="li-head">{{e.episode}}</h2>
               <div class="li-sub">
-                <h3>{{e.title}}</h3>
+                <h3>{{e.name}}</h3>
               </div>
             </div>
           </a>
@@ -97,7 +97,7 @@
   <div class="container-more__movie">
     {% for s in more_series %}
       <div class="card-more__movie">
-        <a href="{% url 'series' s.id %}">
+        <a href="{% url 'series' s.title %}">
           <img class="image-more__movie" src="{{s.poster}}">
           <h2 class="title-marvel__movie">{{s.title}}</h2>
         </a>

@@ -56,9 +56,9 @@
       <div class="container-latest__movie">
         {% for upload in latest_movies %}
         <div class="card-latest__movie">
-          <a href="{% url 'detail-movies' upload.id %}">
+          <a href="{% url 'detail-movies' upload.title %}">
           <img class="image-latest__movie" src="{{upload.poster}}">
-          <h2 class="title-latest__movie">{{upload.title}}</h2>
+          <h2 class="title-latest__movie">{{upload.name}}</h2>
           </a>
         </div>
         {% endfor %}
@@ -75,9 +75,9 @@
     <div class="container-marvel__movie">
       {% for upload in marvel_movies %}
       <div class="card-marvel__movie">
-        <a href="{% url 'detail-movies' upload.id %}">
+        <a href="{% url 'detail-movies' upload.title %}">
         <img class="image-marvel__movie" src="{{upload.poster}}">
-        <h2 class="title-marvel__movie">{{upload.title}}</h2>
+        <h2 class="title-marvel__movie">{{upload.name}}</h2>
         </a>
       </div>
       {% endfor %}
@@ -92,9 +92,9 @@
   <div class="container-marvel__movie">
     {% for upload in marvel_series %}
     <div class="card-marvel__movie">
-      <a href="{% url 'series' upload.id %}">
+      <a href="{% url 'series' upload.title %}">
       <img class="image-marvel__movie" src="{{upload.poster}}">
-      <h2 class="title-marvel__movie">{{upload.title}}</h2>
+      <h2 class="title-marvel__movie">{{upload.name}}</h2>
       </a>
     </div>
     {% endfor %}

@@ -82,19 +82,19 @@ def character(request):
 
     return render(request, 'char.html', {'title':"Characters", 'marvel_heroes':marvel_heroes, 'marvel_villain':marvel_villain})
 
-def detail_comics(request, id):
+def detail_comics(request, title):
     # Random Comics Views
     items = list(SubCategoryComic.objects.all())
     # change 3 to how many random items you want
     random_items = random.sample(items, 8)
 
-    post = get_object_or_404(SubCategoryComic, id=id)
+    post = get_object_or_404(SubCategoryComic,title=title)
     detail_comics = DetailComic.objects.filter(post=post)
 
     return render(request, 'detail_comic.html', {'title':"Comic", 'post':post, 'detail_comics':detail_comics, 'random_items':random_items})
 
-def detail_movies(request, id):
-    upload = get_object_or_404(SubCategoryMovie, id=id)
+def detail_movies(request, title):
+    upload = get_object_or_404(SubCategoryMovie, title=title)
     detail_movies = DetailMovie.objects.filter(upload=upload)
     
     # Random Movies Views
@@ -104,9 +104,9 @@ def detail_movies(request, id):
     
     return render(request, 'detail_movie.html', {'title':"Movie", 'upload':upload, 'detail_movies':detail_movies, 'more_movies':more_movies})
 
-def series(request, id):
+def series(request, title):
 
-    series = get_object_or_404(Series, id=id)
+    series = get_object_or_404(Series, title=title)
 
     season = Season.objects.filter(series=series)
     episode = Episode.objects.filter(season__in=season)
@@ -117,9 +117,9 @@ def series(request, id):
 
     return render(request, 'series.html', {'title':"Series", 'series':series, 'more_series':more_series, 'season':season, 'episode':episode})
 
-def detail_series(request, id):
+def detail_series(request, season, title):
 
-    uploads = get_object_or_404(Episode, id=id)
+    uploads = get_object_or_404(Episode, title=title)
 
     items = list(Series.objects.all())
     # change 3 to how many random items you want

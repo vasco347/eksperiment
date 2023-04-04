@@ -12,7 +12,7 @@
   
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
-    <title>MARVEL | {{upload.title}}</title>
+    <title>MARVEL | {{upload.name}}</title>
 </head>
 
 <body>
@@ -45,9 +45,7 @@
 
 {% block movie-content %}
 
-  <div class="content">
-    <h2 class="h2-Detail__Movie">{{upload.title}}</h2>
-  </div>
+  <br><br>
 
   <div class="container-iframe">
     {% for m in detail_movies %}

@@ -56,7 +56,7 @@
       <div class="container-feature__comic">
         {% for fc in feature_comic %}
           <div class="card-feature__comic">
-            <a href="{% url 'detail-comics' fc.id %}">
+            <a href="{% url 'detail-comics' fc.title %}">
               <img class="image-feature__comic" src="{{fc.covers}}">
               <h2 class="title-feature__comic">{{fc.title}}</h2>
             </a>
@@ -73,7 +73,7 @@
     <div class="container-marvel__comic">
       {% for post in marvel_items %}
         <div class="card-marvel__comic">
-          <a href="{% url 'detail-comics' post.id %}">
+          <a href="{% url 'detail-comics' post.title %}">
             <img class="image-marvel__comic" src="{{post.covers}}">
             <h2 class="title-marvel__comic">{{post.title}}</h2>
           </a>
@@ -90,7 +90,7 @@
   <section class="slider-comic">
     {% for post in SC %}
       <div class="card-comics">
-        <a href="{% url 'detail-comics' post.id %}">
+        <a href="{% url 'detail-comics' post.title %}">
           <img class="hover-comics" src="{{post.covers}}"/>
           <h3 class="title-comics">{{post.title}}</h3>
         </a>
@@ -106,7 +106,7 @@
   <section class="slider-comic">
     {% for post in GOTG %}
       <div class="card-comics">
-        <a href="{% url 'detail-comics' post.id %}">
+        <a href="{% url 'detail-comics' post.title %}">
           <img class="hover-comics" src="{{post.covers}}"/>
           <h3 class="title-comics">{{post.title}}</h3>
         </a>
@@ -121,7 +121,7 @@
   <section class="slider-comic">
     {% for post in FF %}
       <div class="card-comics">
-        <a href="{% url 'detail-comics' post.id %}">
+        <a href="{% url 'detail-comics' post.title %}">
           <img class="hover-comics" src="{{post.covers}}"/>
           <h3 class="title-comics">{{post.title}}</h3>
         </a>
@@ -136,7 +136,7 @@
   <section class="slider-comic">
     {% for post in MR %}
       <div class="card-comics">
-        <a href="{% url 'detail-comics' post.id %}">
+        <a href="{% url 'detail-comics' post.title %}">
           <img class="hover-comics" src="{{post.covers}}"/>
           <h3 class="title-comics">{{post.title}}</h3>
         </a>
@@ -151,7 +151,7 @@
   <section class="slider-comic">
     {% for post in DP %}
       <div class="card-comics">
-        <a href="{% url 'detail-comics' post.id %}">
+        <a href="{% url 'detail-comics' post.title %}">
           <img class="hover-comics" src="{{post.covers}}"/>
           <h3 class="title-comics">{{post.title}}</h3>
         </a>
@@ -166,7 +166,7 @@
   <section class="slider-comic">
     {% for post in DS %}
       <div class="card-comics">
-        <a href="{% url 'detail-comics' post.id %}">
+        <a href="{% url 'detail-comics' post.title %}">
           <img class="hover-comics" src="{{post.covers}}"/>
           <h3 class="title-comics">{{post.title}}</h3>
         </a>
@@ -181,7 +181,7 @@
   <section class="slider-comic">
     {% for post in LATPA %}
       <div class="card-comics">
-        <a href="{% url 'detail-comics' post.id %}">
+        <a href="{% url 'detail-comics' post.title %}">
           <img class="hover-comics" src="{{post.covers}}"/>
           <h3 class="title-comics">{{post.title}}</h3>
         </a>
