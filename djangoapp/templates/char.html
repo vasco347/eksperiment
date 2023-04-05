@@ -58,7 +58,7 @@
       <div class="container-feature__comic">
         {% for c in marvel_heroes %}
         <div class="card-feature__comic">
-          <a href="{% url 'detail-heroes' c.id %}">
+          <a href="{% url 'detail-heroes' c.title %}">
           <img class="image-feature__comic" src="{{c.images}}">
           <h2 class="title-feature__comic">{{c.name}}</h2>
           </a>
@@ -74,7 +74,7 @@
       <div class="container-feature__comic">
         {% for c in marvel_villain %}
         <div class="card-feature__comic">
-          <a href="{% url 'detail-villain' c.id %}">
+          <a href="{% url 'detail-villain' c.title %}">
           <img class="image-feature__comic" src="{{c.images}}">
           <h2 class="title-feature__comic">{{c.name}}</h2>
           </a>

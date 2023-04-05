@@ -252,50 +252,54 @@
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
   
   </div>
-  
-  <div class="cont-text mt-5">
-    <h2 class="h2-comic">MARVEL ACTION SPIDER-MAN (2018)</h2>
-  </div>
 
-  <div class="container-comic">
-    {% for post in comic_spiderman %}
-      <div class="card-comic">
-        <a href="{% url 'comic' %}">
-          <img class="hover-comic" src="{{post.covers}}"/>
-          <h3 class="title-comic">{{post.title}}</h3>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
+  <div class="content">
 
-  <div class="cont-text mt-5">
-    <h2 class="h2-comic">DEADPOOL (2018)</h2>
-  </div>
+    <div class="cont-text mt-5">
+      <h2 class="h2-comic">MARVEL ACTION SPIDER-MAN (2018)</h2>
+    </div>
 
-  <div class="container-comic">
-    {% for post in comic_deadpool %}
-      <div class="card-comic">
-        <a href="{% url 'comic' %}">
-          <img class="hover-comic" src="{{post.covers}}"/>
-          <h3 class="title-comic">{{post.title}}</h3>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
+    <div class="container-comic">
+      {% for post in comic_spiderman %}
+        <div class="card-comic">
+          <a href="{% url 'comic' %}">
+            <img class="hover-comic" src="{{post.covers}}"/>
+            <h3 class="title-comic">{{post.name}}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
 
-  <div class="cont-text mt-5">
-    <h2 class="h2-comic">GUARDIANS OF THE GALAXY (2019)</h2>
-  </div>
+    <div class="cont-text mt-5">
+      <h2 class="h2-comic">DEADPOOL (2018)</h2>
+    </div>
 
-  <div class="container-comic">
-    {% for post in comic_guardians %}
-      <div class="card-comic">
-        <a href="{% url 'comic' %}">
-          <img class="hover-comic" src="{{post.covers}}"/>
-          <h3 class="title-comic">{{post.title}}</h3>
-        </a>
-      </div>
-    {% endfor %}
+    <div class="container-comic">
+      {% for post in comic_deadpool %}
+        <div class="card-comic">
+          <a href="{% url 'comic' %}">
+            <img class="hover-comic" src="{{post.covers}}"/>
+            <h3 class="title-comic">{{post.name}}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="cont-text mt-5">
+      <h2 class="h2-comic">GUARDIANS OF THE GALAXY (2019)</h2>
+    </div>
+
+    <div class="container-comic">
+      {% for post in comic_guardians %}
+        <div class="card-comic">
+          <a href="{% url 'comic' %}">
+            <img class="hover-comic" src="{{post.covers}}"/>
+            <h3 class="title-comic">{{post.name}}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
   </div>
 
 {% endblock Comic-content %}

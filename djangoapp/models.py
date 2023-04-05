@@ -12,32 +12,21 @@ class CategoryComic(models.Model):
     def __str__(self):
         return self.title
 
-    class Meta:
-        unique_together = ('slug', 'parent')    
-        verbose_name_plural = "comics categories"
-
-    def __str__(self):                           
-        full_path = [self.title]                  
-        k = self.parent
-        while k is not None:
-            full_path.append(k.title)
-            k = k.parent
-        return ' -> '.join(full_path[::-1]) 
-
 class SubCategoryComic(models.Model):
     child = models.ForeignKey(CategoryComic, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    title = models.CharField(max_length=255, null=False,)
-    covers = models.CharField(max_length=2000)
+    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    covers = models.CharField(max_length=1000)
 
     def __str__(self):
-        return self.title
+        return self.name
 
 class DetailComic(models.Model):
     post = models.ForeignKey(SubCategoryComic, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    comics = models.CharField(max_length=2000)
+    comics = models.CharField(max_length=1000)
 
     def __str__(self):
-        return self.post.title
+        return self.post.name
 # =======================================================================================================================
 
 # Movies
@@ -115,58 +104,62 @@ class Episode(models.Model):
 
 # Shop
 class Shop(models.Model):
-    title = models.CharField(max_length=2000, null=False)
+    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     description = models.TextField()
-    price = models.CharField(max_length=2000, null=False)
-    cover = models.CharField(max_length=2000, null=False)
+    price = models.CharField(max_length=100)
+    cover = models.CharField(max_length=1000)
 
     def __str__(self):
         return self.title
     
 class DetailShop(models.Model):
-    items = models.ForeignKey(Shop, on_delete=models.CASCADE, blank=False, null=False)
-    title = models.CharField(max_length=2000, null=False)
+    items = models.ForeignKey(Shop, on_delete=models.CASCADE, blank=True, null=True)
+    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     description = models.TextField()
-    price = models.CharField(max_length=2000, null=False)
-    photos = models.CharField(max_length=2000, null=False)
+    price = models.CharField(max_length=100)
+    photos = models.CharField(max_length=1000)
 
     def __str__(self):
-        return self.items.title
+        return self.title
 # ========================================================================================================================
 
 # Marvel Character
 class MarvelHeroes(models.Model):
     parent = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True)
-    name = models.CharField(max_length=300, null=False, blank=True)
-    images = models.CharField(max_length=300, null=False, blank=True)
+    title = models.CharField(max_length=300)
+    name = models.CharField(max_length=300)
+    images = models.CharField(max_length=1000)
 
     def __str__(self):
         return self.name
 
 class MarvelVillain(models.Model):
     parent = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True)
-    name = models.CharField(max_length=300, null=False, blank=True)
-    images = models.CharField(max_length=300, null=False, blank=True)
+    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    images = models.CharField(max_length=1000)
 
     def __str__(self):
         return self.name
 
 class DetailHeroes(models.Model):
     char_heroes = models.ForeignKey(MarvelHeroes, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    name = models.CharField(max_length=300, null=False, blank=True)
-    story = models.TextField(blank=True)
-    multiverse = models.CharField(max_length=300, blank=True)
-    images = models.CharField(max_length=300, null=False, blank=True)
+    name = models.CharField(max_length=100)
+    story = models.TextField()
+    multiverse = models.CharField(max_length=100)
+    images = models.CharField(max_length=1000)
 
     def __str__(self):
         return self.char_heroes.name
     
 class DetailVillain(models.Model):
     char_villain = models.ForeignKey(MarvelVillain, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    name = models.CharField(max_length=300, null=False, blank=True)
-    story = models.TextField(blank=True)
-    multiverse = models.CharField(max_length=300, blank=True)
-    images = models.CharField(max_length=300, null=False, blank=True)
+    name = models.CharField(max_length=100)
+    story = models.TextField()
+    multiverse = models.CharField(max_length=100)
+    images = models.CharField(max_length=1000)
     
     def __str__(self):
         return self.char_villain.name

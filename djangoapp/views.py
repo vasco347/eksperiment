@@ -127,9 +127,9 @@ def detail_series(request, season, title):
 
     return render(request, 'detail_series.html', {'title':"Episode", 'uploads':uploads, 'more_series':more_series })
 
-def detail_shops(request, id):
+def detail_shops(request, title):
 
-    items = get_object_or_404(Shop, id=id)
+    items = get_object_or_404(Shop, title=title)
     detail_shop = DetailShop.objects.filter(items=items)
 
     shop = list(Shop.objects.all())
@@ -137,20 +137,19 @@ def detail_shops(request, id):
 
     return render(request, 'detail_shop.html', {'title':"Shop", 'items':items, 'random_shop':random_shop, 'detail_shop':detail_shop})
 
-def detail_heroes(request, id):
+def detail_heroes(request, title):
 
-    items = get_object_or_404(MarvelHeroes, id=id)
+    items = get_object_or_404(MarvelHeroes, title=title)
     detail_heroes = DetailHeroes.objects.filter(char_heroes=items)
 
     return render(request, 'detail_heroes.html', {'title':"Marvel Characters",  'char_heroes':items, 'detail_heroes':detail_heroes})
 
-def detail_villain(request, id):
+def detail_villain(request, title):
 
-    items = get_object_or_404(MarvelVillain, id=id)
+    items = get_object_or_404(MarvelVillain, title=title)
     detail_villain = DetailVillain.objects.filter(char_villain=items)
 
     return render(request, 'detail_villain.html', {'title':"Marvel Characters", 'char_villain':items, 'detail_villain':detail_villain})
-
 
 def about(request):
     return render(request, "about.html",{'title' : "About"})

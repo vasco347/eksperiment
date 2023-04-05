@@ -57,10 +57,10 @@
     <div class="container-shops">
       {% for items in shop_1 %} 
       <div class="merch-thumb">
-        <a href="{% url 'detail-shops' items.id %}">
+        <a href="{% url 'detail-shops' items.title %}">
           <img class="hover-merch" src="{{items.cover}}" />
           <div class="box-shop">
-            <h2>{{items.title}}</h2>
+            <h2>{{items.name}}</h2>
             <p>Rp. {{items.price}}<p>
           </div>
         </a>
@@ -75,10 +75,10 @@
     <div class="container-shops">
       {% for items in shop_2 %} 
       <div class="merch-thumb">
-        <a href="{% url 'detail-shops' items.id %}">
+        <a href="{% url 'detail-shops' items.title %}">
           <img class="hover-merch" src="{{items.cover}}" />
           <div class="box-shop">
-            <h2>{{items.title}}</h2>
+            <h2>{{items.name}}</h2>
             <p>Rp. {{items.price}}<p>
           </div>
         </a>

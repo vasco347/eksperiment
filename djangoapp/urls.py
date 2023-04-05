@@ -8,13 +8,13 @@ urlpatterns = [
 
     path("", views.home, name="home"),
 
-    path('comics/<title>', views.detail_comics, name='detail-comics'),
-    path('movies/<title>', views.detail_movies, name='detail-movies'),
-    path('detail-shop/<int:id>', views.detail_shops, name='detail-shops'),
-    path('series/<title>', views.series, name='series'),
-    path('series/<season>/<title>', views.detail_series, name='detail-series'),
-    path('detail-characters/heroes/<int:id>', views.detail_heroes, name='detail-heroes'),
-    path('detail-characters/villain/<int:id>', views.detail_villain, name='detail-villain'),
+    path('comic/<title>', views.detail_comics, name='detail-comics'),
+    path('film/movie/<title>', views.detail_movies, name='detail-movies'),
+    path('shop/<title>', views.detail_shops, name='detail-shops'),
+    path('film/series/<title>', views.series, name='series'),
+    path('film/series/<season>/<title>', views.detail_series, name='detail-series'),
+    path('character/heroes/<title>', views.detail_heroes, name='detail-heroes'),
+    path('character/villain/<title>', views.detail_villain, name='detail-villain'),
 
     path("comic/", views.comic, name="comic"),
     path("character/", views.character, name="character"),

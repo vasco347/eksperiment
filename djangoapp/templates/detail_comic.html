@@ -14,7 +14,7 @@
   
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
-    <title>MARVEL | {{post.title}}</title>
+    <title>MARVEL | {{post.name}}</title>
 </head>
 
 {% block Header %}
@@ -46,7 +46,7 @@
 {% block detail-comic %}
 
   <div class="content">
-    <h2 class="h2-Detail__Comic">{{post.title}}</h2>
+    <h2 class="h2-Detail__Comic">{{post.name}}</h2>
   </div>
 
   <section class="slider-detail__comic">
@@ -64,9 +64,9 @@
   <div class="container-more">
     {% for c in random_items %}
       <div class="card-marvel__comic">
-        <a href="{% url 'detail-comics' c.id %}">
+        <a href="{% url 'detail-comics' c.title %}">
         <img class="image-marvel__comic" src="{{c.covers}}">
-        <h2 class="title-marvel__comic">{{c.title}}</h2>
+        <h2 class="title-marvel__comic">{{c.name}}</h2>
         </a>
       </div>
     {% endfor %}
