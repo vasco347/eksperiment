@@ -67,7 +67,7 @@ def movie(request):
     marvel_movies = SubCategoryMovie.objects.all()
 
     # Latest Marvel Movies
-    videos = (3, 6, 8, 10)
+    videos = (8, 15, 21, 25, 26, 27 )
     latest_movies = SubCategoryMovie.objects.filter(pk__in=videos)
 
     return render(request, 'movies.html', {'title':"Movies", 'marvel_movies':marvel_movies, 'marvel_series':marvel_series, 'latest_movies':latest_movies})
@@ -86,7 +86,7 @@ def detail_comics(request, title):
     # Random Comics Views
     items = list(SubCategoryComic.objects.all())
     # change 3 to how many random items you want
-    random_items = random.sample(items, 8)
+    random_items = random.sample(items, 12)
 
     post = get_object_or_404(SubCategoryComic,title=title)
     detail_comics = DetailComic.objects.filter(post=post)
@@ -100,7 +100,7 @@ def detail_movies(request, title):
     # Random Movies Views
     items = list(SubCategoryMovie.objects.all())
     # change 3 to how many random items you want
-    more_movies = random.sample(items, 8)
+    more_movies = random.sample(items, 12)
     
     return render(request, 'detail_movie.html', {'title':"Movie", 'upload':upload, 'detail_movies':detail_movies, 'more_movies':more_movies})
 
@@ -113,7 +113,7 @@ def series(request, title):
 
     items = list(Series.objects.all())
     # change 3 to how many random items you want
-    more_series = random.sample(items, 8)
+    more_series = random.sample(items, 12)
 
     return render(request, 'series.html', {'title':"Series", 'series':series, 'more_series':more_series, 'season':season, 'episode':episode})
 
@@ -123,7 +123,7 @@ def detail_series(request, season, title):
 
     items = list(Series.objects.all())
     # change 3 to how many random items you want
-    more_series = random.sample(items, 8)
+    more_series = random.sample(items, 12)
 
     return render(request, 'detail_series.html', {'title':"Episode", 'uploads':uploads, 'more_series':more_series })
 

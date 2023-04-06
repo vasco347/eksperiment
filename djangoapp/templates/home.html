@@ -261,10 +261,10 @@
 
     <div class="container-comic">
       {% for post in comic_spiderman %}
-        <div class="card-comic">
+        <div class="card-marvel__comic">
           <a href="{% url 'comic' %}">
-            <img class="hover-comic" src="{{post.covers}}"/>
-            <h3 class="title-comic">{{post.name}}</h3>
+            <img class="image-marvel__comic" src="{{post.covers}}">
+            <h2 class="title-marvel__comic">{{post.name}}</h2>
           </a>
         </div>
       {% endfor %}
@@ -276,10 +276,10 @@
 
     <div class="container-comic">
       {% for post in comic_deadpool %}
-        <div class="card-comic">
+        <div class="card-marvel__comic">
           <a href="{% url 'comic' %}">
-            <img class="hover-comic" src="{{post.covers}}"/>
-            <h3 class="title-comic">{{post.name}}</h3>
+            <img class="image-marvel__comic" src="{{post.covers}}">
+            <h2 class="title-marvel__comic">{{post.name}}</h2>
           </a>
         </div>
       {% endfor %}
@@ -291,10 +291,10 @@
 
     <div class="container-comic">
       {% for post in comic_guardians %}
-        <div class="card-comic">
+        <div class="card-marvel__comic">
           <a href="{% url 'comic' %}">
-            <img class="hover-comic" src="{{post.covers}}"/>
-            <h3 class="title-comic">{{post.name}}</h3>
+            <img class="image-marvel__comic" src="{{post.covers}}">
+            <h2 class="title-marvel__comic">{{post.name}}</h2>
           </a>
         </div>
       {% endfor %}
