@@ -45,6 +45,7 @@
 
 {% block movie-content %}
 
+{% for uploads in uploads %}
   <div class="content">
     <h2 class="h2-Episode__Series">{{uploads.episode}}</h2>
     <h2 class="h2-Title__Series">{{uploads.name}}</h2>
@@ -53,7 +54,7 @@
   <div class="container-iframe">
       <iframe class="responsive-iframe" src="{{uploads.videos}}" frameborder="0" allowfullscreen /></iframe>
   </div>
-
+{% endfor %}
   <div class="content">
     <h2 class="h2-More__Movie">MORE SERIES</h2>
   </div>

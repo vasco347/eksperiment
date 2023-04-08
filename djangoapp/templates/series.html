@@ -68,7 +68,7 @@
 
       {% for e in season.episode_set.all %}
         <li>
-          <a href="{% url 'detail-series' e.season e.title %}" class="inner">
+          <a href="{% url 'detail-series' e.season e.id e.title %}" class="inner">
             <div class="li-img">
               <img src="{{e.thumbnail}}" alt="" />
             </div>

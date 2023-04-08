@@ -117,9 +117,9 @@ def series(request, title):
 
     return render(request, 'series.html', {'title':"Series", 'series':series, 'more_series':more_series, 'season':season, 'episode':episode})
 
-def detail_series(request, season, title):
+def detail_series(request, season, id, title):
 
-    uploads = get_object_or_404(Episode, title=title)
+    uploads = Episode.objects.filter(id=id)
 
     items = list(Series.objects.all())
     # change 3 to how many random items you want
