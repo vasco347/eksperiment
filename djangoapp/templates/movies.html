@@ -59,59 +59,52 @@
 
 {% block Movies-content %}
 
-<div class="content-latest__movie">
-  <div class="header">
-    <h2>Marvel Movies</h2>
-    <div class="container-latest__movie">
-      {% for upload in latest_movies %}
-        <div class="card-latest__movie">
-          <a href="{% url 'detail-movies' upload.title %}">
-            <img class="image-latest__movie" src="{{upload.poster}}">
-            <h2 class="title-latest__movie">{{upload.name}}</h2>
-            <div class="marvel_movies"></div>
-         </a>
-        </div>
-      {% endfor %}
+  <div class="grid-container__movie">
+    <div class="header">
+      <h2>Latest Movies</h2>
     </div>
-    <br>
+    {% for upload in latest_movies %}
+    <div class="card-latest__movie">
+      <a href="{% url 'detail-movies' upload.title %}">
+        <img class="image-latest__movie" src="{{upload.poster}}">
+        <h2 class="title-latest__movie">{{upload.name}}</h2>
+        <div class="rating"> <span>N</span></div>
+        <div class="hd"> {{upload.resolution}}</div>
+      </a>
+    </div>
+    {% endfor %}
   </div>
-</div>
 
-
-  <div class="content-latest__movie">
+  <div class="grid-container__movie">
     <div class="header">
       <h2>Marvel Movies</h2>
-      <div class="container-marvel__movie">
-        {% for upload in marvel_movies %}
-          <div class="card-marvel__movie">
-            <a href="{% url 'detail-movies' upload.title %}">
-              <img class="image-marvel__movie" src="{{upload.poster}}">
-              <h2 class="title-marvel__movie">{{upload.name}}</h2>
-              <div class="marvel_movies"></div>
-           </a>
-          </div>
-        {% endfor %}
-      </div>
-      <br>
     </div>
+    {% for upload in marvel_movies %}
+    <div class="card-latest__movie">
+      <a href="{% url 'detail-movies' upload.title %}">
+        <img class="image-latest__movie" src="{{upload.poster}}">
+        <h2 class="title-latest__movie">{{upload.name}}</h2>
+        <div class="rating"><i class="fa-sharp fa-solid fa-star" style="color: #fff700;"></i> {{upload.imdb_rating}}</div>
+        <div class="hd"> {{upload.resolution}}</div>
+      </a>
+    </div>
+    {% endfor %}
   </div>
 
-  <div class="content-latest__movie">
+  <div class="grid-container__movie">
     <div class="header">
       <h2>Marvel Series</h2>
-      <div class="container-marvel__movie">
-        {% for upload in marvel_series %}
-          <div class="card-marvel__movie">
-            <a href="{% url 'series' upload.title %}">
-              <img class="image-marvel__movie" src="{{upload.poster}}">
-              <h2 class="title-marvel__movie">{{upload.name}}</h2>
-              <div class="marvel_series"><i class="fa-sharp fa-solid fa-star" style="color: #fff700;"></i> 7.3</div>
-           </a>
-          </div>
-        {% endfor %}
-      </div>
-      <br>
     </div>
+    {% for upload in marvel_series %}
+    <div class="card-latest__movie">
+      <a href="{% url 'series' upload.title %}">
+        <img class="image-latest__movie" src="{{upload.poster}}">
+        <h2 class="title-latest__movie">{{upload.name}}</h2>
+        <div class="rating"><i class="fa-sharp fa-solid fa-star" style="color: #fff700;"></i> {{upload.imdb_rating}}</div>
+        <div class="hd"> {{upload.num_season}} Season</div>
+      </a>
+    </div>
+    {% endfor %}
   </div>
 
 {% endblock Movies-content %}

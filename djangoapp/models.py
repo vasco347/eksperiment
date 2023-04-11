@@ -44,6 +44,9 @@ class SubCategoryMovie(models.Model):
     title = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     poster = models.CharField(max_length=2000)
+    imdb_rating = models.CharField(max_length=100)
+    rotten_rating = models.CharField(max_length=100)
+    resolution = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
@@ -76,6 +79,7 @@ class Series(models.Model):
     release = models.CharField(max_length=100)
     imdb_rating = models.CharField(max_length=11)
     rotten_rating = models.CharField(max_length=11)
+    num_season = models.CharField(max_length=11)
 
     def __str__(self):
         return self.title
