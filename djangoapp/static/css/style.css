@@ -4,7 +4,13 @@
 }
  body {
 	 overflow-x: hidden;
-	 background: url("/static/images/bg.jpg");
+	 background: url("/static/images/2 + 1.jpg");
+	 background-position: 50% 50%;
+	 background-size: 100% auto;
+	 /*background-color: #bbbbbb4f;
+	 background: url("https://i2.wp.com/www.epicheroes.com/wp-content/uploads/2018/06/marvel-wallpaper-ironman-face.jpg?ssl=1"), url("https://wallpaperaccess.com/full/54669.jpg");
+	 */
+	 
 }
  html {
 	 overflow-x: hidden;
@@ -373,119 +379,7 @@
 	 -ms-transform: translate(0%, 0%);
 	 -webkit-transform: translate(0%, 0%);
 }
- .nav-h1 {
-	 color: #fff;
-	 text-align: center;
-	 font-size: 2rem;
-	 font-weight: bold;
-	 line-height: 1.4;
-	 font-size: 2.2rem;
-}
- .nav-h2 {
-	 color: #fff;
-	 text-align: center;
-	 font-size: 2rem;
-	 font-weight: bold;
-	 line-height: 1.4;
-}
- .nav-p {
-	 color: #fff;
-	 font-size: 1.3rem;
-	 text-align: center;
-	 line-height: 1.4;
-	 margin-bottom: 10px;
-}
- .headline {
-	 width: 100%;
-	 min-height: 450px;
-	 background: url('/static/images/t1.jpg');
-	 background-size: cover;
-	 display: flex;
-	 flex-direction: column;
-	 justify-content: center;
-}
- .header-banner-top {
-	 text-align: center;
-}
- .header-banner-top .primary-wrapper {
-	 margin: 0 auto;
-	 max-width: 900px;
-}
- .header-banner-top .hidden {
-	 display: none;
-}
- .header-banner-top .horizontal-nav ul {
-	 list-style: none;
-	 margin: 0;
-	 padding: 0;
-}
- .header-banner-top .horizontal-nav li {
-	 display: inline-block;
-}
- .header-banner-top .horizontal-nav a {
-	 display: block;
-	 padding: 1.5em 1em;
-	 color: #fff;
-	 text-decoration: none;
-	 text-transform: uppercase;
-	 font-size: 13px;
-	 letter-spacing: 1px;
-}
- .header-banner-top .horizontal-nav a:hover {
-	 color: #fdfdfd;
-}
- .header-banner-top .horizontal-nav .folder {
-	 position: relative;
-	 cursor: pointer;
-}
- .header-banner-top .horizontal-nav .folder ul {
-	 display: block;
-	 position: absolute;
-	 top: -9999px;
-	 left: 0;
-	 z-index: 999;
-	 background-color: #000;
-	 transition: padding 0.14s ease-out;
-	 text-align: left;
-}
- .header-banner-top .horizontal-nav .folder li {
-	 display: block;
-}
- .header-banner-top .horizontal-nav .folder:hover ul {
-	 top: 100%;
-	 padding: 0.5em 0;
-}
- .header-banner-top .horizontal-nav .folder a {
-	 padding: 0.5em 1em;
-	 white-space: nowrap;
-}
- .header-banner-top .horizontal-nav .active-link a {
-	 color: #fdfdfd;
-}
- .header-banner-top .mobile-menu-box {
-	 display: none;
-}
- .header-banner-top .mobile-menu-label {
-	 display: none;
-}
- .header-banner-top .banner {
-	 position: relative;
-}
- .header-banner-top .banner .banner-image {
-	 position: absolute;
-	 top: 0;
-	 right: 0;
-	 bottom: 0;
-	 left: 0;
-}
- .header-banner-top .banner .primary-wrapper {
-	 position: relative;
-	 padding-top: 150px;
-	 padding-bottom: 150px;
-}
- .header-banner-top .main-navigation {
-	 background: #000;
-}
+
  .slider-comic {
 	 overflow: hidden;
 	 width: 80%;
@@ -628,7 +522,7 @@
  .container-foot {
 	 display: flex;
 	 flex-direction: row;
-	 background: #000;
+	 background: #1e1e1e;
 	 width: 100%;
 	 margin-top: 10%;
 }
@@ -1547,22 +1441,183 @@ button {
 .container-latest__movie{
 	display: grid;
 	grid-template-columns: auto auto auto auto auto auto;
-	gap: 15px;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+.content-latest__movie{
+	display: flex;
+	position: relative;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5em;
+}
+
 .container-marvel__movie{
 	display: grid;
-	grid-template-columns: auto auto auto auto;
-	gap: 15px;
-	width: 80%;
+	grid-template-columns: auto auto auto auto auto auto;
+	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.card-latest__movie {
+@media (max-width: 900px){
+	.container-marvel__movie{
+		width: 99%;
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.card-marvel__movie .image-marvel__movie {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-width: 600px){
+	.container-marvel__movie{
+		width: 99%;
+		display: grid;
+		grid-template-columns: auto auto auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.card-marvel__movie .image-marvel__movie {
+		width: 100%;
+		height: auto;
+	}
+	.content-latest__movie{
+		display: flex;
+		width: 99%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5em;
+	}
+}
+
+@media (max-width: 900px) {
+	.container-latest__movie{
+		width: 99%;
+		display: grid;
+		grid-template-columns: auto auto auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.card-latest__movie .image-latest__movie {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.container-latest__movie .image-latest__movie{
+	padding: 10px;
+}
+
+.container-marvel__movie .image-marvel__movie{
+	padding: 10px;
+}
+
+.header{
+	margin-bottom: 10px;
+    line-height: 2em;
+	background-color: #151515;
+}
+
+.header h2{
+	display: inline-block;
+    padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.5em;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #ee0f0f;
+}
+
+.latest_movies{
+	position: absolute;
+    top: 10px;
+    right: 0;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    color: #fff;
+}
+
+.marvel_movies{
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    color: #fff;
+}
+
+.marvel_series{
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    text-align: center;
+    height: 30px;
+	font-size: 80%;
+	font-weight: bold;
+    color: #fff;
+}
+
+.card-latest__movie .latest_movies{
+	background-color: #00000080;
+}
+
+.card-marvel__movie .marvel_movies{
+	background-color: #00000080;
+}
+
+.card-marvel__movie .marvel_series{
+	background-color: #00000080;
+}
+
+.card-marvel__movie{
+	position: relative;
+	overflow: hidden;
+	transition: ease 0.3s;
+}
+
+.card-marvel__movie .image-marvel__movie{
+	width: 100%;
+	height: auto;
+	transition: ease .3s;
+}
+
+.card-marvel__movie:hover{
+	transform: translateY(-6px);
+	-webkit-transform: translateY(-6px);
+	-o-transform: translateY(-6px);
+	-moz-transform: translateY(-6px);
+	-ms-transform: translateY(-6px);
+}
+
+.card-marvel__movie .title-marvel__movie{
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	position: absolute;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	width: 90%;
+	z-index: 5;
+	color: #fff;
+	font-size: 80%;
+	font-weight: 500;
+	margin: 0;
+	text-shadow: 0 0 2px #000;
+}
+
+.card-latest__movie{
 	position: relative;
 	overflow: hidden;
 	transition: ease 0.3s;
@@ -1585,16 +1640,18 @@ button {
 .card-latest__movie .title-latest__movie{
 	bottom: 0;
 	left: 0;
-	padding: 10px 5px;
-	position: absolute;
+	right: 0;
 	text-align: center;
-	width: 100%;
+	position: absolute;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	width: 90%;
 	z-index: 5;
 	color: #fff;
 	font-size: 80%;
-	font-weight: 600;
+	font-weight: 500;
 	margin: 0;
-	text-shadow: 0 0 5px #000;
+	text-shadow: 0 0 2px #000;
 }
 
 .content .h2-More__Movie{
@@ -1654,6 +1711,21 @@ button {
 	margin-right: auto;
 }
 
+.card-more__movie .title-marvel__movie{
+	bottom: 0;
+	left: 0;
+	padding: 10px 0px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 5;
+	color: #fff;
+	font-size: 80%;
+	font-weight: 600;
+	margin: 0;
+	text-shadow: 0 0 5px #000;
+}
+
 @media (max-width: 900px){
 	.container-more__movie{
 		display: grid;
@@ -1694,57 +1766,6 @@ button {
 	-o-transform: translateY(-6px);
 	-moz-transform: translateY(-6px);
 	-ms-transform: translateY(-6px);
-}
-
-.card-more__movie .title-marvel__movie{
-	bottom: 0;
-	left: 0;
-	padding: 10px 0px;
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	z-index: 5;
-	color: #fff;
-	font-size: 80%;
-	font-weight: 600;
-	margin: 0;
-	text-shadow: 0 0 5px #000;
-}
-
-.card-marvel__movie{
-	position: relative;
-	overflow: hidden;
-	transition: ease 0.3s;
-}
-
-.card-marvel__movie .image-marvel__movie{
-	width: 100%;
-	height: auto;
-	transition: ease .3s;
-}
-
-.card-marvel__movie:hover{
-	transform: translateY(-6px);
-	-webkit-transform: translateY(-6px);
-	-o-transform: translateY(-6px);
-	-moz-transform: translateY(-6px);
-	-ms-transform: translateY(-6px);
-}
-
-.card-marvel__movie .title-marvel__movie{
-	bottom: 0;
-	left: 0;
-	right: 0;
-	text-align: center;
-	padding: 10px 0px;
-	position: absolute;
-	width: 100%;
-	z-index: 5;
-	color: #fff;
-	font-size: 80%;
-	font-weight: 500;
-	margin: 0;
-	text-shadow: 0 0 2px #000;
 }
 
 .container-iframe {
@@ -2166,103 +2187,216 @@ button {
 	margin-right: auto;
 }
 
-.list {
-	width: 90%;
-	margin: 20px auto;
+nav{
+	background: #1e1e1e;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 70px;
+	padding: 0 100px;
   }
-  .img-list a {
+  nav .logo{
+	color: #ec2020db;
+	font-size: 35px;
+	font-weight: 600;
+	letter-spacing: -1px;
+  }
+  nav .nav-items{
+	display: flex;
+	flex: 0;
+	padding: 0 0 0 40px;
+  }
+  nav .nav-items li{
+	list-style: none;
+	padding: 0 15px;
+  }
+  nav .nav-items li a{
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
 	text-decoration: none;
   }
-
-  .img-list h2{
-	color: #fff;
-	font-size: 1.2em;
-	font-weight: bold;
-	line-height: 1.5em;
+  nav .nav-items li a:hover{
+	color: #ff3d00;
   }
-  .img-list h3{
-	color: #fff;
-	font-size: 1.1em;
-	font-weight: 500;
-	line-height: 1.5em;
-  }
-  
-  .li-sub p {
-	margin: 0;
-  }
-  .inner {
+  nav form{
 	display: flex;
-}
-  .list li {
-	border-bottom: 2px solid #ccc;
+	height: 40px;
+	padding: 2px;
+	background: #71717192;
+	min-width: 18%!important;
+	border-radius: 2px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
   }
-
-  .inner {
-	overflow: hidden;
-  }
-  .li-img {
-	vertical-align: middle;
-	width: 300px;
-	height: auto;
-	padding-right: 1em;
-	margin: 1em 0 0;
-  }
-  .li-img img {
-	display: block;
+  nav form .search-data{
 	width: 100%;
-	height: auto;
-	transition: all ease .3s;
+	height: 100%;
+	padding: 0 10px;
+	color: #d1d1d1;
+	font-size: 17px;
+	border: none;
+	font-weight: 500;
+	background: none;
   }
-  .li-img:hover img{
-	transform: translateY(-6px);
-	-o-transform: translateY(-6px);
-	-moz-transform: translateY(-6px);
-	-webkit-transform: translateY(-6px);
-	-ms-transform: translateY(-6px);
+  nav form button{
+	padding: 0 15px;
+	color: #fff;
+	font-size: 17px;
+	background: #ec2020db;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
   }
-  .li-text {
-	vertical-align: middle;
-	width: 80%;
+  nav form button:hover{
+	background: #ec2020a0;
   }
-  .li-head {
-	margin: 10px 0 0 0;
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+	width: 40px;
+	text-align: center;
+	margin: 0 50px;
+	font-size: 18px;
+	color: #fefefe;
+	cursor: pointer;
+	display: none;
   }
-  .li-sub {
-	margin: 0;
+  nav .menu-icon span,
+  nav .cancel-icon,
+  nav .search-icon{
+	display: none;
   }
-
-.box-entity tag{
-	font-size: 1em;
-	font-weight: bold;
-}
-  
-@media(max-width: 600px){
-	.list {
-		width: 99%;
-		margin-left: -15px;
-	  }
-	.container-series{
-		width: 99%;
+  @media (max-width: 1245px) {
+	nav{
+	  padding: 0 50px;
 	}
-	.inner {
-		display: flex;
+  }
+  @media (max-width: 1140px){
+	nav{
+	  padding: 0px;
 	}
-	.img-list a {
-		text-decoration: none;
-	  }
-	.img-list h2{
-		color: #fff;
-		font-size: 1em;
-		font-weight: bold;
-		line-height: 1.5em;
-	  }
-	  .img-list h3{
-		color: #fff;
-		font-size: 0.8em;
-		font-weight: 500;
-		line-height: 1.5em;
-	  }
-}
+	nav .logo{
+	  flex: 2;
+	  text-align: center;
+	}
+	nav .nav-items{
+	  position: fixed;
+	  z-index: 99;
+	  top: 70px;
+	  width: 100%;
+	  left: -100%;
+	  height: 100%;
+	  padding: 10px 50px 0 50px;
+	  text-align: center;
+	  background: #252525ec;
+	  display: inline-block;
+	  transition: left 0.3s ease;
+	}
+	nav .nav-items.active{
+	  left: 0px;
+	}
+	nav .nav-items li{
+	  line-height: 40px;
+	  margin: 30px 0;
+	}
+	nav .nav-items li a{
+	  font-size: 20px;
+	  color: #fff;
+	}
+	nav form{
+	  position: absolute;
+	  top: 80px;
+	  right: 50px;
+	  opacity: 0;
+	  pointer-events: none;
+	  transition: top 0.3s ease, opacity 0.1s ease;
+	}
+	nav form.active{
+	  top: 95px;
+	  opacity: 1;
+	  pointer-events: auto;
+	}
+	nav form:before{
+	  position: absolute;
+	  content: "";
+	  top: -13px;
+	  right: 0px;
+	  width: 0;
+	  height: 0;
+	  z-index: -1;
+	  border: 10px solid transparent;
+	  border-bottom-color: #242424;
+	  margin: -20px 0 0;
+	}
+	nav form:after{
+	  position: absolute;
+	  content: '';
+	  height: 60px;
+	  padding: 2px;
+	  background: #242424;
+	  border-radius: 2px;
+	  min-width: calc(100% + 20px);
+	  z-index: -2;
+	  left: 50%;
+	  top: 50%;
+	  transform: translate(-50%, -50%);
+	}
+	nav .menu-icon{
+	  display: block;
+	}
+	nav .search-icon,
+	nav .menu-icon span{
+	  display: block;
+	}
+	nav .menu-icon span.hide,
+	nav .search-icon.hide{
+	  display: none;
+	}
+	nav .cancel-icon.show{
+	  display: block;
+	}
+  }
+  .context{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+  }
+  .context header{
+	font-size: 30px;
+	font-weight: 700;
+  }
+  .context .text{
+	font-size: 30px;
+	font-weight: 700;
+  }
+  .space{
+	margin: 10px 0;
+  }
+  nav .logo.space{
+	color: red;
+	padding: 0 5px 0 0;
+  }
+  @media (max-width: 980px){
+	nav .menu-icon,
+	nav .cancel-icon,
+	nav .search-icon{
+	  margin: 0 20px;
+	}
+	nav form{
+	  right: 30px;
+	}
+  }
+  @media (max-width: 350px){
+	nav .menu-icon,
+	nav .cancel-icon,
+	nav .search-icon{
+	  margin: 0 10px;
+	  font-size: 16px;
+	}
+  }
 
 @media (max-width: 600px){
 	.content .h2-more__comic{
@@ -2419,21 +2553,6 @@ button {
 		width: 100%;
 		height: auto;
 	}
-	.container-marvel__movie{
-		width: 99%;
-		display: grid;
-		gap: 10px;
-		grid-template-columns: auto auto auto;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.card-marvel__movie .image-marvel__movie {
-		width: 100%;
-		height: auto;
-	}
-	.content .latest-movie{
-		width: 99%;
-	}
 }
 
 @media(max-width:600px){
@@ -2528,23 +2647,6 @@ button {
 	}
 }
 
- @media (max-width: 900px) {
-	.container-latest__movie{
-		width: 99%;
-		display: grid;
-		gap: 10px;
-		grid-template-columns: auto auto auto;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.card-latest__movie .image-latest__movie {
-		width: 100%;
-		height: auto;
-	}
-	.cont-text_movie{
-		width: 99%;
-	}
-}
  @media (max-width: 600px) {
 	 .container video {
 		 position: absolute;

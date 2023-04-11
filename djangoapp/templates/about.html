@@ -18,31 +18,41 @@
 </head>
 
 <body>
-{% block Header %}
-    <header class="header-banner-top">
   
-      <div class="main-navigation">
-        <input type="checkbox" name="mobile-menu-toggle" id="mobile-menu-toggle" class="mobile-menu-box" />
-        <nav class="horizontal-nav primary-wrapper" role='navigation'>
-          <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'movie' %}">Film</a></li>
-            <li><a href="{% url 'comic' %}">Comic</a></li>
-            <li><a href="{% url 'character' %}">Character</a></li>
-            <li><a href="{% url 'shop' %}">Shop</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-          </ul>
-        </nav>
-        <label for="mobile-menu-toggle" class="mobile-menu-label hidden"></label>
-      </div>
-      
-    </header>
-    
-      <section class="headline">
-        <h1 class="nav-h1">MARVELIUS</h1>
-      </section>
-    
-{% endblock Header %}
+{% block Header %}
+
+  <nav>  
+    <div class="menu-icon">
+       <span class="fas fa-bars"></span>
+    </div>
+
+    <div class="logo">
+      Marvelius
+    </div>
+
+    <div class="nav-items">
+       <li><a href="{% url 'home' %}">Home</a></li>
+       <li><a href="{% url 'comic' %}">Comics</a></li>
+       <li><a href="{% url 'movie' %}">Films</a></li>
+       <li><a href="{% url 'shop' %}">Shop</a></li>
+       <li><a href="{% url 'about' %}">About</a></li>
+    </div>
+
+    <div class="search-icon">
+       <span class="fas fa-search"></span>
+    </div>
+
+    <div class="cancel-icon">
+       <span class="fas fa-times"></span>
+    </div>
+
+    <form action="#">
+       <input type="search" class="search-data" placeholder="Search" required>
+       <button type="submit" class="fas fa-search"></button>
+    </form>
+  </nav>
+  
+{% endblock %}
 
 {% block about-content %}
     <div class="content">
@@ -93,7 +103,7 @@
 
 {% block Footer %}
 
-  <div class="container-foot__About">
+  <div class="container-foot">
 
     <section class="nb-copyright">
 
@@ -111,6 +121,10 @@
   </div>
 
 {% endblock Footer %}
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
 
 </body>
 </html>
