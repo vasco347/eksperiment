@@ -12,7 +12,7 @@ urlpatterns = [
     path('films/movies/<title>', views.detail_movies, name='detail-movies'),
     path('shop/<title>', views.detail_shops, name='detail-shops'),
     path('films/series/<title>', views.series, name='series'),
-    path('films/series/<tmdb_id>/season/<season>/episode/<episode>', views.detail_series, name='detail-series'),
+    path('films/series/<id>/<tmdb_id>/season/<season>/episode/<episode>', views.detail_series, name='detail-series'),
     path('character/heroes/<title>', views.detail_heroes, name='detail-heroes'),
     path('character/villain/<title>', views.detail_villain, name='detail-villain'),
 
@@ -22,4 +22,4 @@ urlpatterns = [
     path("shop/", views.shop, name="shop"),
     path("about/", views.about, name="about"),
     
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

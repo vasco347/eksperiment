@@ -6,6 +6,9 @@ from . models import Series, Season, Episode
 from . models import Shop, DetailShop
 from . models import MarvelHeroes, MarvelVillain, DetailHeroes, DetailVillain
 import random
+import requests
+
+TMDB_API = 'cd6372556d9c099c35aa482bafbd82cb'
 
 def home(request):
     # Comic Views
@@ -46,7 +49,7 @@ def comic(request):
     DP = SubCategoryComic.objects.filter(child=3)
     GOTG = SubCategoryComic.objects.filter(child=5)
 
-    items = [1, 6, 11, 16, 21]
+    items = [1, 6, 11, 16, 21, 30 ]
     feature_comic = SubCategoryComic.objects.filter(pk__in=items)
 
     items = list(SubCategoryComic.objects.all())
@@ -70,7 +73,7 @@ def movie(request):
     videos = (8, 15, 21, 25, 26, 27 )
     latest_movies = SubCategoryMovie.objects.filter(pk__in=videos)
 
-    return render(request, 'movies.html', {'title':"Movies", 'marvel_movies':marvel_movies, 'marvel_series':marvel_series, 'latest_movies':latest_movies})
+    return render(request, 'movies.html', {'title':"Films", 'marvel_movies':marvel_movies, 'marvel_series':marvel_series, 'latest_movies':latest_movies})
 
 def character(request):
     
@@ -108,16 +111,16 @@ def series(request, title):
 
     series = get_object_or_404(Series, title=title)
 
-    season = Season.objects.filter(series=series)
-    episode = Episode.objects.filter(season__in=season)
+    season = Season.objects.filter(tag_series=series)
+    episode = Episode.objects.filter(tag_season__in=season)
 
     items = list(Series.objects.all())
     # change 3 to how many random items you want
     more_series = random.sample(items, 12)
 
-    return render(request, 'series.html', {'title':"Series", 'series':series, 'more_series':more_series, 'season':season, 'episode':episode})
+    return render(request, 'series.html', {'series':series, 'more_series':more_series, 'season':season, 'episode':episode})
 
-def detail_series(request, season, id, title):
+def detail_series(request, id, tmdb_id, season, episode):
 
     uploads = Episode.objects.filter(id=id)
 
@@ -125,7 +128,9 @@ def detail_series(request, season, id, title):
     # change 3 to how many random items you want
     more_series = random.sample(items, 12)
 
-    return render(request, 'detail_series.html', {'title':"Episode", 'uploads':uploads, 'more_series':more_series })
+    thumbnail = requests.get(f'https://api.themoviedb.org/3/tv/{tmdb_id}/season/{season}/episode/{episode}/images?api_key={TMDB_API}')
+
+    return render(request, 'detail_series.html', {'uploads':uploads, 'more_series':more_series, 'thumbnail':thumbnail.json() })
 
 def detail_shops(request, title):
 

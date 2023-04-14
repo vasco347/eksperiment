@@ -1781,7 +1781,8 @@ button {
   }
 
 .container-detail_movies{
-	width: 80%;
+	margin-top: 2.5em;
+	width: 90%;
 	display: flex;
 	flex-direction: row;
 	margin-left: auto;
@@ -2191,7 +2192,7 @@ button {
   .img-list h2{
 	color: #fff;
 	font-size: 1.2em;
-	font-weight: bold;
+	font-weight: 600;
 	line-height: 1.5em;
   }
   .img-list h3{
@@ -2267,7 +2268,7 @@ button {
 	.img-list h2{
 		color: #fff;
 		font-size: 1em;
-		font-weight: bold;
+		font-weight: 600;
 		line-height: 1.5em;
 	  }
 	  .img-list h3{
@@ -2509,8 +2510,7 @@ button {
 	background: #fff;
   }
   .box-detail__series{
-	margin-top: -1em;
-	width: 90%;
+	width: 95%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
@@ -2536,6 +2536,15 @@ button {
 	gap: 10px;
 	padding: 10px;
   }
+  @media(max-width: 768px){
+	.box-detail__series{
+		width: 99%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
   @media (min-width: 768px) {
 	.menu {
 	  position: relative;
@@ -2572,6 +2581,19 @@ button {
   }
 /* --------- END HEADER ---------- */
 
+.slider-series{
+	width: 90%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.card-series img{
+	width: 300px;
+	height: 200px;
+}
+.slider-series .card-series{
+	padding: 10px;
+}
 @media (max-width: 600px){
 	.content .h2-more__comic{
 		margin-top: 30%;

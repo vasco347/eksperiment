@@ -85,24 +85,24 @@ class Series(models.Model):
         return self.title
     
 class Season(models.Model):
-    series = models.ForeignKey(Series, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    title = models.CharField(max_length=100)
-    name = models.CharField(max_length=100)
-    season = models.CharField(max_length=100, blank=True)
+    tag_series = models.ForeignKey(Series, default=None, on_delete=models.CASCADE, blank=True, null=True)
+    season = models.IntegerField()
 
     def __str__(self):
-        return self.title
+        return self.tag_series.name
 
 class Episode(models.Model):
-    season = models.ForeignKey(Season, default=None, on_delete=models.CASCADE, blank=True, null=True)
-    episode = models.CharField(max_length=100)
+    tag_season = models.ForeignKey(Season, default=None, on_delete=models.CASCADE, blank=True, null=True)
+    season = models.IntegerField()
+    episode = models.IntegerField()
+    tmdb_id = models.IntegerField()
     title = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     thumbnail = models.CharField(max_length=1000)
     videos = models.CharField(max_length=1000) 
     
     def __str__(self):
-        return self.episode
+        return self.title
 
 # ========================================================================================================================
 
