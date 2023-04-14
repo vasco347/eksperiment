@@ -72,18 +72,18 @@
     <ul class="list img-list">
       {% for season in season %}
         <div class="cont-text__series">
-          <h2 class="season-series">Season {{season.season}}</h2>
+          <h2 class="season-series">{{season.season}}</h2>
         </div>
 
         {% for e in season.episode_set.all %}
           <li>
-            <a href="{% url 'detail-series' e.id e.tmdb_id e.season e.episode %}" class="inner">
+            <a href="{% url 'detail-series' e.tmdb_id e.season e.episode %}" class="inner">
               <div class="li-img">
                 <img src="{{e.thumbnail}}" alt="" />
               </div>
             
               <div class="li-text">
-                <h2 class="li-head">Episode {{e.episode}}</h2>
+                <h2 class="li-head">{{e.episode}}</h2>
                 <div class="li-sub">
                   <h3>{{e.name}}</h3>
                 </div>
