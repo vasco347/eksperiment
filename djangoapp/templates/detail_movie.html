@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAMVgELLIY4UbyltiA9doliJy3LeJHgFyCDqH6_h9aqNNxxwCA4eCjvF4LfI_i0BlIblsOypPTyi9HElYq01lTZcCHpP7-f4ADns2yaO8B7Sbzt9S-CUohOqFmA8Q-tK-0ofLwoqGLhQcB2nR5aLOEBiIb_b_FGB_9SAkenwB9H_nJ8DX45ArnDINGIw/s555/logo1.png">
-
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -20,44 +20,40 @@
 
 {% block Header %}
 
-  <nav>  
-    <div class="menu-icon">
-       <span class="fas fa-bars"></span>
-    </div>
-
-    <div class="logo">
-      Marvelius
-    </div>
-
-    <div class="nav-items">
-       <li><a href="{% url 'home' %}">Home</a></li>
-       <li><a href="{% url 'comic' %}">Comics</a></li>
-       <li><a href="{% url 'movie' %}">Films</a></li>
-       <li><a href="{% url 'shop' %}">Shop</a></li>
-       <li><a href="{% url 'about' %}">About</a></li>
-    </div>
-
-    <div class="search-icon">
-       <span class="fas fa-search"></span>
-    </div>
-
-    <div class="cancel-icon">
-       <span class="fas fa-times"></span>
-    </div>
-
-    <form action="#">
-       <input type="search" class="search-data" placeholder="Search" required>
-       <button type="submit" class="fas fa-search"></button>
-    </form>
+<header class="header" id="header">
+  <nav class="navbar container">
+     <h1 class="brand">Marvelius</h1>
+     <div class="burger" id="burger">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+     </div>
+     <span class="overlay"></span>
+     <div class="menu" id="menu">
+        <ul class="menu-inner">
+           <li class="menu-item"><a class="menu-link" href="{% url 'home' %}">Home</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'comics' %}">Comics</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'films' %}">Films</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'characters' %}">Characters</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'shop' %}">Shop</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'about' %}">About</a></li>
+        </ul>
+     </div>
+     <span><i class="bx bx-search search-toggle"></i></span>
+     <div class="search-block">
+        <form class="search-form">
+           <span><i class="bx bx-x search-cancel"></i></span>
+           <input type="search" name="search" class="search-input" placeholder="Search here...">
+        </form>
+     </div>
   </nav>
-  
+</header>
+
 {% endblock %}
 
 {% block movie-content %}
 
-  <br><br>
-
-  <div class="container-iframe mt-5">
+  <div class="container-iframe">
     {% for m in detail_movies %}
       <iframe class="responsive-iframe" src="{{m.videos}}" frameborder="0" allowfullscreen /></iframe>
     {% endfor %}
@@ -78,7 +74,7 @@
     </div>
 
   <div class="container-more__movie">
-    <div class="header">
+    <div class="header_film">
       <h2>More Movies</h2>
     </div>
     {% for m in more_movies %}

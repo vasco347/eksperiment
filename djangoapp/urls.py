@@ -8,18 +8,18 @@ urlpatterns = [
 
     path("", views.home, name="home"),
 
-    path('comic/<title>', views.detail_comics, name='detail-comics'),
-    path('film/movie/<title>', views.detail_movies, name='detail-movies'),
+    path('comics/<title>', views.detail_comics, name='detail-comics'),
+    path('films/movies/<title>', views.detail_movies, name='detail-movies'),
     path('shop/<title>', views.detail_shops, name='detail-shops'),
-    path('film/series/<title>', views.series, name='series'),
-    path('film/series/<season>/<id>/<title>', views.detail_series, name='detail-series'),
+    path('films/series/<title>', views.series, name='series'),
+    path('films/series/<id>/<tmdb_id>/season/<season>/episode/<episode>', views.detail_series, name='detail-series'),
     path('character/heroes/<title>', views.detail_heroes, name='detail-heroes'),
     path('character/villain/<title>', views.detail_villain, name='detail-villain'),
 
-    path("comic/", views.comic, name="comic"),
-    path("character/", views.character, name="character"),
-    path("film/", views.movie, name="movie"),
+    path("comics/", views.comic, name="comics"),
+    path("characters/", views.character, name="characters"),
+    path("films/", views.movie, name="films"),
     path("shop/", views.shop, name="shop"),
     path("about/", views.about, name="about"),
     
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]

@@ -1,24 +1,39 @@
-const menuBtn = document.querySelector(".menu-icon span");
-const searchBtn = document.querySelector(".search-icon");
-const cancelBtn = document.querySelector(".cancel-icon");
-const items = document.querySelector(".nav-items");
-const form = document.querySelector("form");
-menuBtn.onclick = ()=>{
-  items.classList.add("active");
-  menuBtn.classList.add("hide");
-  searchBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
+// Open and Close Navbar Menu
+const navbarMenu = document.getElementById("menu");
+const burgerMenu = document.getElementById("burger");
+const bgOverlay = document.querySelector(".overlay");
+
+if (burgerMenu && bgOverlay) {
+   burgerMenu.addEventListener("click", () => {
+      navbarMenu.classList.add("is-active");
+      bgOverlay.classList.toggle("is-active");
+   });
+
+   bgOverlay.addEventListener("click", () => {
+      navbarMenu.classList.remove("is-active");
+      bgOverlay.classList.toggle("is-active");
+   });
 }
-cancelBtn.onclick = ()=>{
-  items.classList.remove("active");
-  menuBtn.classList.remove("hide");
-  searchBtn.classList.remove("hide");
-  cancelBtn.classList.remove("show");
-  form.classList.remove("active");
-  cancelBtn.style.color = "#ff3d00";
-}
-searchBtn.onclick = ()=>{
-  form.classList.add("active");
-  searchBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
+
+// Close Navbar Menu on Links Click
+document.querySelectorAll(".menu-link").forEach((link) => {
+   link.addEventListener("click", () => {
+      navbarMenu.classList.remove("is-active");
+      bgOverlay.classList.remove("is-active");
+   });
+});
+
+// Open and Close Search Bar Toggle
+const searchBlock = document.querySelector(".search-block");
+const searchToggle = document.querySelector(".search-toggle");
+const searchCancel = document.querySelector(".search-cancel");
+
+if (searchToggle && searchCancel) {
+   searchToggle.addEventListener("click", () => {
+      searchBlock.classList.add("is-active");
+   });
+
+   searchCancel.addEventListener("click", () => {
+      searchBlock.classList.remove("is-active");
+   });
 }
