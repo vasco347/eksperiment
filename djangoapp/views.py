@@ -13,13 +13,13 @@ TMDB_API = 'cd6372556d9c099c35aa482bafbd82cb'
 def home(request):
     # Comic Views
 
-    comic = [1, 2, 3, 4, 5]
+    comic = [1, 2, 3, 4, 5, 6]
     comic_spiderman = SubCategoryComic.objects.filter(pk__in=comic)
 
-    comic = [21, 22, 23, 24, 25]
+    comic = [21, 22, 23, 24, 25, 26]
     comic_deadpool = SubCategoryComic.objects.filter(pk__in=comic)
 
-    comic = [16, 17, 18, 19, 20]
+    comic = [16, 17, 18, 19, 20, 21]
     comic_guardians = SubCategoryComic.objects.filter(pk__in=comic)   
     
     shop = list(Shop.objects.all())

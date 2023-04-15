@@ -96,13 +96,12 @@ class Episode(models.Model):
     season = models.IntegerField()
     episode = models.IntegerField()
     tmdb_id = models.IntegerField()
-    title = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     thumbnail = models.CharField(max_length=1000)
     videos = models.CharField(max_length=1000) 
     
     def __str__(self):
-        return self.title
+        return self.name
 
 # ========================================================================================================================
 

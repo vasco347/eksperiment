@@ -36,6 +36,7 @@
      <span class="overlay"></span>
      <div class="menu" id="menu">
         <ul class="menu-inner">
+          <h1 class="brand">Marvelius</h1>
            <li class="menu-item"><a class="menu-link" href="{% url 'home' %}">Home</a></li>
            <li class="menu-item"><a class="menu-link" href="{% url 'comics' %}">Comics</a></li>
            <li class="menu-item"><a class="menu-link" href="{% url 'films' %}">Films</a></li>
@@ -86,7 +87,7 @@
   <section class="right-item__movie">
 
     <article class="content">
-      <h1>Marvel Movies</h1>
+      <h1 class="mt-6">Marvel Movies</h1>
         
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -134,7 +135,7 @@
             <img 
               class="video-banner-img" 
               src="http://i3.ytimg.com/vi/aWzlQ2N6qqg/hqdefault.jpg" 
-              alt="Death Cab for Cutie - You Are A Tourist" 
+              alt="" 
             />
           </a>
           
@@ -181,7 +182,7 @@
             <img 
               class="video-banner-img" 
               src="http://i3.ytimg.com/vi/cqGjhVJWtEg/hqdefault.jpg" 
-              alt="Death Cab for Cutie - You Are A Tourist" 
+              alt="" 
             />
           </a>
           
@@ -192,7 +193,6 @@
   </section>
   
   </div>
-
 
   <section class="video-modal">
 
@@ -254,62 +254,52 @@
 {% block Comic-content %}
 
   <div class="content">
-
     <h1 class="title-marvel__comic">MARVEL COMIC</h1>
-
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-  
   </div>
 
-  <div class="content">
-
-    <div class="cont-text mt-5">
-      <h2 class="h2-comic">MARVEL ACTION SPIDER-MAN (2018)</h2>
+  <div class="grid-container__movie">
+    <div class="header_film">
+      <h2>Marvel Action Spider-Man (2018)</h2>
     </div>
-
-    <div class="container-comic">
-      {% for post in comic_spiderman %}
-        <div class="card-marvel__comic">
-          <a href="{% url 'comics' %}">
-            <img class="image-marvel__comic" src="{{post.covers}}">
-            <h2 class="title-marvel__comic">{{post.name}}</h2>
-          </a>
-        </div>
-      {% endfor %}
+    {% for post in comic_spiderman %}
+    <div class="card-latest__movie">
+      <a href="{% url 'comics' %}">
+        <img class="image-latest__movie" src="{{post.covers}}">
+        <h2 class="title-latest__movie">{{post.name}}</h2>
+      </a>
     </div>
+    {% endfor %}
+  </div>
 
-    <div class="cont-text mt-5">
-      <h2 class="h2-comic">DEADPOOL (2018)</h2>
+  <div class="grid-container__movie">
+    <div class="header_film">
+      <h2>Deadpool (2018)</h2>
     </div>
-
-    <div class="container-comic">
-      {% for post in comic_deadpool %}
-        <div class="card-marvel__comic">
-          <a href="{% url 'comics' %}">
-            <img class="image-marvel__comic" src="{{post.covers}}">
-            <h2 class="title-marvel__comic">{{post.name}}</h2>
-          </a>
-        </div>
-      {% endfor %}
+    {% for post in comic_deadpool %}
+    <div class="card-latest__movie">
+      <a href="{% url 'comics' %}">
+        <img class="image-latest__movie" src="{{post.covers}}">
+        <h2 class="title-latest__movie">{{post.name}}</h2>
+      </a>
     </div>
+    {% endfor %}
+  </div>
 
-    <div class="cont-text mt-5">
-      <h2 class="h2-comic">GUARDIANS OF THE GALAXY (2019)</h2>
+  <div class="grid-container__movie">
+    <div class="header_film">
+      <h2>Guardians of the Galaxy (2019)</h2>
     </div>
-
-    <div class="container-comic">
-      {% for post in comic_guardians %}
-        <div class="card-marvel__comic">
-          <a href="{% url 'comics' %}">
-            <img class="image-marvel__comic" src="{{post.covers}}">
-            <h2 class="title-marvel__comic">{{post.name}}</h2>
-          </a>
-        </div>
-      {% endfor %}
+    {% for post in comic_guardians %}
+    <div class="card-latest__movie">
+      <a href="{% url 'comics' %}">
+        <img class="image-latest__movie" src="{{post.covers}}">
+        <h2 class="title-latest__movie">{{post.name}}</h2>
+      </a>
     </div>
-
+    {% endfor %}
   </div>
 
 {% endblock Comic-content %}
@@ -384,11 +374,10 @@
 
 {% block shops-content %}
 
-  <div class="content">
-    <h1 class="text-center text-white mt-5">Marvel Shop</h1>
-  </div>
-
-  <div class="container-shops">
+  <div class="grid-container__shop">
+    <div class="header_shop">
+      <h1>Marvel Shop</h1>
+    </div>
     {% for items in random_shop %} 
       <div class="merch-thumb">
         <a href="{% url 'shop' %}">
@@ -404,7 +393,7 @@
 
   <div class="show-more">
     <a href="{% url 'shop' %}">
-      <button style="--color:#fff;--border:2px;--slant:.5em">MORE SHOP'S</button>
+      <button style="--color:#000;--border:2px;--slant:.5em">MORE SHOP'S</button>
     </a>
   </div>
 
