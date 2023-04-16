@@ -25,35 +25,35 @@
 
 {% block Header %}
 
-<header class="header" id="header">
-  <nav class="navbar container">
+  <header class="header" id="header">
+    <nav class="navbar container">
      <h1 class="brand">Marvelius</h1>
-     <div class="burger" id="burger">
+      <div class="burger" id="burger">
         <span class="burger-line"></span>
         <span class="burger-line"></span>
         <span class="burger-line"></span>
-     </div>
+      </div>
      <span class="overlay"></span>
-     <div class="menu" id="menu">
+      <div class="menu" id="menu">
         <ul class="menu-inner">
           <h1 class="brand">Marvelius</h1>
-           <li class="menu-item"><a class="menu-link" href="{% url 'home' %}">Home</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'comics' %}">Comics</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'films' %}">Films</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'characters' %}">Characters</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'shop' %}">Shop</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'about' %}">About</a></li>
+          <li class="menu-item"><a class="menu-link" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="menu-item"><a class="menu-link" href="{% url 'comics' %}"><i class="fa-solid fa-book-open-reader"></i> Comics</a></li>
+          <li class="menu-item"><a class="menu-link" href="{% url 'films' %}"><i class="fa-solid fa-film"></i> Films</a></li>
+          <li class="menu-item"><a class="menu-link" href="{% url 'characters' %}"><i class="fa-solid fa-users"></i></i></i> Characters</a></li>
+          <li class="menu-item"><a class="menu-link" href="{% url 'shop' %}"><i class="fa-solid fa-cart-shopping"></i> Shop</a></li>
+          <li class="menu-item"><a class="menu-link" href="{% url 'about' %}"><i class="fa-solid fa-mug-hot"></i> About</a></li>
         </ul>
-     </div>
+      </div>
      <span><i class="bx bx-search search-toggle"></i></span>
-     <div class="search-block">
+      <div class="search-block">
         <form class="search-form">
-           <span><i class="bx bx-x search-cancel"></i></span>
-           <input type="search" name="search" class="search-input" placeholder="Search here...">
+          <span><i class="bx bx-x search-cancel"></i></span>
+          <input type="search" name="search" class="search-input" placeholder="Search here...">
         </form>
-     </div>
-  </nav>
-</header>
+      </div>
+    </nav>
+  </header>
   
 {% endblock %}
 

@@ -23,24 +23,24 @@
 
 {% block Header %}
 
-<header class="header" id="header">
-  <nav class="navbar container">
+  <header class="header" id="header">
+    <nav class="navbar container">
      <h1 class="brand">Marvelius</h1>
-     <div class="burger" id="burger">
+      <div class="burger" id="burger">
         <span class="burger-line"></span>
         <span class="burger-line"></span>
         <span class="burger-line"></span>
-     </div>
+      </div>
      <span class="overlay"></span>
      <div class="menu" id="menu">
         <ul class="menu-inner">
           <h1 class="brand">Marvelius</h1>
-           <li class="menu-item"><a class="menu-link" href="{% url 'home' %}">Home</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'comics' %}">Comics</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'films' %}">Films</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'characters' %}">Characters</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'shop' %}">Shop</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'about' %}">About</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'comics' %}"><i class="fa-solid fa-book-open-reader"></i> Comics</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'films' %}"><i class="fa-solid fa-film"></i> Films</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'characters' %}"><i class="fa-solid fa-users"></i></i></i> Characters</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'shop' %}"><i class="fa-solid fa-cart-shopping"></i> Shop</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'about' %}"><i class="fa-solid fa-mug-hot"></i> About</a></li>
         </ul>
      </div>
      <span><i class="bx bx-search search-toggle"></i></span>
@@ -49,154 +49,163 @@
            <span><i class="bx bx-x search-cancel"></i></span>
            <input type="search" name="search" class="search-input" placeholder="Search here...">
         </form>
-     </div>
-  </nav>
-</header>
+      </div>
+    </nav>
+  </header>
   
 {% endblock %}
 
 {% block Cspider-content %}
-  <div class="content">
 
-    <h2 class="featured-comic">FEATURED COMICS</h2>
+  <div class="grid-container__movie">
+    <div class="header_film">
+      <h2>Featured Comic</h2>
+    </div>
+    {% for fc in feature_comic %}
+    <div class="card-latest__movie">
+      <a href="{% url 'detail-comics' fc.title %}">
+        <img class="image-latest__movie" src="{{fc.covers}}">
+        <h2 class="title-latest__movie">{{fc.name}}</h2>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
 
-    <div class="container-comics">
-          
-      <div class="container-feature__comic">
-        {% for fc in feature_comic %}
-          <div class="card-feature__comic">
-            <a href="{% url 'detail-comics' fc.title %}">
-              <img class="image-feature__comic" src="{{fc.covers}}">
-              <h2 class="title-feature__comic">{{fc.name}}</h2>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-          
+  <div class="grid-container__movie">
+    <div class="header_film">
+      <h2 class="text-center">Marvel Comics</h2>
+    </div>
+    {% for c in marvel_comic %}
+    <div class="card-latest__movie">
+      <a href="{% url 'detail-comics' c.title %}">
+        <img class="image-latest__movie" src="{{c.covers}}">
+        <h2 class="title-latest__movie">{{c.name}}</h2>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="box-comics">
+    <div class="box-title__comics">
+      <h2>Marvel Action Spider-Man (2018)</h2>
     </div>
 
-    <br><br>
-
-    <h2 class="h2-marvel__comic">MARVEL COMICS</h2>
-
-    <div class="container-marvel__comic">
-      {% for post in marvel_items %}
-        <div class="card-marvel__comic">
+    <section class="slider-comic">
+      {% for post in SC %}
+        <div class="card-comics">
           <a href="{% url 'detail-comics' post.title %}">
-            <img class="image-marvel__comic" src="{{post.covers}}">
-            <h2 class="title-marvel__comic">{{post.name}}</h2>
+            <img class="hover-comics" src="{{post.covers}}"/>
+            <h3 class="title-comics">{{post.name}}</h3>
           </a>
         </div>
       {% endfor %}
+    </section>
+  
+  </div>
+
+  <div class="box-comics">
+    <div class="box-title__comics">
+      <h2>Guardians of the Galaxy (2019)</h2>
     </div>
-    
+
+    <section class="slider-comic">
+      {% for post in GOTG %}
+        <div class="card-comics">
+          <a href="{% url 'detail-comics' post.title %}">
+            <img class="hover-comics" src="{{post.covers}}"/>
+            <h3 class="title-comics">{{post.name}}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </section>
+  
   </div>
 
-  <div class="cont-text__slider-comic">
-    <h2 class="h2-comics mt-5">MARVEL ACTION SPIDER-MAN (2018)</h2>
-  </div>
+  <div class="box-comics">
+    <div class="box-title__comics">
+      <h2>Fantastic Four Powerpack</h2>
+    </div>
 
-  <section class="slider-comic">
-    {% for post in SC %}
-      <div class="card-comics">
-        <a href="{% url 'detail-comics' post.title %}">
-          <img class="hover-comics" src="{{post.covers}}"/>
-          <h3 class="title-comics">{{post.name}}</h3>
-        </a>
-      </div>
-    {% endfor %}
+    <section class="slider-comic">
+      {% for post in FF %}
+        <div class="card-comics">
+          <a href="{% url 'detail-comics' post.title %}">
+            <img class="hover-comics" src="{{post.covers}}"/>
+            <h3 class="title-comics">{{post.name}}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </section>
+  
+  </div>
         
-  </section>
-      
-  <div class="cont-text__slider-comic">
-    <h2 class="h2-comics mt-5">GUARDIANS OF THE GALAXY (2019)</h2>
+  <div class="box-comics">
+    <div class="box-title__comics">
+      <h2>Marvel Rising (2019)</h2>
+    </div>
+
+    <section class="slider-comic">
+      {% for post in MR %}
+        <div class="card-comics">
+          <a href="{% url 'detail-comics' post.title %}">
+            <img class="hover-comics" src="{{post.covers}}"/>
+            <h3 class="title-comics">{{post.name}}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </section>
   </div>
 
-  <section class="slider-comic">
-    {% for post in GOTG %}
-      <div class="card-comics">
-        <a href="{% url 'detail-comics' post.title %}">
-          <img class="hover-comics" src="{{post.covers}}"/>
-          <h3 class="title-comics">{{post.name}}</h3>
-        </a>
-      </div>
-    {% endfor %}
-  </section>
+  <div class="box-comics">
+    <div class="box-title__comics">
+      <h2>Deadpool (2018)</h2>
+    </div>
 
-  <div class="cont-text__slider-comic">
-    <h2 class="h2-comics mt-5">FANTASTIC FOUR POWERPACK</h2>
-  </div>
-      
-  <section class="slider-comic">
-    {% for post in FF %}
-      <div class="card-comics">
-        <a href="{% url 'detail-comics' post.title %}">
-          <img class="hover-comics" src="{{post.covers}}"/>
-          <h3 class="title-comics">{{post.name}}</h3>
-        </a>
-      </div>
-    {% endfor %}
-  </section>
-        
-  <div class="cont-text__slider-comic">
-    <h2 class="h2-comics mt-5">MARVEL RISING (2019)</h2>
+    <section class="slider-comic">
+      {% for post in DP %}
+        <div class="card-comics">
+          <a href="{% url 'detail-comics' post.title %}">
+            <img class="hover-comics" src="{{post.covers}}"/>
+            <h3 class="title-comics">{{post.name}}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </section>
   </div>
 
-  <section class="slider-comic">
-    {% for post in MR %}
-      <div class="card-comics">
-        <a href="{% url 'detail-comics' post.title %}">
-          <img class="hover-comics" src="{{post.covers}}"/>
-          <h3 class="title-comics">{{post.name}}</h3>
-        </a>
-      </div>
-    {% endfor %}
-  </section>
+  <div class="box-comics">
+    <div class="box-title__comics">
+      <h2>Doctor Strange</h2>
+    </div>
 
-  <div class="cont-text__slider-comic">
-    <h2 class="h2-comics mt-5">Deadpool (2018)</h2>
+    <section class="slider-comic">
+      {% for post in DS %}
+        <div class="card-comics">
+          <a href="{% url 'detail-comics' post.title %}">
+            <img class="hover-comics" src="{{post.covers}}"/>
+            <h3 class="title-comics">{{post.name}}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </section>
   </div>
 
-  <section class="slider-comic">
-    {% for post in DP %}
-      <div class="card-comics">
-        <a href="{% url 'detail-comics' post.title %}">
-          <img class="hover-comics" src="{{post.covers}}"/>
-          <h3 class="title-comics">{{post.name}}</h3>
-        </a>
-      </div>
-    {% endfor %}
-  </section>
+  <div class="box-comics">
+    <div class="box-title__comics">
+      <h2>Lockjaw and the Pet Avengers</h2>
+    </div>
 
-  <div class="cont-text__slider-comic">
-    <h2 class="h2-comics mt-5">DOCTOR STRANGE</h2>
+    <section class="slider-comic">
+      {% for post in LATPA %}
+        <div class="card-comics">
+          <a href="{% url 'detail-comics' post.title %}">
+            <img class="hover-comics" src="{{post.covers}}"/>
+            <h3 class="title-comics">{{post.name}}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </section>
   </div>
-
-  <section class="slider-comic">
-    {% for post in DS %}
-      <div class="card-comics">
-        <a href="{% url 'detail-comics' post.title %}">
-          <img class="hover-comics" src="{{post.covers}}"/>
-          <h3 class="title-comics">{{post.name}}</h3>
-        </a>
-      </div>
-    {% endfor %}
-  </section>
-
-  <div class="cont-text__slider-comic">
-    <h2 class="h2-comics">LOCKJAW AND THE PET AVENGERS</h2>
-  </div>
-
-  <section class="slider-comic">
-    {% for post in LATPA %}
-      <div class="card-comics">
-        <a href="{% url 'detail-comics' post.title %}">
-          <img class="hover-comics" src="{{post.covers}}"/>
-          <h3 class="title-comics">{{post.name}}</h3>
-        </a>
-      </div>
-    {% endfor %}
-  </section>
 
 {% endblock Cspider-content %}
         

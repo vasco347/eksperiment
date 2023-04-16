@@ -34,12 +34,12 @@
      <div class="menu" id="menu">
         <ul class="menu-inner">
           <h1 class="brand">Marvelius</h1>
-           <li class="menu-item"><a class="menu-link" href="{% url 'home' %}">Home</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'comics' %}">Comics</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'films' %}">Films</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'characters' %}">Characters</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'shop' %}">Shop</a></li>
-           <li class="menu-item"><a class="menu-link" href="{% url 'about' %}">About</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'comics' %}"><i class="fa-solid fa-book-open-reader"></i> Comics</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'films' %}"><i class="fa-solid fa-film"></i> Films</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'characters' %}"><i class="fa-solid fa-users"></i></i></i> Characters</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'shop' %}"><i class="fa-solid fa-cart-shopping"></i> Shop</a></li>
+           <li class="menu-item"><a class="menu-link" href="{% url 'about' %}"><i class="fa-solid fa-mug-hot"></i> About</a></li>
         </ul>
      </div>
      <span><i class="bx bx-search search-toggle"></i></span>
@@ -59,59 +59,51 @@
 
   <div class="container text-center mt-5">
     {% for items in detail_shop %}
-    <img width="350px" height="360px" src="{{items.photos}}">
-    <h1 class="text-white mt-2">{{items.name}}</h1> 
-    <h5 class="text-white">{{items.description}}</h5>
+    <img width="320px" height="340px" src="{{items.photos}}">
+    <h1 class="mt-2">{{items.name}}</h1> 
+    <h5>{{items.description}}</h5>
     <h2 class="h2-price">Rp. {{items.price}}</h2>
     {% endfor %}
   </div>
 
   <div class="show-more">
     <a href="#!">
-      <button style="--color:#fff;--border:2px;--slant:.5em">ADD TO CHART</button>
+      <button style="--color:#000;--border:2px;--slant:.5em">ADD TO CHART</button>
     </a>
   </div>
   
   <div class="show-more">
     <a href="{% url 'shop' %}">
-      <button style="--color:#fff;--border:2px;--slant:.5em">BACK TO SHOP</button>
+      <button style="--color:#000;--border:2px;--slant:.5em">BACK TO SHOP</button>
     </a>
   </div>
 
-  <div class="content">
-    <h1 class="h2-merch">MARVEL SHOP</h1>
+  <div class="grid-container__shop">
+    <div class="header_shop">
+      <h1>MORE SHOP</h1>
+    </div>
+    {% for items in random_shop %} 
+      <div class="merch-thumb">
+        <a href="{% url 'detail-shops' items.title %}">
+          <img class="hover-merch" src="{{items.cover}}" />
+          <div class="box-shop">
+            <h2>{{items.name}}</h2>
+            <p>Rp. {{items.price}}<p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
   </div>
 
-    <div class="container-shops">
-      {% for items in random_shop %} 
-        <div class="merch-thumb">
-          <a href="{% url 'detail-shops' items.title %}">
-            <img class="hover-merch" src="{{items.cover}}" />
-            <div class="box-shop">
-              <h2>{{items.name}}</h2>
-              <p>Rp. {{items.price}}<p>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="show-more">
-
-      <a href="{% url 'shop' %}">
-        <button style="--color:#fff;--border:2px;--slant:.5em">MORE SHOP'S</button>
-      </a>
-    
-    </div>
 {% endblock %}
 
 {% block Footer %}
 
-  <div class="container-foot__DetailShop">
+  <div class="container-foot">
 
-    <section class="nb-copyright__DetailMovie">
+    <section class="nb-copyright">
 
-      <div class="copyrt__DetailMovie">
+      <div class="copyrt">
         <img width="150px" height="120px" src="{% static 'images/marvel-logo.png' %}">
 	      <p class="color">© 2023 MARVEL<p> 
           <a href="#!">Terms of Use</a>

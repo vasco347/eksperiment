@@ -54,9 +54,9 @@ def comic(request):
 
     items = list(SubCategoryComic.objects.all())
     # change number to how many random items you want
-    marvel_items = random.sample(items, 12)
+    marvel_comic = random.sample(items, 12)
 
-    return render(request, 'comics.html', {'title':"Comics", 'SC':SC, 'LATPA':LATPA, 'FF':FF, 'MR':MR, 'DP':DP, 'DS':DS, 'GOTG':GOTG, 'feature_comic':feature_comic, 'marvel_items':marvel_items})
+    return render(request, 'comics.html', {'title':"Comics", 'SC':SC, 'LATPA':LATPA, 'FF':FF, 'MR':MR, 'DP':DP, 'DS':DS, 'GOTG':GOTG, 'feature_comic':feature_comic, 'marvel_comic':marvel_comic})
 
 def movie(request):
     # Movie Views 
