@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
+from django.utils.html import format_html
 from . models import CategoryComic, SubCategoryComic, DetailComic
 from . models import CategoryMovie, SubCategoryMovie, DetailMovie
 from . models import Series, Season, Episode
@@ -117,10 +118,10 @@ def series(request, title):
     items = list(Series.objects.all())
     # change 3 to how many random items you want
     more_series = random.sample(items, 12)
-
+    
     return render(request, 'series.html', {'series':series, 'more_series':more_series, 'season':season, 'episode':episode})
 
-def detail_series(request, id, tmdb_id, season, episode):
+def detail_series(request, id, tmdb_id, title, season, episode):
 
     uploads = Episode.objects.filter(id=id)
 
