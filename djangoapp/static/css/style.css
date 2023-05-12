@@ -4,8 +4,8 @@
 }
  body {
 	 overflow-x: hidden;
-	 color: transparent;
 	 background-color: #bbbbbb4f;
+	 color: transparent;
 	 /*
 	 background: url("/static/images/background.jpg");
 	 background-size: 100% auto;
@@ -90,6 +90,16 @@
 	letter-spacing: 0.155em;
 	color: #fff;
 }
+.text-center{
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-top: 1em;
+	font-size: 2em;
+	
+	text-align: center;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #000;
+}
 
 @media(max-width:900px){
 	.content .h2-Title__Series{
@@ -132,7 +142,13 @@
 	 margin-top: -1.5em;
 	 color: #000;
 }
-
+.content .title-thumb {
+	margin-top: -75px;
+	 font-size: 2.5em;
+	 font-weight: 300;
+	 text-transform: uppercase;
+	 color: #000;
+}
  .content .h2-game {
 	 font-size: 1.2em;
 	 font-weight: 600;
@@ -298,7 +314,6 @@
 	 -moz-transform-style: preserve-3d;
 	 transform-style: preserve-3d;
 }
-
  .video-modal .overlay {
 	 position: absolute;
 	 top: 0;
@@ -307,15 +322,14 @@
 	 left: 0;
 	 z-index: 3000;
 	 z-index: 0;
-	 background: rgba(21, 21, 21, 0.82);
+	 background: rgba(0, 0, 0, 0.82);
 	 opacity: 0;
 	 -webkit-transition: opacity 0.2s ease-out 0.05s;
 	 -moz-transition: opacity 0.2s ease-out 0.05s;
 	 -o-transition: opacity 0.2s ease-out 0.05s;
 	 transition: opacity 0.2s ease-out 0.05s;
 }
-
-.video-modal-content {
+ .video-modal-content {
 	 position: relative;
 	 top: auto;
 	 right: auto;
@@ -337,7 +351,7 @@
 	 text-decoration: none;
 	 font-size: 20px;
 	 font-weight: bold;
-	 color: #000000;
+	 color: #fff;
 }
  .close-video-static {
 	 display: block;
@@ -347,7 +361,7 @@
 	 text-decoration: none;
 	 font-size: 20px;
 	 font-weight: bold;
-	 color: #000000;
+	 color: #fff;
 }
  iframe#youtube {
 	 position: absolute;
@@ -515,11 +529,21 @@
 .right-item__movie { grid-area: r_movie; }
 
 .left-item__headline-movie img{
-	width: 100%;	
+	width: 100%;
+	height: auto;
+	position: relative;
+	top: 20px;
+	left: 0;
+	right: 0;	
 }
 
 .left-item__headline-movies img{
 	width: 100%;
+	height: auto;
+	position: relative;
+	top: 20px;
+	left: 0;
+	right: 0;
 }
 
 .container-grid {
@@ -1522,6 +1546,7 @@ button {
 }
 
 .card-latest__movie{
+	background-color: transparent;
 	position: relative;
 	overflow: hidden;
 	transition: ease 0.3s;
@@ -1835,7 +1860,7 @@ button {
   }
 
 .container-detail_movies{
-	margin-top: 2.5em;
+	
 	width: 90%;
 	display: flex;
 	flex-direction: row;
@@ -2009,7 +2034,7 @@ button {
 	text-shadow: 0 0 2px #000;
 }
 
-.content .title-heroes{
+.title-heroes{
 	color: #000;
 	font-size: 1.3em;
 	font-weight: 500;
@@ -2017,12 +2042,12 @@ button {
 	margin-top: 2em;
 }
 
-.content .title-villain{
+.title-villain{
 	color: #000;
 	font-size: 1.3em;
 	font-weight: 500;
 	text-align: left;
-	margin-top: 2em;
+	
 }
 
 .container-detail_heroes{
@@ -2398,6 +2423,32 @@ button {
 
 /* --------- END HEADER ---------- */
 
+.box-detail__series{
+	width: 95%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ffffffab;
+  }
+  .box-title__series{
+	text-align: center;
+	font-size: 1em;
+	font-weight: 500;
+	color: #000;
+	margin-left: auto;
+	margin-right: auto;
+  }
+
+  @media(max-width: 768px){
+	.box-detail__series{
+		width: 99%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 .slider-series{
 	width: 90%;
 	height: auto;
