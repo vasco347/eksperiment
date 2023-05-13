@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAMVgELLIY4UbyltiA9doliJy3LeJHgFyCDqH6_h9aqNNxxwCA4eCjvF4LfI_i0BlIblsOypPTyi9HElYq01lTZcCHpP7-f4ADns2yaO8B7Sbzt9S-CUohOqFmA8Q-tK-0ofLwoqGLhQcB2nR5aLOEBiIb_b_FGB_9SAkenwB9H_nJ8DX45ArnDINGIw/s555/logo1.png">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    
+    <title>Search Comics</title>
+    
+</head>
+
+<body>
+    <div class="container-series">
+        <ul class="list img-list">
+          <h2>Results:</h2>
+            {% for e in search_comics %}
+              <li>
+                <a href="{% url 'detail-comics' e.title %}" class="inner">
+                  <div class="li-img">
+                    <img src="{{e.covers}}" alt="" />
+                  </div>
+                
+                  <div class="li-text">
+                    <h2 class="li-head">{{e.name}}</h2>
+                    
+                    <br>
+                    
+                    <div class="li-sub">
+                      <h3>Published: {{e.published}}</h3>
+                    </div>
+                    <div class="li-sub">
+                      <h3>Writer: {{e.writer}}</h3>
+                    </div>
+                    <div class="li-sub">
+                      <h3>Cover Artist: {{e.cover_artist}}</h3>
+                    </div>
+                    <div class="li-sub">
+                      <h3>Penciller: {{e.penciller}}</h3>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="li-sub">
+                      <h3>{{e.description}}</h3>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              {%endfor%}
+        </ul>
+      </div>
+
+</body>
+</html>

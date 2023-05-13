@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, HttpResponse
 from django.utils.html import format_html
 from . models import CategoryComic, SubCategoryComic, DetailComic
 from . models import CategoryMovie, SubCategoryMovie, DetailMovie
 from . models import Series, Season, Episode
 from . models import Shop, DetailShop
 from . models import MarvelHeroes, MarvelVillain, DetailHeroes, DetailVillain
+from django.db.models import Q
+from itertools import chain
 import random
 import requests
 
@@ -132,6 +134,35 @@ def detail_series(request, id, tmdb_id, title, season, episode):
     thumbnail = requests.get(f'https://api.themoviedb.org/3/tv/{tmdb_id}/season/{season}/episode/{episode}/images?api_key={TMDB_API}')
 
     return render(request, 'detail_series.html', {'uploads':uploads, 'more_series':more_series, 'thumbnail':thumbnail.json() })
+
+def search_films(request):
+
+    if request.method == "GET":
+        query = request.GET.get('s')
+
+        if query == '':
+            query = 'None'
+
+
+    search_series = Series.objects.filter(Q(name__icontains=query) | Q(name1__icontains=query) | Q(name2__icontains=query) | Q(name3__icontains=query) | Q(name4__icontains=query) | Q(name5__icontains=query))
+    search_movies = SubCategoryMovie.objects.filter(Q(name__icontains=query) | Q(name1__icontains=query) | Q(name2__icontains=query) | Q(name3__icontains=query) | Q(name4__icontains=query) | Q(name5__icontains=query))
+
+    results = chain(search_series, search_movies)
+    
+    return render(request, 'results_films.html', {'results':results, 'search_series':search_series, 'search_movies':search_movies})
+
+def search_comics(request):
+
+    if request.method == "GET":
+        query = request.GET.get('s')
+
+        if query == '':
+            query = 'None'
+
+
+    search_comics = SubCategoryComic.objects.filter(Q(name__icontains=query) | Q(name1__icontains=query) | Q(name2__icontains=query) | Q(name3__icontains=query) | Q(name4__icontains=query) | Q(name5__icontains=query))
+    
+    return render(request, 'results_comics.html', {'search_comics':search_comics})
 
 def detail_shops(request, title):
 

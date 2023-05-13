@@ -46,6 +46,9 @@
         <a class="nav-link" href="{% url 'films' %}"><i class="fa-solid fa-film"></i> Films</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="{% url 'shop' %}"><i class="fa-solid fa-cart-shopping"></i> Shop</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{% url 'about' %}"><i class="fa-solid fa-mug-hot"></i> About</a>
       </li>
     </ul>
@@ -57,38 +60,34 @@
 {% block Char-content %}
   
   <h1 class="text-center">Marvel Characters</h1>
-  
-    <h2 class="title-heroes">MARVEL HEROES</h2>
-    <div class="container-comics">
-      <div class="container-feature__comic">
-        {% for c in marvel_heroes %}
-        <div class="card-feature__comic">
-          <a href="{% url 'detail-heroes' c.title %}">
-          <img class="image-feature__comic" src="{{c.images}}">
-          <h2 class="title-feature__comic">{{c.name}}</h2>
-          </a>
-        </div>
-        {% endfor %}
-      </div>
-    </div >
 
-    <br><br>
-
-    <h2 class="title-villain">MARVEL VILLAIN</h2>
-    <div class="container-comics">
-      <div class="container-feature__comic">
-        {% for c in marvel_villain %}
-        <div class="card-feature__comic">
-          <a href="{% url 'detail-villain' c.title %}">
-          <img class="image-feature__comic" src="{{c.images}}">
-          <h2 class="title-feature__comic">{{c.name}}</h2>
-          </a>
-        </div>
-        {% endfor %}
+    <div class="grid-container__char">
+      <div class="header__char">
+        <h2>Marvel Heroes</h2>
       </div>
+      {% for c in marvel_heroes %}
+      <div class="card__char">
+        <a href="{% url 'detail-heroes' c.title %}">
+          <img class="image__char" src="{{c.images}}">
+          <h2 class="title__char">{{c.name}}</h2>
+        </a>
+      </div>
+      {% endfor %}
     </div>
 
-  
+    <div class="grid-container__char mt-5">
+      <div class="header__char">
+        <h2>Marvel Villain</h2>
+      </div>
+      {% for c in marvel_villain %}
+      <div class="card__char">
+        <a href="{% url 'detail-villain' c.title %}">
+          <img class="image__char" src="{{c.images}}">
+          <h2 class="title__char">{{c.name}}</h2>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
 
 {% endblock Char-content %}
         
